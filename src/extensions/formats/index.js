@@ -9,6 +9,7 @@ import { markdown } from './markdown';
 import { subscript } from './subscript';
 import { superscript } from './superscript';
 import { clear } from './clear';
+// import { tooltip } from './tooltips';
 import { uppercase } from './uppercase';
 
 /**
@@ -26,6 +27,7 @@ function registerFormats() {
 		subscript,
 		superscript,
 		clear,
+		// tooltip,
 		uppercase,
 	].forEach( ( { name, ...settings } ) => registerFormatType( name, settings ) );
 }
