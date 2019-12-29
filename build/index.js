@@ -19549,9 +19549,21 @@ var _wp$richText = wp.richText,
     toggleFormat = _wp$richText.toggleFormat;
 var decodeEntities = wp.htmlEntities.decodeEntities;
 var RichTextToolbarButton = wp.blockEditor.RichTextToolbarButton;
+var _wp$components = wp.components,
+    Tooltip = _wp$components.Tooltip,
+    Button = _wp$components.Button;
+
+var MyTooltip = function MyTooltip() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Tooltip, {
+    text: "More information"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Button, {
+    isSecondary: true
+  }, "Hover for more information"));
+};
 /**
  * Block constants
  */
+
 
 var name = 'editorskit/tooltip';
 
@@ -19560,9 +19572,7 @@ var MyCustomButton = function MyCustomButton(props) {
     icon: "editor-code",
     title: "Tooltip output",
     onClick: function onClick() {
-      props.onChange(toggleFormat(props.value, {
-        type: name
-      }));
+      props.onChange(toggleFormat(props.value, name));
     },
     isActive: props.isActive
   });

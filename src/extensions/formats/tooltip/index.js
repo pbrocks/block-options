@@ -9,7 +9,15 @@ const { __ } = wp.i18n;
 const { applyFormat, isCollapsed, toggleFormat } = wp.richText;
 const { decodeEntities } = wp.htmlEntities;
 const { RichTextToolbarButton } = wp.blockEditor;
-
+const { Tooltip, Button } = wp.components;
+ 
+const MyTooltip = () => (
+    <Tooltip text="More information">
+        <Button isSecondary>
+            Hover for more information
+        </Button>
+    </Tooltip>
+);
 /**
  * Block constants
  */
@@ -22,7 +30,7 @@ const MyCustomButton = ( props ) => {
         onClick={ () => {
             props.onChange( toggleFormat(
                 props.value,
-                { type: name }
+                name
             ) );
         } }
         isActive={ props.isActive }
