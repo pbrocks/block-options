@@ -46,6 +46,7 @@
     "build-assets": "wp-scripts build",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
+    "dev": "wp-scripts start",
     "lint:css": "wp-scripts lint-style '**/*.scss'",
     "lint:css-fix": "wp-scripts lint-style '**/*.scss' --fix",
     "lint:js": "wp-scripts lint-js '**/*.js'",

@@ -3,6 +3,7 @@
  */
 import { justify } from './justify';
 import { textColor } from './text-color';
+import { toolTip } from './tooltip';
 import { backgroundColor } from './background-color';
 import { markdown } from './markdown';
 import { subscript } from './subscript';
@@ -35,6 +36,7 @@ function registerEditorsKitFormats() {
 		alignment,
 		nbsp,
 		abbreviation,
+		toolTip,
 		! isDisabled ? link : [],
 	].forEach( ( { name, ...settings } ) => {
 		if ( name ) {
