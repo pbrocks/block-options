@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/extensions/advanced-controls/custom-class-name/index.js:67
+msgid "Additional CSS Class(es)"
+msgstr ""
+
+#: src/extensions/advanced-controls/fullwidth/index.js:21
+msgid "Full Width Display"
+msgstr ""
+
+#: src/extensions/advanced-controls/fullwidth/index.js:24
+msgid "Full width display is enabled."
+msgstr ""
+
+#: src/extensions/advanced-controls/fullwidth/index.js:24
+msgid "Toggle to display this block's as full width."
+msgstr ""
+
+#: src/extensions/advanced-controls/options/devices/index.js:41
+msgid "Hide on Desktop"
+msgstr ""
+
+#: src/extensions/advanced-controls/options/devices/index.js:46
+msgid "Hide on Tablet"
+msgstr ""
+
+#: src/extensions/advanced-controls/options/devices/index.js:51
+msgid "Hide on Mobile"
+msgstr ""
+
+#: src/extensions/block-settings/set-as-featured/components/controls.js:28
+msgid "Remove as Featured Image"
+msgstr ""
+
+#: src/extensions/block-settings/set-as-featured/components/controls.js:29
+msgid "Set as Featured Image"
+msgstr ""
+
+#: src/extensions/block-settings/set-as-featured/components/controls.js:77
+msgid "Image Set as Featured."
+msgstr ""
+
+#: src/extensions/block-settings/set-as-featured/components/controls.js:88
+msgid "Featured Image Removed."
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:15
+msgid "None"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:21
+msgid "Arrow"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:27
+msgid "Checked"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:33
+msgid "Crossed"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:39
+msgid "Connected"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:45
+msgid "Starred"
+msgstr ""
+
+#: src/extensions/block-styles/list/index.js:9
+msgid "Default"
+msgstr ""
+
+#: src/extensions/block-toolbar/block-navigator/components/controls.js:35
+msgid "Open block navigator"
+msgstr ""
+
+#: src/extensions/block-toolbar/block-navigator/components/controls.js:43
+msgid "Block Navigator"
+msgstr ""
+
+#: src/extensions/block-toolbar/block-navigator/components/controls.js:44
+#: src/extensions/components/help-tips/components/about.js:15
+#: src/extensions/components/manager/components/index.js:47
+#: src/extensions/transform/empty-paragraphs/components/controls.js:73
+msgid "Close"
+msgstr ""
+
+#: src/extensions/components/autosave/components/menu.js:21
+msgid "Auto Save Disabled"
+msgstr ""
+
+#: src/extensions/components/autosave/components/menu.js:76
+msgid "Toggle to disable or enable editor autosaving feature."
+msgstr ""
+
+#: src/extensions/components/autosave/components/menu.js:79
+msgid "Auto Save"
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:12
+msgid "About Gutenberg Block Editor"
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:19
+msgid "Version"
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:21
+msgid "You are using the new block editor bundled on WordPress core %s"
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:22
+msgid "You are using the new block editor powered by the %sGutenberg Plugin%s."
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:24
+msgid " Want to help? %sGet involved or report an issue%s."
+msgstr ""
+
+#: src/extensions/components/help-tips/components/about.js:25
+msgid "Sidetrack %s"
+msgstr ""
+
+#: src/extensions/components/manager/components/index.js:41
+msgid "Sidetrack Settings"
+msgstr ""
+
+#: src/extensions/components/manager/components/index.js:45
+msgid "Sidetrack Features Manager"
+msgstr ""
+
+#: src/extensions/disable-title/controls.js:66
+msgid "Hide  Title"
+msgstr ""
+
+#: src/extensions/disable-title/controls.js:69
+msgid "Title is hidden on your website."
+msgstr ""
+
+#: src/extensions/formats/alignment/components/control.js:21
+msgid "Align caption left"
+msgstr ""
+
+#: src/extensions/formats/alignment/components/control.js:26
+msgid "Align caption center"
+msgstr ""
+
+#: src/extensions/formats/alignment/components/control.js:31
+msgid "Align caption right"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:23
+msgid "Highlight Color"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:27
+msgid "Orange Sunrise"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:32
+msgid "Pink Flamingo"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:37
+msgid "Spring Green"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:42
+msgid "Blue Moon"
+msgstr ""
+
+#: src/extensions/formats/background-color/components/edit.js:47
+msgid "Purple Mist"
+msgstr ""
+
+#: src/extensions/formats/background-color/index.js:18
+msgid "Background Color"
+msgstr ""
+
+#: src/extensions/formats/link/components/utils.js:106
+#. accessibility label for external links, where the argument is the link text
+msgid "%s (opens in a new tab)"
+msgstr ""
+
+#: src/extensions/formats/nbsp/components/edit.js:56
+msgid "Nonbreaking space"
+msgstr ""
+
+#: src/extensions/formats/nbsp/index.js:19
+msgid "Nonbreaking Space"
+msgstr ""
+
+#: src/extensions/transform/empty-paragraphs/components/controls.js:70
+msgid "Enable Shortcut"
+msgstr ""
+
+#: src/extensions/transform/empty-paragraphs/components/controls.js:77
+msgid ""
+"Do you want to automatically transform four(4) consecutive empty paragraphs "
+"into Spacer Block?"
+msgstr ""
+
+#: src/extensions/transform/empty-paragraphs/components/controls.js:84
+msgid "Yes Enable"
+msgstr ""
+
+#: src/extensions/transform/empty-paragraphs/components/controls.js:88
+msgid "No, Thanks"
+msgstr ""
+
+#: src/extensions/transform/empty-paragraphs/components/controls.js:90
+msgid ""
+"This prompt will only be shown once and will remember your preference. "
+"Thanks!"
+msgstr ""
