@@ -41,7 +41,7 @@ const MyCustomButton = ( props ) => {
 export const toolTip = {
 	name,
     title: 'Tooltip output',
-    tagName: 'samp',
+    tagName: 'samp1',
     className: null,
     edit: MyCustomButton,
 };

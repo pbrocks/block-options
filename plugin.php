@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: EditorsKit
+ * Plugin Name: EditorsKit Git
  * Plugin URI: https://editorskit.com/
  * Description: EditorsKit is a suite of <strong>page building block options</strong> for the Gutenberg block editor.
  * Version: 1.22.1
