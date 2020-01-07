@@ -49,10 +49,10 @@ class EditorMinHeight extends Component {
 				<PluginMoreMenuItem
 					icon={ isActive && 'yes' }
 					role="menuitemcheckbox"
-					info={ __( 'Toggle to change editor min-height similar to browser viewport.', 'block-options' ) }
+					info={ __( 'Toggle to change editor min-height similar to browser viewport.', 'blockshop-options' ) }
 					onClick={ onToggle }
 				>
-					{ __( 'Editor Height', 'block-options' ) }
+					{ __( 'Editor Height', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 
 			</Fragment>
@@ -63,7 +63,7 @@ class EditorMinHeight extends Component {
 export default compose( [
 	withSelect( ( select ) => ( {
 		isActive: select( 'core/edit-post' ).isFeatureActive( 'editorMinHeight' ),
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitHeightTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackHeightTools' ),
 	} ) ),
 	withDispatch( ( dispatch ) => ( {
 		onToggle() {

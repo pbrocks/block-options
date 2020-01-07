@@ -13,13 +13,13 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/markdown';
+const name = 'sidetrack/markdown';
 
 export const markdown = {
 	name,
-	title: __( 'Underline', 'block-options' ),
+	title: __( 'Underline', 'blockshop-options' ),
 	tagName: 'p',
-	className: 'editorskit-markdown',
+	className: 'sidetrack-markdown',
 	attributes: {
 		style: 'style',
 	},

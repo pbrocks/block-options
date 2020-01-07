@@ -29,23 +29,23 @@ class DisableTitle extends Component {
 		const titleBlock = document.querySelector( '.editor-post-title__block' );
 
 		if ( titleBlock ) {
-			const isHidden = typeof postmeta !== 'undefined' && typeof postmeta._editorskit_title_hidden !== 'undefined' ? postmeta._editorskit_title_hidden : false;
-			const bodyClass = isHidden ? 'editorskit-title-hidden' : 'editorskit-title-visible';
+			const isHidden = typeof postmeta !== 'undefined' && typeof postmeta._sidetrack_title_hidden !== 'undefined' ? postmeta._sidetrack_title_hidden : false;
+			const bodyClass = isHidden ? 'sidetrack-title-hidden' : 'sidetrack-title-visible';
 
 			//remove existing class
 			if ( isHidden ) {
-				document.body.classList.remove( 'editorskit-title-visible' );
+				document.body.classList.remove( 'sidetrack-title-visible' );
 			} else {
-				document.body.classList.remove( 'editorskit-title-hidden' );
+				document.body.classList.remove( 'sidetrack-title-hidden' );
 			}
 
 			document.body.classList.add( bodyClass );
 
 			//hide if disabled
 			if ( isDisabled ) {
-				document.body.classList.add( 'editorskit-title-visible-disabled' );
+				document.body.classList.add( 'sidetrack-title-visible-disabled' );
 			} else {
-				document.body.classList.remove( 'editorskit-title-visible-disabled' );
+				document.body.classList.remove( 'sidetrack-title-visible-disabled' );
 			}
 		}
 	}
@@ -57,16 +57,16 @@ class DisableTitle extends Component {
 			return false;
 		}
 
-		const isHidden = typeof postmeta !== 'undefined' && typeof postmeta._editorskit_title_hidden !== 'undefined' ? postmeta._editorskit_title_hidden : false;
+		const isHidden = typeof postmeta !== 'undefined' && typeof postmeta._sidetrack_title_hidden !== 'undefined' ? postmeta._sidetrack_title_hidden : false;
 
 		return (
 			<PluginPostStatusInfo>
 				<CheckboxControl
-					className="editorskit-hide-title-label"
-					label={ __( 'Hide ' + posttype + ' Title', 'block-options' ) }
+					className="sidetrack-hide-title-label"
+					label={ __( 'Hide ' + posttype + ' Title', 'blockshop-options' ) }
 					checked={ isHidden }
 					onChange={ onToggle }
-					help={ isHidden ? __( 'Title is hidden on your website.', 'block-options' ) : null }
+					help={ isHidden ? __( 'Title is hidden on your website.', 'blockshop-options' ) : null }
 				/>
 			</PluginPostStatusInfo>
 		);
@@ -78,19 +78,19 @@ export default compose(
 		return {
 			posttype: select( 'core/editor' ).getEditedPostAttribute( 'type' ),
 			postmeta: select( 'core/editor' ).getEditedPostAttribute( 'meta' ),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitToggleTitleTools' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackToggleTitleTools' ),
 		};
 	} ),
 	withDispatch( ( dispatch, ownProps ) => {
 		let metavalue;
-		if ( typeof ownProps.postmeta !== 'undefined' && typeof ownProps.postmeta._editorskit_title_hidden !== 'undefined' ) {
-			metavalue = ownProps.postmeta._editorskit_title_hidden;
+		if ( typeof ownProps.postmeta !== 'undefined' && typeof ownProps.postmeta._sidetrack_title_hidden !== 'undefined' ) {
+			metavalue = ownProps.postmeta._sidetrack_title_hidden;
 		}
 		return {
 			onToggle() {
 				dispatch( 'core/editor' ).editPost( {
 					meta: {
-						_editorskit_title_hidden: ! metavalue,
+						_sidetrack_title_hidden: ! metavalue,
 					},
 				} );
 			},

@@ -4,11 +4,11 @@
  *
  * @copyright   Copyright (c) 2019, Jeffrey Carandang
  * @since       1.9.2
- * @package     EditorsKit
+ * @package     Sidetrack
  */
 
 // Block Lab : https://github.com/getblocklab/block-lab/pull/373.
-if ( ! function_exists( 'editorskit_block_lab_default_fields' ) ) {
+if ( ! function_exists( 'sidetrack_block_lab_default_fields' ) ) {
 
 	/**
 	 * Filters blocklab plugin fields.
@@ -17,23 +17,23 @@ if ( ! function_exists( 'editorskit_block_lab_default_fields' ) ) {
 	 *
 	 * @return array Returns updated fields.
 	 */
-	function editorskit_block_lab_default_fields( $default_fields ) {
-		$default_fields['editorskit'] = 'array'; // The name and type.
+	function sidetrack_block_lab_default_fields( $default_fields ) {
+		$default_fields['sidetrack'] = 'array'; // The name and type.
 		return $default_fields;
 	}
-	add_filter( 'block_lab_default_fields', 'editorskit_block_lab_default_fields', 10, 3 );
+	add_filter( 'block_lab_default_fields', 'sidetrack_block_lab_default_fields', 10, 3 );
 }
 
-if ( ! function_exists( 'editorskit_blocklab_classname' ) ) {
+if ( ! function_exists( 'sidetrack_blocklab_classname' ) ) {
 
 	/**
-	 * EditorsKit helper function for BlockLab plugin
+	 * Sidetrack helper function for BlockLab plugin
 	 */
-	function editorskit_blocklab_classname() {
+	function sidetrack_blocklab_classname() {
 		$classes = '';
 		if ( function_exists( 'block_field' ) ) {
 
-			$value = block_field( 'editorskit', false );
+			$value = block_field( 'sidetrack', false );
 
 			if ( ! is_array( $value ) ) {
 
@@ -46,7 +46,7 @@ if ( ! function_exists( 'editorskit_blocklab_classname' ) ) {
 				// phpcs:ignore
 				if ( in_array( $device, $value ) && ! $value[ $device ] ) {
 
-					$classes .= ' editorskit-no-' . $device;
+					$classes .= ' sidetrack-no-' . $device;
 				}
 			}
 		}

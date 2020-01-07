@@ -12,13 +12,13 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/clear-formatting';
+const name = 'sidetrack/clear-formatting';
 
 export const clear = {
 	name,
-	title: __( 'Clear Formatting', 'block-options' ),
+	title: __( 'Clear Formatting', 'blockshop-options' ),
 	tagName: 'span',
-	className: 'editorskit-clear-formatting',
+	className: 'sidetrack-clear-formatting',
 	edit( { isActive, value, onChange, activeAttributes } ) {
 		return (
 			<Fragment>

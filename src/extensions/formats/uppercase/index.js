@@ -12,11 +12,11 @@ const { Fragment } = wp.element; // eslint-disable-line no-unused-vars
 /**
  * Block constants
  */
-const name = 'editorskit/uppercase';
+const name = 'sidetrack/uppercase';
 
 export const uppercase = {
 	name,
-	title: __( 'Uppercase', 'block-options' ),
+	title: __( 'Uppercase', 'blockshop-options' ),
 	tagName: 'span',
 	className: 'uppercase',
 	edit( { isActive, value, onChange, activeAttributes } ) {

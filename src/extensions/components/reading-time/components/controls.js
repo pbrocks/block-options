@@ -50,7 +50,7 @@ class ReadingTime extends Component {
 			const checkExist = setInterval( function() {
 				if ( document.querySelector( '.table-of-contents__popover' ) ) {
 					document.querySelector( '.table-of-contents__counts' ).insertAdjacentHTML( 'beforeend',
-						`<li class="table-of-contents__count table-of-contents__wordcount">${ __( 'Reading Time', 'block-options' ) }<span class="table-of-contents__number">${ estimated } min</span></li>`
+						`<li class="table-of-contents__count table-of-contents__wordcount">${ __( 'Reading Time', 'blockshop-options' ) }<span class="table-of-contents__number">${ estimated } min</span></li>`
 					);
 					clearInterval( checkExist );
 				}
@@ -111,14 +111,14 @@ export default compose( [
 	withSelect( () => ( {
 		content: select( 'core/editor' ).getEditedPostAttribute( 'content' ),
 		blocks: select( 'core/editor' ).getEditedPostAttribute( 'blocks' ),
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitReadingTimeWriting' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackReadingTimeWriting' ),
 	} ) ),
 	withDispatch( ( dispatch ) => {
 		return {
 			updateReadingTime( estimated ) {
 				dispatch( 'core/editor' ).editPost( {
 					meta: {
-						_editorskit_reading_time: estimated,
+						_sidetrack_reading_time: estimated,
 					},
 				} );
 			},

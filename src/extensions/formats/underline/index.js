@@ -10,18 +10,18 @@ const { select } = wp.data;
 /**
  * Block constants
  */
-const name = 'editorskit/underline';
+const name = 'sidetrack/underline';
 
 export const underline = {
 	name,
-	title: __( 'Underline', 'block-options' ),
+	title: __( 'Underline', 'blockshop-options' ),
 	tagName: 'span',
 	className: 'ek-underline',
 	attributes: {
 		style: 'style',
 	},
 	edit( { isActive, value, onChange } ) {
-		const isDisabled = select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitUnderlineFormats' );
+		const isDisabled = select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackUnderlineFormats' );
 		const formatTypes = select( 'core/rich-text' ).getFormatTypes();
 		const checkFormats = formatTypes.filter( ( formats ) => formats.name === 'wpcom/underline' );
 
@@ -45,7 +45,7 @@ export const underline = {
 				/>
 				{ ! isDisabled && checkFormats.length === 0 && ( <RichTextToolbarButton
 					icon="editor-underline"
-					title={ __( 'Underline', 'block-options' ) }
+					title={ __( 'Underline', 'blockshop-options' ) }
 					onClick={ onToggle }
 					isActive={ isActive }
 					shortcutType="primary"

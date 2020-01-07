@@ -1,6 +1,6 @@
 # Help, Tips and Tricks
 
-EditorsKit provides **accessible help, tips and tricks** to help you navigate easily and save time on learning the new Gutenberg block editor through tips and tricks.
+Sidetrack provides **accessible help, tips and tricks** to help you navigate easily and save time on learning the new Gutenberg block editor through tips and tricks.
 
 # How to access help, tips and tricks?
 

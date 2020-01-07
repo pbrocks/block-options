@@ -1,6 +1,6 @@
 # Subscript and Superscript Text Formatting
 
-Transform any selected text or word to **subscript** or **superscript** easily using text formats added by EditorsKit.
+Transform any selected text or word to **subscript** or **superscript** easily using text formats added by Sidetrack.
 
 ## Change text to subscript or superscript.
 

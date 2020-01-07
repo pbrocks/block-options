@@ -2,15 +2,15 @@
 /**
  * Add theme support for template body class
  *
- * @package   EditorsKit
+ * @package   Sidetrack
  * @author    Jeffrey Carandang
- * @link      https://editorskit.com
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
 // @codingStandardsIgnoreStart
 /*
-	add_theme_support('editorskit-template-block-sizes', array(
+	add_theme_support('sidetrack-template-block-sizes', array(
 		'page-templates/landing.php' => array(
 			'default' 	=> '500px',
 			'wide' 		=> '900px',
@@ -18,7 +18,7 @@
 		)
 	));
 
-	add_theme_support('editorskit-genesis-layout-block-sizes', array(
+	add_theme_support('sidetrack-genesis-layout-block-sizes', array(
 		'content-sidebar' => array(
 			'default' 	=> array(
 								'post' 	=> '700px',
@@ -41,13 +41,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class EditorsKit_Page_Template_Support {
+class Sidetrack_Page_Template_Support {
 
 
 	/**
 	 * This plugin's instance.
 	 *
-	 * @var EditorsKit_Page_Template_Support
+	 * @var Sidetrack_Page_Template_Support
 	 */
 	private static $instance;
 
@@ -56,7 +56,7 @@ class EditorsKit_Page_Template_Support {
 	 */
 	public static function register() {
 		if ( null === self::$instance ) {
-			self::$instance = new EditorsKit_Page_Template_Support();
+			self::$instance = new Sidetrack_Page_Template_Support();
 		}
 	}
 
@@ -86,21 +86,21 @@ class EditorsKit_Page_Template_Support {
 	 */
 	private function __construct() {
 		$this->version = EDITORSKIT_VERSION;
-		$this->slug    = 'editorskit';
+		$this->slug    = 'sidetrack';
 		$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ), 100 );
 	}
 
 	/**
-	 * Support custom theme support for editorskit-template-block-sizes
+	 * Support custom theme support for sidetrack-template-block-sizes
 	 *
 	 * @access public
 	 */
 	public function theme_support() {
 
-		if ( current_theme_supports( 'editorskit-template-block-sizes' ) ) {
-			$theme_support = get_theme_support( 'editorskit-template-block-sizes' );
+		if ( current_theme_supports( 'sidetrack-template-block-sizes' ) ) {
+			$theme_support = get_theme_support( 'sidetrack-template-block-sizes' );
 			if ( $theme_support ) {
 				add_filter( 'admin_body_class', array( $this, 'body_class_support' ) );
 
@@ -114,8 +114,8 @@ class EditorsKit_Page_Template_Support {
 			}
 		}
 
-		if ( current_theme_supports( 'editorskit-genesis-layout-block-sizes' ) ) {
-			$theme_support = get_theme_support( 'editorskit-genesis-layout-block-sizes' );
+		if ( current_theme_supports( 'sidetrack-genesis-layout-block-sizes' ) ) {
+			$theme_support = get_theme_support( 'sidetrack-genesis-layout-block-sizes' );
 			if ( $theme_support ) {
 				add_filter( 'admin_body_class', array( $this, 'genesis_layout_support' ) );
 
@@ -140,7 +140,7 @@ class EditorsKit_Page_Template_Support {
 	public function body_class_support( $classes ) {
 		global $post;
 
-		$classes .= 'editorskit-body-class-on ';
+		$classes .= 'sidetrack-body-class-on ';
 
 		if ( isset( $post->ID ) ) {
 			$template = str_replace( array( '.', '/' ), '-', get_page_template_slug( $post->ID ) );
@@ -166,14 +166,14 @@ class EditorsKit_Page_Template_Support {
 		}
 
 		wp_register_style(
-			'editorskit-body-class',
+			'sidetrack-body-class',
 			false,
 			array(),
 			$this->version
 		);
-		wp_enqueue_style( 'editorskit-body-class' );
+		wp_enqueue_style( 'sidetrack-body-class' );
 
-		$theme_support = get_theme_support( 'editorskit-template-block-sizes' );
+		$theme_support = get_theme_support( 'sidetrack-template-block-sizes' );
 		$selector      = ' .editor-styles-wrapper .wp-block';
 		$style         = '';
 
@@ -195,7 +195,7 @@ class EditorsKit_Page_Template_Support {
 			}
 		}
 
-		wp_add_inline_style( 'editorskit-body-class', $style );
+		wp_add_inline_style( 'sidetrack-body-class', $style );
 	}
 
 	/**
@@ -208,7 +208,7 @@ class EditorsKit_Page_Template_Support {
 	public function genesis_layout_support( $classes ) {
 		global $post;
 
-		$classes .= 'editorskit-genesis-body-class-on ';
+		$classes .= 'sidetrack-genesis-body-class-on ';
 
 		if ( isset( $post->ID ) && function_exists( 'genesis_get_custom_field' ) ) {
 			$layout = genesis_get_custom_field( '_genesis_layout', $post->ID );
@@ -233,14 +233,14 @@ class EditorsKit_Page_Template_Support {
 		}
 
 		wp_register_style(
-			'editorskit-genesis-body-class',
+			'sidetrack-genesis-body-class',
 			false,
 			array(),
 			$this->version
 		);
-		wp_enqueue_style( 'editorskit-genesis-body-class' );
+		wp_enqueue_style( 'sidetrack-genesis-body-class' );
 
-		$theme_support = get_theme_support( 'editorskit-genesis-layout-block-sizes' );
+		$theme_support = get_theme_support( 'sidetrack-genesis-layout-block-sizes' );
 		$selector      = ' .editor-styles-wrapper .wp-block';
 		$style         = '';
 
@@ -274,9 +274,9 @@ class EditorsKit_Page_Template_Support {
 			}
 		}
 
-		wp_add_inline_style( 'editorskit-genesis-body-class', $style );
+		wp_add_inline_style( 'sidetrack-genesis-body-class', $style );
 	}
 
 }
 
-EditorsKit_Page_Template_Support::register();
+Sidetrack_Page_Template_Support::register();

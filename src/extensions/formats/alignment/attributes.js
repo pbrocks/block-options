@@ -30,6 +30,6 @@ function addAttributes( settings ) {
 
 addFilter(
 	'blocks.registerBlockType',
-	'editorskit/alignment/attributes',
+	'sidetrack/alignment/attributes',
 	addAttributes
 );

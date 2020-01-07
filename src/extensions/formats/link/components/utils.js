@@ -93,7 +93,7 @@ export function isValidHref( href ) {
  */
 export function createLinkFormat( { url, opensInNewWindow, noFollow, sponsored, text } ) {
 	const format = {
-		type: 'editorskit/link',
+		type: 'sidetrack/link',
 		attributes: {
 			url,
 		},
@@ -103,7 +103,7 @@ export function createLinkFormat( { url, opensInNewWindow, noFollow, sponsored, 
 
 	if ( opensInNewWindow ) {
 		// translators: accessibility label for external links, where the argument is the link text
-		const label = sprintf( __( '%s (opens in a new tab)', 'block-options' ), text );
+		const label = sprintf( __( '%s (opens in a new tab)', 'blockshop-options' ), text );
 
 		format.attributes.target = '_blank';
 		format.attributes[ 'aria-label' ] = label;

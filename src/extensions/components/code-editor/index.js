@@ -8,7 +8,7 @@ import CodeEditor from './components/code-editor';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-code-editor', {
+registerPlugin( 'sidetrack-code-editor', {
 	icon: false,
 	render: CodeEditor,
 } );

@@ -19,14 +19,14 @@ const { compose, createHigherOrderComponent } = wp.compose;
 const { PanelBody } = wp.components;
 const { hasBlockSupport } = wp.blocks;
 
-const restrictedBlocks = [ 'core/block', 'core/freeform', 'core/shortcode', 'core/template', 'core/nextpage', 'editorskit/import' ];
+const restrictedBlocks = [ 'core/block', 'core/freeform', 'core/shortcode', 'core/template', 'core/nextpage', 'sidetrack/import' ];
 
 const enhance = compose(
 	withSelect( () => {
 		return {
-			isDisabledButtonWidth: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitButtonFullwidthOptions' ),
-			isDisabledDevices: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitDevicesVisibility' ),
-			isDisabledUserState: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitUserStateVisibility' ),
+			isDisabledButtonWidth: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackButtonFullwidthOptions' ),
+			isDisabledDevices: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackDevicesVisibility' ),
+			isDisabledUserState: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackUserStateVisibility' ),
 		};
 	} )
 );
@@ -50,7 +50,7 @@ const withAdvancedControls = createHigherOrderComponent( ( BlockEdit ) => {
 		} = props;
 
 		const {
-			editorskit,
+			sidetrack,
 			blockOpts,
 		} = attributes;
 
@@ -58,8 +58,8 @@ const withAdvancedControls = createHigherOrderComponent( ( BlockEdit ) => {
 		const withFullWidthDisplay = hasBlockSupport( name, 'hasFullWidthDisplay' );
 
 		//compatibility with version 1
-		if ( typeof editorskit !== 'undefined' && ! editorskit.migrated && blockOpts ) {
-			props.attributes.editorskit = Object.assign( props.attributes.editorskit, {
+		if ( typeof sidetrack !== 'undefined' && ! sidetrack.migrated && blockOpts ) {
+			props.attributes.sidetrack = Object.assign( props.attributes.sidetrack, {
 				devices: false,
 				desktop: ( ( blockOpts.devices === 'show' && blockOpts.desktop !== 'on' ) || ( blockOpts.devices === 'hide' && blockOpts.desktop === 'on' ) ) ? false : true,
 				tablet: ( ( blockOpts.devices === 'show' && blockOpts.tablet !== 'on' ) || ( blockOpts.devices === 'hide' && blockOpts.tablet === 'on' ) ) ? false : true,
@@ -78,11 +78,11 @@ const withAdvancedControls = createHigherOrderComponent( ( BlockEdit ) => {
 			if ( ! props.attributes.className ) {
 				props.attributes.className = '';
 			}
-			let newClassNames = props.attributes.className.replace( 'b' + blockOpts.id, '' ).replace( 'blockopts-show', '' ).replace( 'blockopts-hide', '' ).replace( 'blockopts-desktop', '' ).replace( 'blockopts-tablet', '' ).replace( 'blockopts-mobile', '' );
+			let newClassNames = props.attributes.className.replace( 'b' + blockOpts.id, '' ).replace( 'wpblockshop-show', '' ).replace( 'wpblockshop-hide', '' ).replace( 'wpblockshop-desktop', '' ).replace( 'wpblockshop-tablet', '' ).replace( 'wpblockshop-mobile', '' );
 			newClassNames = newClassNames.trim();
 			props.attributes.className = newClassNames;
 
-			setAttributes( { editorskit: props.attributes.editorskit, className: newClassNames } );
+			setAttributes( { sidetrack: props.attributes.sidetrack, className: newClassNames } );
 		}
 
 		return (
@@ -103,11 +103,11 @@ const withAdvancedControls = createHigherOrderComponent( ( BlockEdit ) => {
 				{ isSelected && ! isDisabledDevices && ! restrictedBlocks.includes( name ) &&
 					<InspectorControls>
 						<PanelBody
-							title={ __( 'Responsive', 'block-options' ) }
+							title={ __( 'Responsive', 'blockshop-options' ) }
 							initialOpen={ false }
-							className="editorskit-panel"
+							className="sidetrack-panel"
 						>
-							<small>{ __( 'Attention: The display settings (show/hide for mobile, tablet or desktop) will only take effect once you are on the live page, and not while you\'re editing in Gutenberg.', 'block-options' ) }</small>
+							<small>{ __( 'Attention: The display settings (show/hide for mobile, tablet or desktop) will only take effect once you are on the live page, and not while you\'re editing in Gutenberg.', 'blockshop-options' ) }</small>
 							{ DevicesOptions( props ) }
 						</PanelBody>
 					</InspectorControls>
@@ -124,6 +124,6 @@ const withAdvancedControls = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/advanced',
+	'sidetrack/advanced',
 	withAdvancedControls
 );

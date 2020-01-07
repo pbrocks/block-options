@@ -8,7 +8,7 @@ import FeaturesManagerModal from './components/';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-features-manager', {
+registerPlugin( 'sidetrack-features-manager', {
 	icon: false,
 	render: FeaturesManagerModal,
 } );

@@ -4,14 +4,14 @@
  *
  * @copyright   Copyright (c) 2019, Jeffrey Carandang
  * @since       1.0
- * @package     EditorsKit
+ * @package     Sidetrack
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'editorskit_hide_title' ) ) {
+if ( ! function_exists( 'sidetrack_hide_title' ) ) {
 
 	/**
 	 * Replace title with blank
@@ -21,11 +21,11 @@ if ( ! function_exists( 'editorskit_hide_title' ) ) {
 	 *
 	 * @return string Returns the new title.
 	 */
-	function editorskit_hide_title( $title, $id = null ) {
+	function sidetrack_hide_title( $title, $id = null ) {
 		// phpcs:ignore
 		if ( ! is_admin() && ! is_search() && ( strpos( esc_url( $_SERVER[ 'REQUEST_URI' ] ), '/wp-json/' ) === false ) ) {
 
-			$hidden = get_post_meta( $id, '_editorskit_title_hidden', true );
+			$hidden = get_post_meta( $id, '_sidetrack_title_hidden', true );
 			if ( $hidden ) {
 
 				return '';
@@ -34,10 +34,10 @@ if ( ! function_exists( 'editorskit_hide_title' ) ) {
 
 		return $title;
 	}
-	add_filter( 'the_title', 'editorskit_hide_title', 10, 2 );
+	add_filter( 'the_title', 'sidetrack_hide_title', 10, 2 );
 }
 
-if ( ! function_exists( 'editorskit_hidden_title_body_class' ) ) {
+if ( ! function_exists( 'sidetrack_hidden_title_body_class' ) ) {
 
 	/**
 	 * Replace title with blank
@@ -46,26 +46,26 @@ if ( ! function_exists( 'editorskit_hidden_title_body_class' ) ) {
 	 *
 	 * @return array Returns the new body classes.
 	 */
-	function editorskit_hidden_title_body_class( $classes ) {
+	function sidetrack_hidden_title_body_class( $classes ) {
 		if ( ! is_admin() && ! is_search() ) {
 
 			global $post;
 			if ( isset( $post->ID ) ) {
 
-				$hidden = get_post_meta( $post->ID, '_editorskit_title_hidden', true );
+				$hidden = get_post_meta( $post->ID, '_sidetrack_title_hidden', true );
 
 				if ( $hidden ) {
 
-					$classes[] = 'editorskit-title-hidden';
+					$classes[] = 'sidetrack-title-hidden';
 				}
 			}
 		}
 		return $classes;
 	}
-	add_filter( 'body_class', 'editorskit_hidden_title_body_class' );
+	add_filter( 'body_class', 'sidetrack_hidden_title_body_class' );
 }
 
-if ( ! function_exists( 'editorskit_remove_title_filter_nav_menu' ) ) {
+if ( ! function_exists( 'sidetrack_remove_title_filter_nav_menu' ) ) {
 
 	/**
 	 * Replace title with blank
@@ -75,15 +75,15 @@ if ( ! function_exists( 'editorskit_remove_title_filter_nav_menu' ) ) {
 	 *
 	 * @return array Returns the new $nav_menu.
 	 */
-	function editorskit_remove_title_filter_nav_menu( $nav_menu, $args ) {
+	function sidetrack_remove_title_filter_nav_menu( $nav_menu, $args ) {
 
-		remove_filter( 'the_title', 'editorskit_hide_title', 10, 2 );
+		remove_filter( 'the_title', 'sidetrack_hide_title', 10, 2 );
 		return $nav_menu;
 	}
-	add_filter( 'pre_wp_nav_menu', 'editorskit_remove_title_filter_nav_menu', 10, 2 );
+	add_filter( 'pre_wp_nav_menu', 'sidetrack_remove_title_filter_nav_menu', 10, 2 );
 }
 
-if ( ! function_exists( 'editorskit_add_title_filter_non_menu' ) ) {
+if ( ! function_exists( 'sidetrack_add_title_filter_non_menu' ) ) {
 
 	/**
 	 * Replace title with blank
@@ -93,16 +93,16 @@ if ( ! function_exists( 'editorskit_add_title_filter_non_menu' ) ) {
 	 *
 	 * @return array Returns the new $items.
 	 */
-	function editorskit_add_title_filter_non_menu( $items, $args ) {
+	function sidetrack_add_title_filter_non_menu( $items, $args ) {
 		// we are done working with menu, so add the title filter back.
-		add_filter( 'the_title', 'editorskit_hide_title', 10, 2 );
+		add_filter( 'the_title', 'sidetrack_hide_title', 10, 2 );
 		return $items;
 	}
-	add_filter( 'wp_nav_menu_items', 'editorskit_add_title_filter_non_menu', 10, 2 );
+	add_filter( 'wp_nav_menu_items', 'sidetrack_add_title_filter_non_menu', 10, 2 );
 }
 
 
-if ( ! function_exists( 'editorskit_admin_body_class' ) ) {
+if ( ! function_exists( 'sidetrack_admin_body_class' ) ) {
 
 	/**
 	 * Replace title with blank
@@ -111,18 +111,18 @@ if ( ! function_exists( 'editorskit_admin_body_class' ) ) {
 	 *
 	 * @return array Returns the new body classes.
 	 */
-	function editorskit_admin_body_class( $classes ) {
+	function sidetrack_admin_body_class( $classes ) {
 		global $post;
 		if ( isset( $post->ID ) ) {
 
-			$hidden = get_post_meta( $post->ID, '_editorskit_title_hidden', true );
+			$hidden = get_post_meta( $post->ID, '_sidetrack_title_hidden', true );
 			if ( $hidden ) {
 
-				$classes .= 'editorskit-title-hidden ';
+				$classes .= 'sidetrack-title-hidden ';
 			}
 		}
 
 		return $classes;
 	}
-	add_filter( 'admin_body_class', 'editorskit_admin_body_class', 10, 2 );
+	add_filter( 'admin_body_class', 'sidetrack_admin_body_class', 10, 2 );
 }

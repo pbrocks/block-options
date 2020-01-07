@@ -8,7 +8,7 @@ import SetAsFeaturedImage from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-set-as-featured-image', {
+registerPlugin( 'sidetrack-set-as-featured-image', {
 	icon: 'format-image',
 	render: SetAsFeaturedImage,
 } );

@@ -4,7 +4,7 @@
 const { select } = wp.data;
 
 function PageTemplateBodyClass() {
-	if ( document.body.classList.contains( 'editorskit-body-class-on' ) ) {
+	if ( document.body.classList.contains( 'sidetrack-body-class-on' ) ) {
 		const templateSelector = document.querySelector( '.editor-page-attributes__template select' );
 		const genesisLayoutSelector = document.querySelectorAll( '.genesis-layout-selector input' );
 		const postType 		 = select( 'core/editor' ).getEditedPostAttribute( 'type' );

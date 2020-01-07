@@ -30,13 +30,13 @@ const ColumnColorSettings = ( props ) => {
 			<InspectorControls>
 				{ ! isTextColorDisabled && (
 					<PanelColorSettings
-						title={ __( 'Color Settings', 'block-options' ) }
+						title={ __( 'Color Settings', 'blockshop-options' ) }
 						initialOpen={ false }
 						colorSettings={ [
 							{
 								value: backgroundColor.color,
 								onChange: setBackgroundColor,
-								label: __( 'Background Color', 'block-options' ),
+								label: __( 'Background Color', 'blockshop-options' ),
 							},
 						] }
 					>
@@ -50,7 +50,7 @@ const ColumnColorSettings = ( props ) => {
 export default compose( [
 	withSelect( ( select ) => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitColumnsBackgroundOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackColumnsBackgroundOptions' ),
 		};
 	} ),
 	withColors( { backgroundColor: 'color' } ),

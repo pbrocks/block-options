@@ -92,15 +92,15 @@ class MarkdownFormatting extends Component {
 						this.setState( { isOpen: true } );
 					} }
 				>
-					{ __( 'Markdown Formatting', 'block-options' ) }
+					{ __( 'Markdown Formatting', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 				{ this.state.isOpen ?
 					<Modal
-						title={ __( 'Keyboard Shortcuts', 'block-options' ) }
+						title={ __( 'Keyboard Shortcuts', 'blockshop-options' ) }
 						onRequestClose={ () => closeModal() }
-						closeLabel={ __( 'Close', 'block-options' ) }
+						closeLabel={ __( 'Close', 'blockshop-options' ) }
 						icon={ null }
-						className="editorskit-modal-component components-modal--editorskit-markdown"
+						className="sidetrack-modal-component components-modal--sidetrack-markdown"
 					>
 						{ shortcutConfig.map( ( config, index ) => (
 							<ShortcutSection key={ index } { ...config } />
@@ -115,7 +115,7 @@ class MarkdownFormatting extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitMarkdownWriting' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackMarkdownWriting' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

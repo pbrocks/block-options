@@ -2,9 +2,9 @@
 /**
  * Register post meta.
  *
- * @package   EditorsKit
- * @author    Jeffrey Carandang from EditorsKit
- * @link      https://editorskit.com
+ * @package   Sidetrack
+ * @author    Jeffrey Carandang from Sidetrack
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -14,11 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * EditorsKit_Post_Meta Class
+ * Sidetrack_Post_Meta Class
  *
  * @since 1.6.0
  */
-class EditorsKit_Post_Meta {
+class Sidetrack_Post_Meta {
 
 	/**
 	 * Constructor
@@ -34,7 +34,7 @@ class EditorsKit_Post_Meta {
 	public function register_meta() {
 		register_meta(
 			'post',
-			'_editorskit_title_hidden',
+			'_sidetrack_title_hidden',
 			array(
 				'show_in_rest'  => true,
 				'single'        => true,
@@ -47,7 +47,7 @@ class EditorsKit_Post_Meta {
 
 		register_meta(
 			'post',
-			'_editorskit_reading_time',
+			'_sidetrack_reading_time',
 			array(
 				'show_in_rest'  => true,
 				'single'        => true,
@@ -72,10 +72,10 @@ class EditorsKit_Post_Meta {
 
 		if ( strpos( $request->get_route(), '/wp/v2/block-renderer' ) !== false ) {
 
-			if ( isset( $request['attributes'] ) && isset( $request['attributes']['editorskit'] ) ) {
+			if ( isset( $request['attributes'] ) && isset( $request['attributes']['sidetrack'] ) ) {
 
 				$attributes = $request['attributes'];
-				unset( $attributes['editorskit'] );
+				unset( $attributes['sidetrack'] );
 				$request['attributes'] = $attributes;
 			}
 		}
@@ -84,4 +84,4 @@ class EditorsKit_Post_Meta {
 	}
 }
 
-return new EditorsKit_Post_Meta();
+return new Sidetrack_Post_Meta();

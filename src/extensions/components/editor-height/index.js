@@ -8,7 +8,7 @@ import EditorMinHeight from './components/height';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-editor-height', {
+registerPlugin( 'sidetrack-editor-height', {
 	icon: false,
 	render: EditorMinHeight,
 } );

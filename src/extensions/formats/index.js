@@ -21,9 +21,9 @@ import { underline } from './underline';
 const { registerFormatType } = wp.richText;
 const { select } = wp.data;
 
-const isDisabled = select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitLinkFormats' );
+const isDisabled = select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackLinkFormats' );
 
-function registerEditorsKitFormats() {
+function registerSidetrackFormats() {
 	[
 		justify,
 		textColor,
@@ -46,5 +46,5 @@ function registerEditorsKitFormats() {
 }
 
 wp.domReady(
-	registerEditorsKitFormats
+	registerSidetrackFormats
 );

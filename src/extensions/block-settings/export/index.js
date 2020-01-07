@@ -8,7 +8,7 @@ import ExportManager from './components/export';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-features-import-export', {
+registerPlugin( 'sidetrack-features-import-export', {
 	icon: false,
 	render: ExportManager,
 } );

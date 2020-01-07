@@ -1,6 +1,6 @@
 # Export and Import Blocks
 
-**Export Single or Multiple Selected Block** easily via EditorsKit then just drag and drop the exported `.json` file to the Gutenberg editor and it will automagically be imported.
+**Export Single or Multiple Selected Block** easily via Sidetrack then just drag and drop the exported `.json` file to the Gutenberg editor and it will automagically be imported.
 
 ## How to export single or multiple blocks?
 

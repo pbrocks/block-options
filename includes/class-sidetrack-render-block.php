@@ -2,9 +2,9 @@
 /**
  * Load assets for our blocks.
  *
- * @package   EditorsKit
+ * @package   Sidetrack
  * @author    Jeffrey Carandang
- * @link      https://editorskit.com
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -18,13 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class EditorsKit_Render_Block {
+class Sidetrack_Render_Block {
 
 
 	/**
 	 * This plugin's instance.
 	 *
-	 * @var EditorsKit_Render_Block
+	 * @var Sidetrack_Render_Block
 	 */
 	private static $instance;
 
@@ -33,7 +33,7 @@ class EditorsKit_Render_Block {
 	 */
 	public static function register() {
 		if ( null === self::$instance ) {
-			self::$instance = new EditorsKit_Render_Block();
+			self::$instance = new Sidetrack_Render_Block();
 		}
 	}
 
@@ -70,7 +70,7 @@ class EditorsKit_Render_Block {
 	 */
 	private function __construct() {
 		$this->version = EDITORSKIT_VERSION;
-		$this->slug    = 'editorskit';
+		$this->slug    = 'sidetrack';
 		$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 		if ( ! is_admin() ) {
@@ -88,16 +88,16 @@ class EditorsKit_Render_Block {
 	 * @return array Returns the block attributes.
 	 */
 	private function block_attributes( $block ) {
-		if ( isset( $block['attrs'] ) && isset( $block['attrs']['editorskit'] ) && is_array( $block['attrs'] ) ) {
+		if ( isset( $block['attrs'] ) && isset( $block['attrs']['sidetrack'] ) && is_array( $block['attrs'] ) ) {
 
-			return $block['attrs']['editorskit'];
+			return $block['attrs']['sidetrack'];
 		}
 
 		return [];
 	}
 
 	/**
-	 * EditorsKit compatibility to old Block Options.
+	 * Sidetrack compatibility to old Block Options.
 	 *
 	 * @param array $block The block data.
 	 *
@@ -157,7 +157,7 @@ class EditorsKit_Render_Block {
 			$logic = stripslashes( trim( $this->attributes['logic'] ) );
 
 			// allow override filters.
-			$logic = apply_filters( 'editorskit_logic_override', $logic );
+			$logic = apply_filters( 'sidetrack_logic_override', $logic );
 			$logic = apply_filters( 'block_options_logic_override', $logic );
 			if ( false === $logic ) {
 				return '';
@@ -279,7 +279,7 @@ class EditorsKit_Render_Block {
 				}
 
 				// //do return to bypass other conditions
-				$hidden = apply_filters( 'editorskit_visibility_acf', $hidden );
+				$hidden = apply_filters( 'sidetrack_visibility_acf', $hidden );
 
 				if ( $hidden ) {
 					return '';
@@ -302,7 +302,7 @@ class EditorsKit_Render_Block {
 		if ( isset( $block['blockName'] ) && 'core/media-text' === $block['blockName'] ) {
 			$attributes = $block['attrs'];
 			if ( isset( $attributes['href'] ) && ! empty( $attributes['href'] ) ) {
-				$linked = '<a href="' . $attributes['href'] . '" class="editorskit-media-text-link"';
+				$linked = '<a href="' . $attributes['href'] . '" class="sidetrack-media-text-link"';
 				$rel    = 'rel="';
 
 				if ( isset( $attributes['linkTarget'] ) && '_blank' === $attributes['linkTarget'] ) {
@@ -377,8 +377,8 @@ class EditorsKit_Render_Block {
 	 */
 	public function block_lab_get_block_attributes( $attributes, $block ) {
 
-		if ( ! isset( $attributes['editorskit'] ) ) {
-			$attributes['editorskit'] = array(
+		if ( ! isset( $attributes['sidetrack'] ) ) {
+			$attributes['sidetrack'] = array(
 				'type' => 'object',
 			);
 		}
@@ -388,4 +388,4 @@ class EditorsKit_Render_Block {
 
 }
 
-EditorsKit_Render_Block::register();
+Sidetrack_Render_Block::register();

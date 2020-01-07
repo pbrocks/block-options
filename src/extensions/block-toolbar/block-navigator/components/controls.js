@@ -32,7 +32,7 @@ class NavigatorToolbar extends Component {
 		const navigatorToolbarButton = (
 			<IconButton
 				className="components-toolbar__control"
-				label={ __( 'Open block navigator', 'block-options' ) }
+				label={ __( 'Open block navigator', 'blockshop-options' ) }
 				onClick={ () => this.setState( { isNavigationListOpen: true } ) }
 				icon={ NavigatorIcon }
 			/>
@@ -40,8 +40,8 @@ class NavigatorToolbar extends Component {
 
 		const navigatorModal = this.state.isNavigationListOpen && (
 			<Modal
-				title={ __( 'Block Navigator', 'block-options' ) }
-				closeLabel={ __( 'Close', 'block-options' ) }
+				title={ __( 'Block Navigator', 'blockshop-options' ) }
+				closeLabel={ __( 'Close', 'blockshop-options' ) }
 				onRequestClose={ () => {
 					this.setState( { isNavigationListOpen: false } );
 				} }
@@ -87,7 +87,7 @@ export default compose(
 			clientId,
 			block: getBlock( clientId ),
 			selectedBlockClientId: getSelectedBlockClientId(),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitNavigatorOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackNavigatorOptions' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => ( {

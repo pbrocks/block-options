@@ -25,9 +25,9 @@ class HeadingLabel extends Component {
 	sync() {
 		const { isDisabled } = this.props;
 		if ( ! isDisabled ) {
-			document.body.classList.add( 'is-editorskit-heading-label-on' );
+			document.body.classList.add( 'is-sidetrack-heading-label-on' );
 		} else {
-			document.body.classList.remove( 'is-editorskit-heading-label-on' );
+			document.body.classList.remove( 'is-sidetrack-heading-label-on' );
 		}
 	}
 
@@ -38,7 +38,7 @@ class HeadingLabel extends Component {
 
 export default compose( [
 	withSelect( ( select ) => ( {
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitHeadingLabelWriting' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackHeadingLabelWriting' ),
 	} ) ),
 	withSpokenMessages,
 ] )( HeadingLabel );

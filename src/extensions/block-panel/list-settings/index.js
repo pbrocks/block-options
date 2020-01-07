@@ -37,9 +37,9 @@ const ListTextSettings = ( props ) => {
 			<InspectorControls>
 				{ ! isFontSizeDisabled && (
 					<PanelBody
-						title={ __( 'Text Settings', 'block-options' ) }
+						title={ __( 'Text Settings', 'blockshop-options' ) }
 						initialOpen={ false }
-						className="editorskit-panel"
+						className="sidetrack-panel"
 					>
 						<FontSizePicker
 							fallbackFontSize={ fallbackFontSize }
@@ -50,18 +50,18 @@ const ListTextSettings = ( props ) => {
 				) }
 				{ ! isTextColorDisabled && (
 					<PanelColorSettings
-						title={ __( 'Color Settings', 'block-options' ) }
+						title={ __( 'Color Settings', 'blockshop-options' ) }
 						initialOpen={ false }
 						colorSettings={ [
 							{
 								value: textColor.color,
 								onChange: setTextColor,
-								label: __( 'Text Color', 'block-options' ),
+								label: __( 'Text Color', 'blockshop-options' ),
 							},
 							{
 								value: bulletColor,
 								onChange: ( newBulletColor ) => setAttributes( { bulletColor: newBulletColor } ),
-								label: __( 'Bullet/Icon Color', 'block-options' ),
+								label: __( 'Bullet/Icon Color', 'blockshop-options' ),
 							},
 						] }
 					>
@@ -75,8 +75,8 @@ const ListTextSettings = ( props ) => {
 export default compose( [
 	withSelect( ( select ) => {
 		return {
-			isFontSizeDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitListBlockFontSizeOptions' ),
-			isTextColorDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitListBlockTextColorOptions' ),
+			isFontSizeDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackListBlockFontSizeOptions' ),
+			isTextColorDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackListBlockTextColorOptions' ),
 		};
 	} ),
 	withColors( { textColor: 'color' } ),

@@ -20,13 +20,13 @@ const { Button, Spinner, ResponsiveWrapper } = wp.components;
 const ALLOWED_MEDIA_TYPES = [ 'image' ];
 
 // Used when labels from post type were not yet loaded or when they are not present.
-const DEFAULT_FEATURE_IMAGE_LABEL = __( 'Featured Image', 'block-options' );
-const DEFAULT_SET_FEATURE_IMAGE_LABEL = __( 'Set Featured Image', 'block-options' );
-const DEFAULT_REMOVE_FEATURE_IMAGE_LABEL = __( 'Remove Image', 'block-options' );
+const DEFAULT_FEATURE_IMAGE_LABEL = __( 'Featured Image', 'blockshop-options' );
+const DEFAULT_SET_FEATURE_IMAGE_LABEL = __( 'Set Featured Image', 'blockshop-options' );
+const DEFAULT_REMOVE_FEATURE_IMAGE_LABEL = __( 'Remove Image', 'blockshop-options' );
 
 const PostFeaturedImage = ( { currentPostId, featuredImageId, onUpdateImage, onRemoveImage, media, postType } ) => {
 	const postLabel = get( postType, [ 'labels' ], {} );
-	const instructions = <p>{ __( 'To edit the featured image, you need permission to upload media.', 'block-options' ) }</p>;
+	const instructions = <p>{ __( 'To edit the featured image, you need permission to upload media.', 'blockshop-options' ) }</p>;
 
 	let mediaWidth, mediaHeight, mediaSourceUrl;
 	if ( media ) {
@@ -44,16 +44,16 @@ const PostFeaturedImage = ( { currentPostId, featuredImageId, onUpdateImage, onR
 
 	const dropZone = (
 		<BackgroundDropZone
-			label={ __( 'Upload Featured Image', 'block-options' ) }
+			label={ __( 'Upload Featured Image', 'blockshop-options' ) }
 		/>
 	);
 
 	return (
 		<PostFeaturedImageCheck>
-			<div className="editor-post-featured-image editorskit-post-featured-image">
+			<div className="editor-post-featured-image sidetrack-post-featured-image">
 				<MediaUploadCheck fallback={ instructions }>
 					{ dropZone }
-					<div className="editorskit-post-featured-spinner">
+					<div className="sidetrack-post-featured-spinner">
 						<Spinner />
 					</div>
 					<MediaUpload
@@ -65,7 +65,7 @@ const PostFeaturedImage = ( { currentPostId, featuredImageId, onUpdateImage, onR
 							<Button
 								className={ ! featuredImageId ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview' }
 								onClick={ open }
-								aria-label={ ! featuredImageId ? null : __( 'Edit or update the image', 'block-options' ) }>
+								aria-label={ ! featuredImageId ? null : __( 'Edit or update the image', 'blockshop-options' ) }>
 								{ !! featuredImageId && media &&
 									<ResponsiveWrapper
 										naturalWidth={ mediaWidth }
@@ -90,7 +90,7 @@ const PostFeaturedImage = ( { currentPostId, featuredImageId, onUpdateImage, onR
 							modalClass="editor-post-featured-image__media-modal"
 							render={ ( { open } ) => (
 								<Button onClick={ open } isDefault isLarge>
-									{ __( 'Replace Image', 'block-options' ) }
+									{ __( 'Replace Image', 'blockshop-options' ) }
 								</Button>
 							) }
 						/>

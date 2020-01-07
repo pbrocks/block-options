@@ -1,7 +1,7 @@
-=== Gutenberg Page Building Toolkit – EditorsKit ===
-Author URI: https://editorskit.com
-Plugin URI: https://editorskit.com
-Contributors: phpbits
+=== Gutenberg Page Building Toolkit – Sidetrack ===
+Author URI: https://sidetrack.com
+Plugin URI: https://sidetrack.com
+Contributors: pbrocks
 Tags: Gutenberg blocks, WordPress blocks, gutenberg, blocks, Gutenberg editor
 Requires at least: 5.0
 Tested up to: 5.3
@@ -11,19 +11,19 @@ License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FMKC2SLPTULP8
 
-EditorsKit provides set of page building tools to supercharge the new WordPress Gutenberg block editor.
+Sidetrack provides set of page building tools to supercharge the new WordPress Gutenberg block editor.
 
 == Description ==
 
-[EditorsKit](https://editorskit.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=editorskit) provides set of page building <strong>block options and toolkit</strong> for the new WordPress Gutenberg editor.
+[Sidetrack](https://sidetrack.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=sidetrack) provides set of page building <strong>block options and toolkit</strong> for the new WordPress Gutenberg editor.
 
-You can now have better control, text formats, styling and workflow by simply utilizing the tools provided by EditorsKit plugin.
+You can now have better control, text formats, styling and workflow by simply utilizing the tools provided by Sidetrack plugin.
 
 = See for yourself =
 https://www.youtube.com/watch?v=QWgO4lAJAlE
 
 ## Rich Text Formats
-[EditorsKit](https://editorskit.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=editorskit) also adds the missing text formats for better content creation. The following rich text format are available upon plugin activation:
+[Sidetrack](https://sidetrack.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=sidetrack) also adds the missing text formats for better content creation. The following rich text format are available upon plugin activation:
 
 * Links with "rel" nofollow and sponsored attribute option
 * Highlighted Text or Heading Colors
@@ -39,20 +39,20 @@ https://www.youtube.com/watch?v=QWgO4lAJAlE
 * Abbreviation for acronyms
 
 ## Markdown Support
-Starting [EditorsKit 1.6 ](https://jeffreycarandang.com/editorskit-1-6/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=editorskit), you can now use markdowns on Gutenberg editor while typing. Markdowns for `*bold*`, `_italic_` and `~strikethrough~` are available upon plugin activation. Lists of available markdowns are also accessible on the settings menu.
+Starting [Sidetrack 1.6 ](https://jeffreycarandang.com/sidetrack-1-6/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=sidetrack), you can now use markdowns on Gutenberg editor while typing. Markdowns for `*bold*`, `_italic_` and `~strikethrough~` are available upon plugin activation. Lists of available markdowns are also accessible on the settings menu.
 
 = Watch it in action =
 https://www.youtube.com/watch?v=ZgI8gdfxlaA
 
 
 ## Block Guide Lines
-[EditorsKit](https://editorskit.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=editorskit) features other tool aside from visibility management. With the new Block Guide Lines, you can easily toggle visible guide lines on title and each editor blocks in order to check the element boundaries. This feature will also help your workflow on handling nested blocks.
+[Sidetrack](https://sidetrack.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=sidetrack) features other tool aside from visibility management. With the new Block Guide Lines, you can easily toggle visible guide lines on title and each editor blocks in order to check the element boundaries. This feature will also help your workflow on handling nested blocks.
 
 = Watch it in action =
 https://www.youtube.com/watch?v=G8x5QkKGzhw
 
 ## Block Visibility
-Using EditorsKit you will have the following visibility control in order to manage and display better contents.
+Using Sidetrack you will have the following visibility control in order to manage and display better contents.
 
 * Show or hide Gutenberg blocks on desktop, tablet and mobile devices
 * User logged-in or logged-out state block visibility
@@ -60,11 +60,11 @@ Using EditorsKit you will have the following visibility control in order to mana
 * Show or hide Gutenberg blocks based on <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields Plugin(ACF)</a> Value
 
 ## Estimated Reading Time
-Word count is already available on Gutenberg editor. EditorsKit then extend this word count and display estimated count as well. Using roughly 275 word per minute plus additional calculations based on image blocks, you can display better estimated reading time on your posts and pages.
+Word count is already available on Gutenberg editor. Sidetrack then extend this word count and display estimated count as well. Using roughly 275 word per minute plus additional calculations based on image blocks, you can display better estimated reading time on your posts and pages.
 
 Powered by shortcode you can display the Estimated Reading Time on your content by using the code below.
 
-`[editorskit display="wordcount" before="Reading Time: " after=" min"]`
+`[sidetrack display="wordcount" before="Reading Time: " after=" min"]`
 
 * `before` : Text or element you want to display before reading time.
 * `after` : Text or element you want to display after reading time.
@@ -90,7 +90,7 @@ Easily hide post, page or any post type's title on your website in just a click.
 Export each block or selected blocks and reusable blocks directly on the editor, no need to navigate to separate admin dashboard. Then <strong>drag and drop</strong> exported JSON file on the editor and it will automatically be transformed into Gutenberg blocks, same goes with reusable blocks.
 
 ## Better Custom CSS Class(es)
-Huge improvement on `Additional CSS Class(es)` option! EditorsKit provides better UI with classes suggestions while typing. Powered with custom PHP filter, theme developers can include custom Utility Classes for more customization options.
+Huge improvement on `Additional CSS Class(es)` option! Sidetrack provides better UI with classes suggestions while typing. Powered with custom PHP filter, theme developers can include custom Utility Classes for more customization options.
 
 ## Set Image Block as Featured Image
 Enable selected image block to be set as featured image easily using the block settings dropdown.
@@ -111,20 +111,20 @@ Display "Block Navigator" on block that can contain multiple child blocks. Avail
 Improve interface and provide better writing experience.
 
 ## Features Manager
-Enable or disable EditorsKit features using "EditorsKit Settings" menu. This will give you full control over the plugin features and let you disable the features that you don't need on your website.
+Enable or disable Sidetrack features using "Sidetrack Settings" menu. This will give you full control over the plugin features and let you disable the features that you don't need on your website.
 
 ## Theme Supports for Developers
-[EditorsKit](https://editorskit.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=editorskit) is moving towards being developer friendly as well. Starting version 1.5, custom `theme_supports` were added to provide theme developers option to make Gutenberg block editing experience for their users match the frontend display. [Learn more here](https://jeffreycarandang.com/editorskit-1-5/).
+[Sidetrack](https://sidetrack.com?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=sidetrack) is moving towards being developer friendly as well. Starting version 1.5, custom `theme_supports` were added to provide theme developers option to make Gutenberg block editing experience for their users match the frontend display. [Learn more here](https://jeffreycarandang.com/sidetrack-1-5/).
 
 ## Accessible Help, Tips and Tricks
 Add help, tips and tricks button on the bottom right side of the editor to help users discover several helpful power tips and shortcuts. These tips will definitely improve your workflow and save time navigating the new block editor.
 
 ## Helping you with the new Gutenberg Editor
-EditorsKit is created to help you navigate through the new editor. Each new features will make your page building more convenient and easier. You can help achieving this goal through the community: 
+Sidetrack is created to help you navigate through the new editor. Each new features will make your page building more convenient and easier. You can help achieving this goal through the community: 
 
 * [Join Facebook Community](https://www.facebook.com/groups/1306393256173179/)
-* [Follow Us on Twitter](https://twitter.com/editorskit/)
-* [Contribute on Github](https://github.com/phpbits/block-options)
+* [Follow Us on Twitter](https://twitter.com/sidetrack/)
+* [Contribute on Github](https://github.com/pbrocks/blockshop-options)
 
 == Installation ==
 
@@ -153,39 +153,39 @@ e.g.
 == Changelog ==
 
 = 1.23 =
-* New: `List Block Styles` such as [Arrow, Checked, Crossed, Connected and Starred](https://github.com/phpbits/block-options/pull/210) 🎊
-* New: Add [caption alignment option](https://github.com/phpbits/block-options/pull/213) for Table Block
-* Tweaks: Re-enable [underline format](https://github.com/phpbits/block-options/pull/214)
-* Fixes: Prevent [error when activating via WP CLI](https://github.com/phpbits/block-options/pull/211)
+* New: `List Block Styles` such as [Arrow, Checked, Crossed, Connected and Starred](https://github.com/pbrocks/blockshop-options/pull/210) 🎊
+* New: Add [caption alignment option](https://github.com/pbrocks/blockshop-options/pull/213) for Table Block
+* Tweaks: Re-enable [underline format](https://github.com/pbrocks/blockshop-options/pull/214)
+* Fixes: Prevent [error when activating via WP CLI](https://github.com/pbrocks/blockshop-options/pull/211)
 
 = 1.22.1 =
 * Tweaks: Add new features to Features Manager
 
 = 1.22 =
-* New: Make [Reusable Block easily convertible](https://github.com/phpbits/block-options/issues/198) to regular blocks 🎉
-* New: Add toggle to [Buttons Block full width](https://github.com/phpbits/block-options/pull/203) display 🎉
-* New: Add [Cover Block vertical alignment](https://github.com/phpbits/block-options/pull/201) 🎉
+* New: Make [Reusable Block easily convertible](https://github.com/pbrocks/blockshop-options/issues/198) to regular blocks 🎉
+* New: Add toggle to [Buttons Block full width](https://github.com/pbrocks/blockshop-options/pull/203) display 🎉
+* New: Add [Cover Block vertical alignment](https://github.com/pbrocks/blockshop-options/pull/201) 🎉
 * Fixes: Fix issue with [link rel nofollow and sponsored toggle not saving](https://wordpress.org/support/topic/nofollow-sponsored-tags-not-saving/)
 * Tweaks: Typo fixes on welcome page
 
 = 1.21 =
-* New: [Abbreviation Format](https://github.com/phpbits/block-options/pull/187) for acronyms 🎉
-* New: Add option to [Transform Group Block to Cover Block](https://github.com/phpbits/block-options/pull/194) 🎉
-* New: Add [Background Color Settings](https://github.com/phpbits/block-options/pull/191) to Columns Block 🎉
-* Tweaks: [Fix](https://github.com/phpbits/block-options/pull/193) and add more [EditorsKit CSS classes](https://github.com/phpbits/block-options/pull/189)
-* Tweaks: Blocks Unit Testing only feature to [disable selected block](https://github.com/phpbits/block-options/pull/190)
+* New: [Abbreviation Format](https://github.com/pbrocks/blockshop-options/pull/187) for acronyms 🎉
+* New: Add option to [Transform Group Block to Cover Block](https://github.com/pbrocks/blockshop-options/pull/194) 🎉
+* New: Add [Background Color Settings](https://github.com/pbrocks/blockshop-options/pull/191) to Columns Block 🎉
+* Tweaks: [Fix](https://github.com/pbrocks/blockshop-options/pull/193) and add more [Sidetrack CSS classes](https://github.com/pbrocks/blockshop-options/pull/189)
+* Tweaks: Blocks Unit Testing only feature to [disable selected block](https://github.com/pbrocks/blockshop-options/pull/190)
 * Fixes: Few other 🐛 cleanup for errors and Gutenberg compatibility
 
 = 1.20 =
-* New: Add [Gutenberg Block Manager](https://github.com/phpbits/block-options/pull/179) directly on EditorsKit > Settings page.
-* New: Create [developer tools for shortcuts](https://github.com/phpbits/block-options/pull/173) that can be enabled using theme support.
-* New: Add `add_theme_support( 'editorskit-color-palette-classnames' )` in order to use theme color palette specific classnames for color formats.
-* Tweaks: Improve Image and Gallery [Blocks DropZone](https://github.com/phpbits/block-options/pull/175) styling
-* Fixes: Prevent error and [conflicts with third party plugins](https://github.com/phpbits/block-options/pull/184) that is relying on Classic Editor.
+* New: Add [Gutenberg Block Manager](https://github.com/pbrocks/blockshop-options/pull/179) directly on Sidetrack > Settings page.
+* New: Create [developer tools for shortcuts](https://github.com/pbrocks/blockshop-options/pull/173) that can be enabled using theme support.
+* New: Add `add_theme_support( 'sidetrack-color-palette-classnames' )` in order to use theme color palette specific classnames for color formats.
+* Tweaks: Improve Image and Gallery [Blocks DropZone](https://github.com/pbrocks/blockshop-options/pull/175) styling
+* Fixes: Prevent error and [conflicts with third party plugins](https://github.com/pbrocks/blockshop-options/pull/184) that is relying on Classic Editor.
 
 = 1.19 =
-* New: Better user onboarding and [welcome page with docs & tutorials](https://github.com/phpbits/block-options/issues/162)
-* New: List Block [Font Size and Text Color Settings](https://github.com/phpbits/block-options/issues/165) 🎉
+* New: Better user onboarding and [welcome page with docs & tutorials](https://github.com/pbrocks/blockshop-options/issues/162)
+* New: List Block [Font Size and Text Color Settings](https://github.com/pbrocks/blockshop-options/issues/165) 🎉
 * New: Add HTML Anchor support to Spacer and Separator blocks
 * Tweaks: WPCS cleanup and improvements
 * Fixes: Few other 🐛 cleanup for errors and Gutenberg compatibility
@@ -197,21 +197,21 @@ e.g.
 * Fixes: [Fix error with Reusable block](https://wordpress.org/support/topic/error-message-778/) and hide title post meta
 
 = 1.18.1 =
-* Fixes: Fix sudden conflict with CoBlocks - [Use domReady when registering formats](https://github.com/phpbits/block-options/pull/161)
+* Fixes: Fix sudden conflict with CoBlocks - [Use domReady when registering formats](https://github.com/pbrocks/blockshop-options/pull/161)
 
 = 1.18 =
-* New: Create [keyboard shortcut to easily select parent block](https://github.com/phpbits/block-options/issues/151) 🎉
-* New : Add [nonbreaking space format](https://github.com/phpbits/block-options/pull/160) with `CTRL/CMD + SHIFT + SPACE` keyboard shortcut
-* New: Add "[About](https://github.com/phpbits/block-options/pull/154)" button to check the running Gutenberg block editor version
-* Tweaks: Move [Hide Title Toggle](https://github.com/phpbits/block-options/pull/158) on Status and Post Visibility Panel 
-* Tweaks: Remove [unwanted block supports](https://github.com/phpbits/block-options/pull/149) on Import Block
-* Tweaks: Set [Highlights Color](https://github.com/phpbits/block-options/issues/137) to Default Theme Colors
-* Fixes: Fix [issue with old links](https://github.com/phpbits/block-options/pull/148) added before EditorsKit
-* Fixes: Fix [Media Card Block Toolbars](https://github.com/phpbits/block-options/issues/155) when using Fixed Toolbar Mode
+* New: Create [keyboard shortcut to easily select parent block](https://github.com/pbrocks/blockshop-options/issues/151) 🎉
+* New : Add [nonbreaking space format](https://github.com/pbrocks/blockshop-options/pull/160) with `CTRL/CMD + SHIFT + SPACE` keyboard shortcut
+* New: Add "[About](https://github.com/pbrocks/blockshop-options/pull/154)" button to check the running Gutenberg block editor version
+* Tweaks: Move [Hide Title Toggle](https://github.com/pbrocks/blockshop-options/pull/158) on Status and Post Visibility Panel 
+* Tweaks: Remove [unwanted block supports](https://github.com/pbrocks/blockshop-options/pull/149) on Import Block
+* Tweaks: Set [Highlights Color](https://github.com/pbrocks/blockshop-options/issues/137) to Default Theme Colors
+* Fixes: Fix [issue with old links](https://github.com/pbrocks/blockshop-options/pull/148) added before Sidetrack
+* Fixes: Fix [Media Card Block Toolbars](https://github.com/pbrocks/blockshop-options/issues/155) when using Fixed Toolbar Mode
 
 = 1.17 =
-* New: Add accessible [Help, tips and tricks button](https://github.com/phpbits/block-options/issues/141) 🎉
-* New: Add new shortcut option to [automatically transform 4 consecutive empty paragraphs into Spacer Block](https://github.com/phpbits/block-options/issues/139) 🎊
+* New: Add accessible [Help, tips and tricks button](https://github.com/pbrocks/blockshop-options/issues/141) 🎉
+* New: Add new shortcut option to [automatically transform 4 consecutive empty paragraphs into Spacer Block](https://github.com/pbrocks/blockshop-options/issues/139) 🎊
 * Tweaks: Remove Freemius insight integration
 * Fixes: Few other 🐛 cleanup for errors and Gutenberg compatibility
 
@@ -263,9 +263,9 @@ e.g.
 
 = 1.9.2 =
 * New: Editor Height Option to set editor min-height to 100% of the viewport 🎊
-* Improvement: Only load editorskit scripts on admin pages that are running Gutenberg
+* Improvement: Only load sidetrack scripts on admin pages that are running Gutenberg
 * Improvement: Do not automatically disable Auto Saving after plugin activation
-* Improvement: Extended support for Block Lab Plugin with editorskit_blocklab_classname() helper function
+* Improvement: Extended support for Block Lab Plugin with sidetrack_blocklab_classname() helper function
 * Fixes: Prevent error from third-party plugins for REST API missing attributes
 * Fixes: More compatibility fixes for the latest Gutenberg plugin
 
@@ -277,7 +277,7 @@ e.g.
 
 = 1.9 =
 * New: Custom Utility Classes and Class(es) Suggestions 🎉
-* Improvement: Add `editorskit-title-hidden` body class when title is hidden
+* Improvement: Add `sidetrack-title-hidden` body class when title is hidden
 * Improvement: Add Text and Highlight Colors to Features Manager
 * Fixes: Exclude 'core/nextpage' block to visibility option ( https://wordpress.org/support/topic/nextpage-feature-broken/ )
 * Fixes: Compatibility fixes for new Gutenberg plugin version
@@ -291,7 +291,7 @@ e.g.
 * Fixes: Compatibility fixes for new Gutenberg plugin version
 
 = 1.7 =
-* New: Block Import and Export ( https://twitter.com/phpbits/status/1138412218721026049 ) 🎉
+* New: Block Import and Export ( https://twitter.com/pbrocks/status/1138412218721026049 ) 🎉
 * Improvement: Better UI for Text Color and Highlighter
 * Fixes: Gutenberg 5.9+ compatibility fixes
 * Fixes: Fix ACF on advanced visibility tab issue
@@ -307,19 +307,19 @@ e.g.
 * New: Clear Formatting Options 🎉
 * New: Subscript, Superscript and Uppercase Text Formats 🎉
 * New: Toggle Title Visibility Option 🎉
-* New: EditorsKit Features Manager 🎊
+* New: Sidetrack Features Manager 🎊
 * Add: Freemius Insights
 * Compatibility: Disable duplicate formats when JetPack or CoBlocks is active
 * Fixes: Shortcode Block Compatibility Bugs
-* Fixes: Remove EditorsKit id instance for other plugin's compatibility
-* Fixes: Conflict with Thrive Comments plugin( https://github.com/phpbits/block-options/issues/49 )
+* Fixes: Remove Sidetrack id instance for other plugin's compatibility
+* Fixes: Conflict with Thrive Comments plugin( https://github.com/pbrocks/blockshop-options/issues/49 )
 
 = 1.5 =
 * New: Highlighted Text or Heading Colors 🎉
 * New: Highlighted Text Background Color 🎉
 * New: Paragraph Justify Alignment 🎉
 * New: Enable or Disable Auto Save 🎊
-* New: `editorskit-template-block-sizes` and `editorskit-genesis-layout-block-sizes` theme supports 🎊
+* New: `sidetrack-template-block-sizes` and `sidetrack-genesis-layout-block-sizes` theme supports 🎊
 
 = 1.4.3 =
 * Add new Underline Text Format 🎉
@@ -332,7 +332,7 @@ e.g.
 * Block Guide Lines Compatibility for old version
 
 = 1.4 =
-* Rebranded to EditorsKit
+* Rebranded to Sidetrack
 * Improve UI and UX
 * Add new Block Guide Lines feature
 * Fix issue with Advance Custom Fields Plugin visibility
@@ -376,4 +376,4 @@ e.g.
 
 == Contact and Credits ==
 
-EditorsKit is maintained and developed by <a href="https://jeffreycarandang.com/">Jeffrey Carandang</a>.
+Sidetrack is maintained and developed by <a href="https://jeffreycarandang.com/">Jeffrey Carandang</a>.

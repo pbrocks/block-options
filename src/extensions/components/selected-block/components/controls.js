@@ -14,13 +14,13 @@ class AddSelectedBlockClass extends Component {
 			return null;
 		}
 
-		const regx = new RegExp( '\\beditorskit-selected--.*?\\b', 'g' );
+		const regx = new RegExp( '\\bsidetrack-selected--.*?\\b', 'g' );
 		const bodyClasses = document.body.classList;
 		const addedClasses = bodyClasses.value.split( /\s+/ ).filter( function( el ) {
 			return regx.test( el );
 		} );
 		document.body.classList.remove( ...addedClasses );
-		document.body.classList.add( 'editorskit-selected--' + blockName.replace( '/', '-' ) );
+		document.body.classList.add( 'sidetrack-selected--' + blockName.replace( '/', '-' ) );
 	}
 
 	render() {

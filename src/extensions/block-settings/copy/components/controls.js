@@ -71,7 +71,7 @@ class CopyBlocks extends Component {
 							icon={ icon.copy }
 							onCopy={ onCopy }
 						>
-							{ __( 'Copy', 'block-options' ) }
+							{ __( 'Copy', 'blockshop-options' ) }
 						</ClipboardButton>
 					}
 					onClick={ () => {
@@ -96,7 +96,7 @@ export default compose(
 			selectedBlockCount: getSelectedBlockCount(),
 			selectedBlock: getSelectedBlock(),
 			selectedBlocks: getMultiSelectedBlocks(),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitCopyOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackCopyOptions' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => {
@@ -105,9 +105,9 @@ export default compose(
 		return {
 			onCopy() {
 				const selectedBlocks = select( 'core/block-editor' ).getMultiSelectedBlocks();
-				let notice = __( 'Selected block copied.', 'block-options' );
+				let notice = __( 'Selected block copied.', 'blockshop-options' );
 				if ( size( selectedBlocks ) > 0 ) {
-					notice = __( 'Selected blocks copied.', 'block-options' );
+					notice = __( 'Selected blocks copied.', 'blockshop-options' );
 				}
 
 				createNotice(

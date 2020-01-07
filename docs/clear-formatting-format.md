@@ -4,7 +4,7 @@
 
 ## How to clear block formatting?
 
-There are two ways to remove formatting which are provided by EditorsKit plugin.
+There are two ways to remove formatting which are provided by Sidetrack plugin.
 
 ![Gutenberg block editor clear formatting](https://cldup.com/DiExhP6BHW.gif)
 

@@ -53,7 +53,7 @@ class Edit extends Component {
 				/>
 				<RichTextToolbarButton
 					icon={ icon.spacebar }
-					title={ __( 'Nonbreaking space', 'block-options' ) }
+					title={ __( 'Nonbreaking space', 'blockshop-options' ) }
 					onClick={ onToggle }
 				/>
 			</Fragment>
@@ -64,7 +64,7 @@ class Edit extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitNonbreakingSpaceFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackNonbreakingSpaceFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

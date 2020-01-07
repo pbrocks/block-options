@@ -18,17 +18,17 @@ const ALLOWED_BLOCKS = [ 'core/image', 'core/gallery', 'core/video', 'core/audio
 const ALIGNMENT_CONTROLS = [
 	{
 		icon: 'editor-alignleft',
-		title: __( 'Align caption left', 'block-options' ),
+		title: __( 'Align caption left', 'blockshop-options' ),
 		align: 'left',
 	},
 	{
 		icon: 'editor-aligncenter',
-		title: __( 'Align caption center', 'block-options' ),
+		title: __( 'Align caption center', 'blockshop-options' ),
 		align: 'center',
 	},
 	{
 		icon: 'editor-alignright',
-		title: __( 'Align caption right', 'block-options' ),
+		title: __( 'Align caption right', 'blockshop-options' ),
 		align: 'right',
 	},
 ];
@@ -71,7 +71,7 @@ class AlignmentControl extends Component {
 		return (
 			<Fragment>
 				<BlockControls>
-					<Toolbar className="editorskit-components-alignment-toolbar">
+					<Toolbar className="sidetrack-components-alignment-toolbar">
 						<AlignmentToolbar
 							value={ blockCaptionAlignment }
 							onChange={ ( nextAlign ) => {
@@ -97,7 +97,7 @@ export default compose(
 			blockName: selectedBlock.name,
 			blockClassName: get( selectedBlock, 'attributes.className' ),
 			blockCaptionAlignment: get( selectedBlock, 'attributes.captionAlignment' ),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitCaptionAlignmentFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackCaptionAlignmentFormats' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => ( {

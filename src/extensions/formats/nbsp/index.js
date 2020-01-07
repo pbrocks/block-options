@@ -12,11 +12,11 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/nbsp';
+const name = 'sidetrack/nbsp';
 
 export const nbsp = {
 	name,
-	title: __( 'Nonbreaking Space', 'block-options' ),
+	title: __( 'Nonbreaking Space', 'blockshop-options' ),
 	tagName: 'span',
 	className: 'nbsp',
 	edit( { isActive, value, onChange, activeAttributes } ) {

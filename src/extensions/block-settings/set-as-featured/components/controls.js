@@ -25,8 +25,8 @@ class SetAsFeatImageured extends Component {
 		const label = () => {
 			return (
 				imageID === featuredImageID ?
-					__( 'Remove as Featured Image', 'block-options' ) :
-					__( 'Set as Featured Image', 'block-options' )
+					__( 'Remove as Featured Image', 'blockshop-options' ) :
+					__( 'Set as Featured Image', 'blockshop-options' )
 			);
 		};
 
@@ -62,7 +62,7 @@ export default compose(
 			featuredImageID: select( 'core/editor' ).getEditedPostAttribute( 'featured_media' ),
 			blockName: selectedBlock.name,
 			imageID: get( selectedBlock, 'attributes.id' ),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitSetAsFeaturedOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackSetAsFeaturedOptions' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => {
@@ -74,7 +74,7 @@ export default compose(
 				editPost( { featured_media: imageID } );
 				createNotice(
 					'info',
-					__( 'Image Set as Featured.', 'block-options' ),
+					__( 'Image Set as Featured.', 'blockshop-options' ),
 					{
 						isDismissible: true,
 						type: 'snackbar',
@@ -85,7 +85,7 @@ export default compose(
 				editPost( { featured_media: 0 } );
 				createNotice(
 					'info',
-					__( 'Featured Image Removed.', 'block-options' ),
+					__( 'Featured Image Removed.', 'blockshop-options' ),
 					{
 						isDismissible: true,
 						type: 'snackbar',

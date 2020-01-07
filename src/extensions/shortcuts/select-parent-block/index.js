@@ -8,7 +8,7 @@ import RegisterShortcut from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-shortcuts-select-parent', {
+registerPlugin( 'sidetrack-shortcuts-select-parent', {
 	icon: false,
 	render: RegisterShortcut,
 } );

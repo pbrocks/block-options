@@ -14,11 +14,11 @@ const { isURL } = wp.url;
 /**
  * Block constants
  */
-const name = 'editorskit/link';
+const name = 'sidetrack/link';
 
 export const link = {
 	name,
-	title: __( 'Link', 'block-options' ),
+	title: __( 'Link', 'blockshop-options' ),
 	tagName: 'a',
 	className: 'ek-link',
 	attributes: {

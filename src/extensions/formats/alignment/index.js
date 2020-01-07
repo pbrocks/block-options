@@ -13,11 +13,11 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/alignment';
+const name = 'sidetrack/alignment';
 
 export const alignment = {
 	name,
-	title: __( 'Change Caption Alignment', 'block-options' ),
+	title: __( 'Change Caption Alignment', 'blockshop-options' ),
 	tagName: 'figcaption',
 	className: null,
 	attributes: {

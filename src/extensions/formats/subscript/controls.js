@@ -24,7 +24,7 @@ class SubscriptControl extends Component {
 
 		const onToggle = () => {
 			//remove superscript format if applied
-			const record = removeFormat( value, 'editorskit/superscript' );
+			const record = removeFormat( value, 'sidetrack/superscript' );
 
 			onChange(
 				toggleFormat( record, {
@@ -42,7 +42,7 @@ class SubscriptControl extends Component {
 
 				<RichTextToolbarButton
 					icon={ icon.subscript }
-					title={ __( 'Subscript', 'block-options' ) }
+					title={ __( 'Subscript', 'blockshop-options' ) }
 					onClick={ onToggle }
 					isActive={ isActive }
 				/>
@@ -54,7 +54,7 @@ class SubscriptControl extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitSubscriptFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackSubscriptFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

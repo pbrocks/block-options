@@ -1,6 +1,6 @@
 # Block Devices Visibility
 
-**Show or hide any blocks** on desktop, tablet and/or mobile devices at ease using EditorsKit. **Responsive** panel will be available on each block where you can manage devices visibility.
+**Show or hide any blocks** on desktop, tablet and/or mobile devices at ease using Sidetrack. **Responsive** panel will be available on each block where you can manage devices visibility.
 
 ## How to hide block on mobile or other devices?
 

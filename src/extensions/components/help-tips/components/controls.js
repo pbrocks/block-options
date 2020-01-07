@@ -48,7 +48,7 @@ class HelpControl extends Component {
 	}
 
 	componentDidMount() {
-		const helpButton = document.querySelector( '.editorskit-component-help-tips' );
+		const helpButton = document.querySelector( '.sidetrack-component-help-tips' );
 		if ( helpButton ) {
 			helpButton.parentElement.style.display = 'block';
 		}
@@ -85,7 +85,7 @@ class HelpControl extends Component {
 		return (
 			<Fragment>
 				<Dropdown
-					className="editorskit-component-help-tips"
+					className="sidetrack-component-help-tips"
 					renderToggle={ ( { isOpen, onToggle } ) => {
 						const openOnArrowDown = ( event ) => {
 							if ( ! isOpen && event.keyCode === DOWN ) {
@@ -112,7 +112,7 @@ class HelpControl extends Component {
 					renderContent={ ( { onClose } ) => {
 						return (
 							<NavigableMenu
-								className="editorskit-menu-help-tips"
+								className="sidetrack-menu-help-tips"
 								role="menu"
 							>
 								<IconButton
@@ -136,10 +136,10 @@ class HelpControl extends Component {
 								<IconButton
 									icon="admin-site-alt3"
 									onClick={ () => {
-										this.routeChange( `https://www.facebook.com/groups/editorskit/` );
+										this.routeChange( `https://www.facebook.com/groups/sidetrack/` );
 									} }
 								>
-									{ __( 'EditorsKit Community Help' ) }
+									{ __( 'Sidetrack Community Help' ) }
 								</IconButton>
 								<div className="editor-block-settings-menu__separator block-editor-block-settings-menu__separator"></div>
 								<IconButton
@@ -154,12 +154,12 @@ class HelpControl extends Component {
 				/>
 				{ this.state.isOpen ?
 					<Modal
-						title={ __( 'Tips and Tricks', 'block-options' ) }
+						title={ __( 'Tips and Tricks', 'blockshop-options' ) }
 						shouldCloseOnClickOutside={ false }
 						onRequestClose={ () => closeModal() }
-						closeLabel={ __( 'Close', 'block-options' ) }
+						closeLabel={ __( 'Close', 'blockshop-options' ) }
 						icon={ null }
-						className="editorskit-modal-component components-modal--editorskit-help-tips"
+						className="sidetrack-modal-component components-modal--sidetrack-help-tips"
 					>
 						<TwitterTweetEmbed
 							tweetId={ tweets[ this.state.tweetId ] }
@@ -174,7 +174,7 @@ class HelpControl extends Component {
 							} }
 						/>
 						{ this.state.isLoaded ?
-							<div className="components-modal--editorskit-help-tips-buttons">
+							<div className="components-modal--sidetrack-help-tips-buttons">
 								<IconButton
 									isPrimary
 									isLarge
@@ -182,7 +182,7 @@ class HelpControl extends Component {
 									onClick={ () => {
 										this.routeChange( `https://twitter.com/i/moments/1177466596219949057` );
 									} }>
-									{ __( 'View All Tips and Tricks', 'block-options' ) }
+									{ __( 'View All Tips and Tricks', 'blockshop-options' ) }
 								</IconButton>
 								<Button
 									isDefault
@@ -190,10 +190,10 @@ class HelpControl extends Component {
 									onClick={ () => {
 										this.nextTweet();
 									} }>
-									{ __( 'Next', 'block-options' ) }
+									{ __( 'Next', 'blockshop-options' ) }
 								</Button>
 							</div> :
-							__( 'Fetching...', 'block-options' )
+							__( 'Fetching...', 'blockshop-options' )
 						}
 
 					</Modal> : null }
@@ -205,11 +205,11 @@ class HelpControl extends Component {
 
 export default compose( [
 	withSelect( () => ( {
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitHelpTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackHelpTools' ),
 	} ) ),
 	withDispatch( ( dispatch ) => ( {
 		onDisable() {
-			dispatch( 'core/edit-post' ).toggleFeature( 'disableEditorsKitHelpTools' );
+			dispatch( 'core/edit-post' ).toggleFeature( 'disableSidetrackHelpTools' );
 		},
 	} ) ),
 	ifCondition( ( props ) => {

@@ -1,11 +1,11 @@
 $tablet : 768px;
 $mobile : 736px;
 
-.settings_page_editorskit-getting-started #wpcontent {
+.settings_page_sidetrack-getting-started #wpcontent {
 	padding-left: 0;
 }
 
-.editorskit-settings-wrap {
+.sidetrack-settings-wrap {
 	color: #111;
 
 	.components-panel {
@@ -42,7 +42,7 @@ $mobile : 736px;
 				margin-bottom: 50px;
 			}
 
-			.editorskit-panel__header-hint {
+			.sidetrack-panel__header-hint {
 				font-size: 12px;
 				opacity: 0.4;
 				margin: 0 0 40px;
@@ -50,7 +50,7 @@ $mobile : 736px;
 			}
 		}
 
-		.editorskit-settings-tab-panel {
+		.sidetrack-settings-tab-panel {
 			margin: 0 -50px;
 			width: calc(100% + 100px);
 		}
@@ -127,7 +127,7 @@ $mobile : 736px;
 					}
 				}
 
-				.editorskit-docs-items-wrapper {
+				.sidetrack-docs-items-wrapper {
 					display: flex;
 					flex-wrap: wrap;
 
@@ -154,13 +154,13 @@ $mobile : 736px;
 
 				}
 
-				.editorskit-docs-items-title {
+				.sidetrack-docs-items-title {
 					font-size: 21px;
 					margin-top: 24px;
 					margin-bottom: 16px;
 				}
 
-				.editorskit-docs-items-list {
+				.sidetrack-docs-items-list {
 					margin-left: 0;
 
 					.components-button {
@@ -170,13 +170,13 @@ $mobile : 736px;
 					}
 				}
 
-				.editorskit-started-items-wrapper {
+				.sidetrack-started-items-wrapper {
 					display: flex;
 					align-items: center;
 					flex-wrap: wrap;
 					margin: 25px 0;
 
-					.editorskit-started-item {
+					.sidetrack-started-item {
 						padding: 15px;
 						flex-grow: 1;
 						width: calc(50% - 30px);
@@ -212,7 +212,7 @@ $mobile : 736px;
 					}
 				}
 
-				.editorskit-features-manager-items-wrapper {
+				.sidetrack-features-manager-items-wrapper {
 					display: flex;
 					flex-wrap: wrap;
 
@@ -240,7 +240,7 @@ $mobile : 736px;
 	}
 }
 
-.components-modal--editorskit-docs {
+.components-modal--sidetrack-docs {
 
 	.components-modal__icon-container {
 		padding-top: 4px;
@@ -252,7 +252,7 @@ $mobile : 736px;
 		}
 	}
 
-	.components-modal--editorskit-doc {
+	.components-modal--sidetrack-doc {
 		padding: 5px 20px 0;
 
 		p,

@@ -9,7 +9,7 @@ import CopyBlocks from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-copy', {
+registerPlugin( 'sidetrack-copy', {
 	icon: icon.copy,
 	render: CopyBlocks,
 } );

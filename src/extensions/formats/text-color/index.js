@@ -11,11 +11,11 @@ const { __ } = wp.i18n;
 /**
  * Block constants
  */
-const name = 'editorskit/color';
+const name = 'sidetrack/color';
 
 export const textColor = {
 	name,
-	title: __( 'Text Color', 'block-options' ),
+	title: __( 'Text Color', 'blockshop-options' ),
 	tagName: 'span',
 	className: 'has-inline-color',
 	attributes: {

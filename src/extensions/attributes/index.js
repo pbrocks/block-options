@@ -30,7 +30,7 @@ const blocksWithFullWidth = [ 'core/button' ];
 function addAttributes( settings ) {
 	if ( typeof settings.attributes !== 'undefined' && ! restrictedBlocks.includes( settings.name ) ) {
 		settings.attributes = Object.assign( settings.attributes, {
-			editorskit: {
+			sidetrack: {
 				type: 'object',
 				default: {
 					devices: false,
@@ -163,7 +163,7 @@ function addAttributes( settings ) {
 }
 
 /**
- * Add custom EditorsKit attributes to selected blocks
+ * Add custom Sidetrack attributes to selected blocks
  *
  * @param {Function} BlockEdit Original component.
  * @return {string} Wrapped component.
@@ -174,8 +174,8 @@ const withAttributes = createHigherOrderComponent( ( BlockEdit ) => {
 			attributes,
 		} = props;
 
-		if ( typeof attributes.editorskit === 'undefined' ) {
-			attributes.editorskit = [];
+		if ( typeof attributes.sidetrack === 'undefined' ) {
+			attributes.sidetrack = [];
 		}
 
 		return (
@@ -196,23 +196,23 @@ const withAttributes = createHigherOrderComponent( ( BlockEdit ) => {
  * @return {Object} Filtered props applied to save element.
  */
 function applyExtraClass( extraProps, blockType, attributes ) {
-	const { editorskit, isHeightFullScreen, isFullWidth } = attributes;
+	const { sidetrack, isHeightFullScreen, isFullWidth } = attributes;
 
-	if ( typeof editorskit !== 'undefined' && ! restrictedBlocks.includes( blockType.name ) ) {
-		if ( typeof editorskit.id !== 'undefined' ) {
-			extraProps.className = classnames( extraProps.className, editorskit.id );
+	if ( typeof sidetrack !== 'undefined' && ! restrictedBlocks.includes( blockType.name ) ) {
+		if ( typeof sidetrack.id !== 'undefined' ) {
+			extraProps.className = classnames( extraProps.className, sidetrack.id );
 		}
 
-		if ( typeof editorskit.desktop !== 'undefined' && ! editorskit.desktop ) {
-			extraProps.className = classnames( extraProps.className, 'editorskit-no-desktop' );
+		if ( typeof sidetrack.desktop !== 'undefined' && ! sidetrack.desktop ) {
+			extraProps.className = classnames( extraProps.className, 'sidetrack-no-desktop' );
 		}
 
-		if ( typeof editorskit.tablet !== 'undefined' && ! editorskit.tablet ) {
-			extraProps.className = classnames( extraProps.className, 'editorskit-no-tablet' );
+		if ( typeof sidetrack.tablet !== 'undefined' && ! sidetrack.tablet ) {
+			extraProps.className = classnames( extraProps.className, 'sidetrack-no-tablet' );
 		}
 
-		if ( typeof editorskit.mobile !== 'undefined' && ! editorskit.mobile ) {
-			extraProps.className = classnames( extraProps.className, 'editorskit-no-mobile' );
+		if ( typeof sidetrack.mobile !== 'undefined' && ! sidetrack.mobile ) {
+			extraProps.className = classnames( extraProps.className, 'sidetrack-no-mobile' );
 		}
 	}
 
@@ -236,11 +236,11 @@ const addEditorBlockAttributes = createHigherOrderComponent( ( BlockListBlock ) 
 		let customData 	 	= {};
 
 		if ( hasBlockSupport( name, 'hasHeightFullScreen' ) && isHeightFullScreen ) {
-			customData = Object.assign( customData, { 'data-editorskit-h-screen': 1 } );
+			customData = Object.assign( customData, { 'data-sidetrack-h-screen': 1 } );
 		}
 
 		if ( hasBlockSupport( name, 'hasFullWidthDisplay' ) && isFullWidth ) {
-			customData = Object.assign( customData, { 'data-editorskit-w-full': 1 } );
+			customData = Object.assign( customData, { 'data-sidetrack-w-full': 1 } );
 		}
 
 		wrapperProps = {
@@ -254,24 +254,24 @@ const addEditorBlockAttributes = createHigherOrderComponent( ( BlockListBlock ) 
 
 addFilter(
 	'blocks.registerBlockType',
-	'editorskit/custom/attributes',
+	'sidetrack/custom/attributes',
 	addAttributes
 );
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/attributes',
+	'sidetrack/attributes',
 	withAttributes
 );
 
 addFilter(
 	'blocks.getSaveContent.extraProps',
-	'editorskit/applyExtraClass',
+	'sidetrack/applyExtraClass',
 	applyExtraClass
 );
 
 addFilter(
 	'editor.BlockListBlock',
-	'editorskit/addEditorBlockAttributes',
+	'sidetrack/addEditorBlockAttributes',
 	addEditorBlockAttributes
 );

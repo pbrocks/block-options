@@ -1,27 +1,27 @@
 {
-  "name": "editorskit",
-  "title": "EditorsKit",
+  "name": "sidetrack",
+  "title": "Sidetrack",
   "version": "1.10.1",
   "private": false,
-  "author": "Jeffrey Carandang from EditorsKit",
-  "author_shop": "EditorsKit",
-  "author_uri": "hello@editorskit.com",
+  "author": "Sidetrack Studio",
+  "author_shop": "Sidetrack",
+  "author_uri": "hello@sidetrack.com",
   "requires": "5.0",
   "tested_up_to": "5.1",
   "license": "GPL-2.0",
-  "copyright": "Copyright (c) 2018, EditorsKit",
+  "copyright": "Copyright (c) 2018, Sidetrack",
   "downloadid": "",
-  "description": "EditorsKit is a suite of page building block options for the Gutenberg block editor.",
+  "description": "Sidetrack is a suite of page building block options for the Gutenberg block editor.",
   "tags": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phpbits/block-options.git"
+    "url": "git+https://github.com/pbrocks/blockshop-options.git"
   },
   "bugs": {
-    "url": "https://github.com/phpbits/block-options/issues"
+    "url": "https://github.com/pbrocks/blockshop-options/issues"
   },
   "keywords": [
-    "editorskit",
+    "sidetrack",
     "gutenberg",
     "block options"
   ],
@@ -36,7 +36,7 @@
       [
         "@wordpress/babel-plugin-makepot",
         {
-          "output": "languages/editorskit.pot"
+          "output": "languages/sidetrack.pot"
         }
       ]
     ]
@@ -54,7 +54,7 @@
     "start": "wp-scripts start",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
-    "makepot": "wp i18n make-pot . languages/editorskit.pot --exclude=node_modules,vendor,build"
+    "makepot": "wp i18n make-pot . languages/sidetrack.pot --exclude=node_modules,vendor,build"
   },
   "devDependencies": {
     "@babel/runtime": "^7.6.3",

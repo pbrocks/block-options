@@ -61,7 +61,7 @@ export default compose( [
 		return {
 			selectedBlockId,
 			parentBlockId,
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitSelectParentShortcuts' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackSelectParentShortcuts' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => {

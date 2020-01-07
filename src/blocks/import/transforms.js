@@ -16,7 +16,7 @@ const transforms = {
 			transform: ( files ) => {
 				const blocks = [];
 
-				blocks.push( createBlock( 'editorskit/import', {
+				blocks.push( createBlock( 'sidetrack/import', {
 					file: files,
 				} ) );
 

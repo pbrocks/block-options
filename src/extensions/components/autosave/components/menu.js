@@ -18,7 +18,7 @@ const { withSpokenMessages } = wp.components;
 class ManageAutoSave extends Component {
 	componentDidMount() {
 		const editorHeader = document.querySelector( '.edit-post-header__settings' );
-		const prompt = '<span class="editorskit-auto-save-disabled--label">' + __( 'Auto Save Disabled', 'block-options' ) + '</span>';
+		const prompt = '<span class="sidetrack-auto-save-disabled--label">' + __( 'Auto Save Disabled', 'blockshop-options' ) + '</span>';
 
 		//insert prompt on header
 		editorHeader.insertAdjacentHTML( 'afterbegin', prompt );
@@ -34,7 +34,7 @@ class ManageAutoSave extends Component {
 		const { isAvailable, isActive, isDisabled, editorSettings } = this.props;
 
 		let autosaveInterval = 60;
-		const prompt = document.querySelector( '.editorskit-auto-save-disabled--label' );
+		const prompt = document.querySelector( '.sidetrack-auto-save-disabled--label' );
 
 		//update autosave interval
 		if ( ! isActive && ! isDisabled && typeof isAvailable !== 'undefined' ) {
@@ -48,7 +48,7 @@ class ManageAutoSave extends Component {
 		}
 
 		//show prompt
-		prompt.className = 'editorskit-auto-save-disabled--label editorskit-auto-save-disabled--' + autosaveInterval;
+		prompt.className = 'sidetrack-auto-save-disabled--label sidetrack-auto-save-disabled--' + autosaveInterval;
 	}
 
 	render() {
@@ -73,10 +73,10 @@ class ManageAutoSave extends Component {
 				<PluginMoreMenuItem
 					icon={ isActive && 'yes' }
 					role="menuitemcheckbox"
-					info={ __( 'Toggle to disable or enable editor autosaving feature.', 'block-options' ) }
+					info={ __( 'Toggle to disable or enable editor autosaving feature.', 'blockshop-options' ) }
 					onClick={ onToggle }
 				>
-					{ __( 'Auto Save', 'block-options' ) }
+					{ __( 'Auto Save', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 
 			</Fragment>
@@ -86,14 +86,14 @@ class ManageAutoSave extends Component {
 
 export default compose( [
 	withSelect( () => ( {
-		isAvailable: select( 'core/edit-post' ).getPreference( 'features' ).editorskitAutoSave,
-		isActive: select( 'core/edit-post' ).isFeatureActive( 'editorskitAutoSave' ),
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitAutosaveTools' ),
+		isAvailable: select( 'core/edit-post' ).getPreference( 'features' ).sidetrackAutoSave,
+		isActive: select( 'core/edit-post' ).isFeatureActive( 'sidetrackAutoSave' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackAutosaveTools' ),
 		editorSettings: select( 'core/editor' ).getEditorSettings(),
 	} ) ),
 	withDispatch( () => ( {
 		onToggle() {
-			dispatch( 'core/edit-post' ).toggleFeature( 'editorskitAutoSave' );
+			dispatch( 'core/edit-post' ).toggleFeature( 'sidetrackAutoSave' );
 		},
 	} ) ),
 	withSpokenMessages,

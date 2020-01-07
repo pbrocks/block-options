@@ -42,7 +42,7 @@ class ExportManager extends Component {
 		}
 
 		let blocks;
-		const title = 'editorskit/export';
+		const title = 'sidetrack/export';
 
 		if ( selectedBlockCount === 1 ) {
 			//export as reusable when reusable is selected
@@ -74,7 +74,7 @@ class ExportManager extends Component {
 			<Fragment>
 				<PluginBlockSettingsMenuItem
 					icon="share-alt2"
-					label={ __( 'Export as JSON', 'block-options' ) }
+					label={ __( 'Export as JSON', 'blockshop-options' ) }
 					onClick={ this.saveAsJSON }
 				>
 
@@ -93,7 +93,7 @@ export default compose( [
 			selectedBlockCount: getSelectedBlockCount(),
 			selectedBlock: getSelectedBlock(),
 			selectedBlocks: getMultiSelectedBlocks(),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitExportOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackExportOptions' ),
 			getBlock,
 		};
 	} ),

@@ -2,9 +2,9 @@
 /**
  * Load assets for our blocks.
  *
- * @package   EditorsKit
+ * @package   Sidetrack
  * @author    Jeffrey Carandang
- * @link      https://editorskit.com
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -18,13 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class EditorsKit_Block_Assets {
+class Sidetrack_Block_Assets {
 
 
 	/**
 	 * This plugin's instance.
 	 *
-	 * @var EditorsKit_Block_Assets
+	 * @var Sidetrack_Block_Assets
 	 */
 	private static $instance;
 
@@ -33,7 +33,7 @@ class EditorsKit_Block_Assets {
 	 */
 	public static function register() {
 		if ( null === self::$instance ) {
-			self::$instance = new EditorsKit_Block_Assets();
+			self::$instance = new Sidetrack_Block_Assets();
 		}
 	}
 
@@ -63,7 +63,7 @@ class EditorsKit_Block_Assets {
 	 */
 	private function __construct() {
 		$this->version = EDITORSKIT_VERSION;
-		$this->slug    = 'editorskit';
+		$this->slug    = 'sidetrack';
 		$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 		add_action( 'enqueue_block_assets', array( $this, 'block_assets' ) );
@@ -123,9 +123,9 @@ class EditorsKit_Block_Assets {
 			false
 		);
 
-		if ( current_theme_supports( 'editorskit-devtools' ) ) {
+		if ( current_theme_supports( 'sidetrack-devtools' ) ) {
 
-			$theme_support = get_theme_support( 'editorskit-devtools' );
+			$theme_support = get_theme_support( 'sidetrack-devtools' );
 
 			if ( $theme_support ) {
 
@@ -169,11 +169,11 @@ class EditorsKit_Block_Assets {
 				'is_core' => $is_core,
 			),
 			'supports' => array(
-				'color_palette' => get_theme_support( 'editorskit-color-palette-classnames' ),
+				'color_palette' => get_theme_support( 'sidetrack-color-palette-classnames' ),
 			),
 		);
 
-		wp_add_inline_script( $this->slug . '-editor', 'window.editorskitInfo = ' . wp_json_encode( $global ) . ';', 'before' );
+		wp_add_inline_script( $this->slug . '-editor', 'window.sidetrackInfo = ' . wp_json_encode( $global ) . ';', 'before' );
 
 		// CodeMirror assets.
 		wp_enqueue_script( 'code-editor' );
@@ -193,7 +193,7 @@ class EditorsKit_Block_Assets {
 			return;
 		}
 
-		// Remove EditorsKit JS file when post is not using Gutenberg.
+		// Remove Sidetrack JS file when post is not using Gutenberg.
 		wp_dequeue_script( $this->slug . '-editor' );
 		wp_dequeue_script( $this->slug . '-devtools' );
 	}
@@ -210,4 +210,4 @@ class EditorsKit_Block_Assets {
 
 }
 
-EditorsKit_Block_Assets::register();
+Sidetrack_Block_Assets::register();

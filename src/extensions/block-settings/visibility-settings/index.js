@@ -8,7 +8,7 @@ import BlockSettings from './components/modal';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-block-settings', {
+registerPlugin( 'sidetrack-block-settings', {
 	icon: 'visibility',
 	render: BlockSettings,
 } );

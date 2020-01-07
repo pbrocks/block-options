@@ -11,37 +11,37 @@ function registerStyles() {
 	].forEach( ( block ) => {
 		registerBlockStyle( block, {
 			name: 'default',
-			label: __( 'Default', 'block-options' ),
+			label: __( 'Default', 'blockshop-options' ),
 			isDefault: true,
 		} );
 
 		registerBlockStyle( block, {
-			name: 'editorskit-circular',
-			label: __( 'Circular', 'block-options' ),
+			name: 'sidetrack-circular',
+			label: __( 'Circular', 'blockshop-options' ),
 			isDefault: false,
 		} );
 
 		registerBlockStyle( block, {
-			name: 'editorskit-rounded',
-			label: __( 'Rounded Corners', 'block-options' ),
+			name: 'sidetrack-rounded',
+			label: __( 'Rounded Corners', 'blockshop-options' ),
 			isDefault: false,
 		} );
 
 		registerBlockStyle( block, {
-			name: 'editorskit-diagonal',
-			label: __( 'Diagonal', 'block-options' ),
+			name: 'sidetrack-diagonal',
+			label: __( 'Diagonal', 'blockshop-options' ),
 			isDefault: false,
 		} );
 
 		registerBlockStyle( block, {
-			name: 'editorskit-inverted-diagonal',
-			label: __( 'Inverted Diagonal', 'block-options' ),
+			name: 'sidetrack-inverted-diagonal',
+			label: __( 'Inverted Diagonal', 'blockshop-options' ),
 			isDefault: false,
 		} );
 
 		registerBlockStyle( block, {
-			name: 'editorskit-shadow',
-			label: __( 'Shadow', 'block-options' ),
+			name: 'sidetrack-shadow',
+			label: __( 'Shadow', 'blockshop-options' ),
 			isDefault: false,
 		} );
 	} );

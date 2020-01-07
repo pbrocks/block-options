@@ -62,7 +62,7 @@ class ToolbarControls extends Component {
 		const toolbarControls = [ {
 			className: 'align-pull-top',
 			icon: 'align-pull-left',
-			title: __( 'Show media on top', 'block-options' ),
+			title: __( 'Show media on top', 'blockshop-options' ),
 			isActive: mediaPosition === 'top',
 			onClick: () => {
 				setAttributes( { mediaPosition: 'top', className: this.removeTopBottom() + ' has-media-on-the-top', align: '' } );
@@ -70,7 +70,7 @@ class ToolbarControls extends Component {
 		}, {
 			className: 'align-pull-bottom',
 			icon: 'align-pull-right',
-			title: __( 'Show media on bottom', 'block-options' ),
+			title: __( 'Show media on bottom', 'blockshop-options' ),
 			isActive: mediaPosition === 'bottom',
 			onClick: () => {
 				setAttributes( { mediaPosition: 'bottom', className: this.removeTopBottom() + ' has-media-on-the-bottom', align: '' } );
@@ -81,7 +81,7 @@ class ToolbarControls extends Component {
 			<Fragment>
 				<BlockControls>
 					<Toolbar
-						className="editorskit-media-text-card-controls"
+						className="sidetrack-media-text-card-controls"
 						controls={ toolbarControls }
 					/>
 				</BlockControls>
@@ -93,7 +93,7 @@ class ToolbarControls extends Component {
 export default compose(
 	withSelect( ( select ) => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitMediaTextLayoutOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackMediaTextLayoutOptions' ),
 		};
 	} ),
 	withSpokenMessages

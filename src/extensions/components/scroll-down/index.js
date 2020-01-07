@@ -8,7 +8,7 @@ import ScrollDown from './components/scrolldown';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-scrolldown', {
+registerPlugin( 'sidetrack-scrolldown', {
 	icon: false,
 	render: ScrollDown,
 } );

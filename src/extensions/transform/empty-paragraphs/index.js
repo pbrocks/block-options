@@ -8,7 +8,7 @@ import TransformControls from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-empty-to-spacer', {
+registerPlugin( 'sidetrack-empty-to-spacer', {
 	icon: false,
 	render: TransformControls,
 } );

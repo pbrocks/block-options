@@ -1,6 +1,6 @@
 # Justified Paragraph Alignment
 
-**Justify** is missing on paragraph alignment by default on Gutenberg block editor. Using EditorsKit, this alignment will be added via format on block toolbar.
+**Justify** is missing on paragraph alignment by default on Gutenberg block editor. Using Sidetrack, this alignment will be added via format on block toolbar.
 
 ## How make paragraph align justify?
 

@@ -35,7 +35,7 @@ const enhance = compose(
 			}
 		}
 		return {
-			suggestions: selectFn( 'core/editor' ).getEditorSettings().editorskitCustomClassNames,
+			suggestions: selectFn( 'core/editor' ).getEditorSettings().sidetrackCustomClassNames,
 		};
 	} ),
 );
@@ -64,7 +64,7 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 					<BlockEdit { ...props } />
 					<InspectorAdvancedControls>
 						<FormTokenField
-							label={ __( 'Additional CSS Class(es)', 'block-options' ) }
+							label={ __( 'Additional CSS Class(es)', 'blockshop-options' ) }
 							value={ customClassNames }
 							suggestions={ suggestions }
 							maxSuggestions={ 20 }
@@ -85,9 +85,9 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 }, 'withInspectorControl' );
 
 function applyFilters() {
-	if ( ! select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitCustomClassNamesTools' ) ) {
+	if ( ! select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackCustomClassNamesTools' ) ) {
 		removeFilter( 'editor.BlockEdit', 'core/editor/custom-class-name/with-inspector-control' );
-		addFilter( 'editor.BlockEdit', 'editorskit/custom-class-name/with-inspector-control', withInspectorControl );
+		addFilter( 'editor.BlockEdit', 'sidetrack/custom-class-name/with-inspector-control', withInspectorControl );
 	}
 }
 

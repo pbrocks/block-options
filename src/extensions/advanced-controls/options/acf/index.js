@@ -30,15 +30,15 @@ class ACFOptions extends Component {
 		} = selectedBlock;
 
 		const {
-			editorskit,
+			sidetrack,
 		} = attributes;
 
 		const onSelectFields = ( key, value ) => {
-			delete editorskit[ key ];
+			delete sidetrack[ key ];
 
-			const blockOptions = Object.assign( { [ key ]: value }, editorskit );
+			const blockOptions = Object.assign( { [ key ]: value }, sidetrack );
 
-			dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { editorskit: blockOptions } );
+			dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { sidetrack: blockOptions } );
 
 			if ( reloadModal ) {
 				reloadModal();
@@ -46,7 +46,7 @@ class ACFOptions extends Component {
 		};
 
 		const acfFields = [ {
-			label: __( 'Select Field', 'block-options' ),
+			label: __( 'Select Field', 'blockshop-options' ),
 			value: '',
 		} ];
 
@@ -66,21 +66,21 @@ class ACFOptions extends Component {
 
 				return (
 					<Fragment>
-						<div className="editorskit-button-group-container editorskit-button-group-acf">
-							<label className="components-base-control__label" >{ __( 'Advanced Custom Fields', 'block-options' ) }</label> { /* eslint-disable-line jsx-a11y/label-has-for */ }
+						<div className="sidetrack-button-group-container sidetrack-button-group-acf">
+							<label className="components-base-control__label" >{ __( 'Advanced Custom Fields', 'blockshop-options' ) }</label> { /* eslint-disable-line jsx-a11y/label-has-for */ }
 							<SelectControl
-								value={ ( typeof editorskit.acf_visibility !== 'undefined' && editorskit.acf_visibility !== '' ) ? editorskit.acf_visibility : '' }
+								value={ ( typeof sidetrack.acf_visibility !== 'undefined' && sidetrack.acf_visibility !== '' ) ? sidetrack.acf_visibility : '' }
 								options={ [
 									{
-										label: __( 'Select Visibility Option', 'block-options' ),
+										label: __( 'Select Visibility Option', 'blockshop-options' ),
 										value: 'none',
 									},
 									{
-										label: __( 'Hide when Condition\'s met', 'block-options' ),
+										label: __( 'Hide when Condition\'s met', 'blockshop-options' ),
 										value: 'hide',
 									},
 									{
-										label: __( 'Show when Condition\'s met', 'block-options' ),
+										label: __( 'Show when Condition\'s met', 'blockshop-options' ),
 										value: 'show',
 									},
 								] }
@@ -88,40 +88,40 @@ class ACFOptions extends Component {
 							/>
 
 							<SelectControl
-								value={ ( typeof editorskit.acf_field !== 'undefined' && editorskit.acf_field !== '' ) ? editorskit.acf_field : '' }
+								value={ ( typeof sidetrack.acf_field !== 'undefined' && sidetrack.acf_field !== '' ) ? sidetrack.acf_field : '' }
 								options={ acfFields }
 								onChange={ ( n ) => onSelectFields( 'acf_field', n ) }
 							/>
 
 							<SelectControl
-								value={ ( typeof editorskit.acf_condition !== 'undefined' && editorskit.acf_condition !== '' ) ? editorskit.acf_condition : '' }
+								value={ ( typeof sidetrack.acf_condition !== 'undefined' && sidetrack.acf_condition !== '' ) ? sidetrack.acf_condition : '' }
 								options={ [
 									{
-										label: __( 'Select Condition', 'block-options' ),
+										label: __( 'Select Condition', 'blockshop-options' ),
 										value: 'none',
 									},
 									{
-										label: __( 'Is Equal to', 'block-options' ),
+										label: __( 'Is Equal to', 'blockshop-options' ),
 										value: 'equal',
 									},
 									{
-										label: __( 'Is Not Equal to', 'block-options' ),
+										label: __( 'Is Not Equal to', 'blockshop-options' ),
 										value: 'not_equal',
 									},
 									{
-										label: __( 'Contains', 'block-options' ),
+										label: __( 'Contains', 'blockshop-options' ),
 										value: 'contains',
 									},
 									{
-										label: __( 'Does Not Contain', 'block-options' ),
+										label: __( 'Does Not Contain', 'blockshop-options' ),
 										value: 'not_contains',
 									},
 									{
-										label: __( 'Is Empty', 'block-options' ),
+										label: __( 'Is Empty', 'blockshop-options' ),
 										value: 'empty',
 									},
 									{
-										label: __( 'Is Not Empty', 'block-options' ),
+										label: __( 'Is Not Empty', 'blockshop-options' ),
 										value: 'not_empty',
 									},
 								] }
@@ -129,11 +129,11 @@ class ACFOptions extends Component {
 							/>
 
 							<TextareaControl
-								label={ __( 'Conditional Value', 'block-options' ) }
+								label={ __( 'Conditional Value', 'blockshop-options' ) }
 								rows="3"
-								value={ editorskit.acf_value }
+								value={ sidetrack.acf_value }
 								onChange={ ( n ) => onSelectFields( 'acf_value', n ) }
-								help={ __( 'Additional support for Advanced Custom Fields plugin. Will automatically show when you have the plugin installed and activated.', 'block-options' ) }
+								help={ __( 'Additional support for Advanced Custom Fields plugin. Will automatically show when you have the plugin installed and activated.', 'blockshop-options' ) }
 							/>
 						</div>
 					</Fragment>
@@ -147,6 +147,6 @@ class ACFOptions extends Component {
 
 export default withSelect( ( select ) => {
 	return {
-		acf: select( 'editorskit/acf' ).receiveACFields(),
+		acf: select( 'sidetrack/acf' ).receiveACFields(),
 	};
 } )( ACFOptions );

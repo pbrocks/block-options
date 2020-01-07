@@ -31,6 +31,6 @@ const withControls = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/reusable-block-convert',
+	'sidetrack/reusable-block-convert',
 	withControls,
 );

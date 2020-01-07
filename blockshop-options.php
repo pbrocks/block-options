@@ -1,54 +1,54 @@
 <?php
 /**
- * Plugin Name: EditorsKit
- * Plugin URI: https://editorskit.com/
- * Description: EditorsKit is a suite of <strong>page building block options</strong> for the Gutenberg block editor.
+ * Plugin Name: Sidetrack Block(shop) Options - WhiteLabel
+ * Plugin URI: https://sidetrack.com/
+ * Description: Sidetrack is a suite of <strong>page building block options</strong> for the Gutenberg block editor.
  * Version: 1.23
  * Author: Jeffrey Carandang
  * Author URI: https://jeffreycarandang.com/
- * Text Domain: block-options
+ * Text Domain: blockshop-options
  * Domain Path: languages
  *
  * @category Gutenberg
  * @author Jeffrey Carandang
  * @version 1.0
- * @package EditorsKit
+ * @package Sidetrack
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'EditorsKit' ) ) :
+if ( ! class_exists( 'Sidetrack' ) ) :
 
 	/**
-	 * Main EditorsKit Class.
+	 * Main Sidetrack Class.
 	 *
 	 * @since  1.0
 	 */
-	final class EditorsKit {
+	final class Sidetrack {
 		/**
 		 * The plugin's instance
 		 *
-		 * @var EditorsKit The one true EditorsKit
+		 * @var Sidetrack The one true Sidetrack
 		 * @since  1.0
 		 */
 
 		private static $instance;
 
 		/**
-		 * Main EditorsKit Instance.
+		 * Main Sidetrack Instance.
 		 *
-		 * Insures that only one instance of EditorsKit exists in memory at any one
+		 * Insures that only one instance of Sidetrack exists in memory at any one
 		 * time. Also prevents needing to define globals all over the place.
 		 *
 		 * @since 1.0.0
 		 * @static
-		 * @return object|EditorsKit The one true EditorsKit
+		 * @return object|Sidetrack The one true Sidetrack
 		 */
 		public static function instance() {
-			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof EditorsKit ) ) {
-				self::$instance = new EditorsKit();
+			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Sidetrack ) ) {
+				self::$instance = new Sidetrack();
 				self::$instance->init();
 				self::$instance->setup_constants();
 				self::$instance->asset_suffix();
@@ -69,7 +69,7 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 		 */
 		public function __clone() {
 			// Cloning instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', 'block-options' ), '1.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', 'blockshop-options' ), '1.0' );
 		}
 
 		/**
@@ -81,7 +81,7 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 		 */
 		public function __wakeup() {
 			// Unserializing instances of the class is forbidden.
-			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', 'block-options' ), '1.0' );
+			_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheating huh?', 'blockshop-options' ), '1.0' );
 		}
 
 		/**
@@ -100,8 +100,8 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 			$this->define( 'EDITORSKIT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			$this->define( 'EDITORSKIT_PLUGIN_FILE', __FILE__ );
 			$this->define( 'EDITORSKIT_PLUGIN_BASE', plugin_basename( __FILE__ ) );
-			$this->define( 'EDITORSKIT_SHOP_URL', 'https://editorskit.com/' );
-			$this->define( 'EDITORSKIT_REVIEW_URL', 'https://wordpress.org/support/plugin/block-options/reviews/?filter=5' );
+			$this->define( 'EDITORSKIT_SHOP_URL', 'https://sidetrack.com/' );
+			$this->define( 'EDITORSKIT_REVIEW_URL', 'https://wordpress.org/support/plugin/blockshop-options/reviews/?filter=5' );
 		}
 
 		/**
@@ -125,20 +125,20 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 		 */
 		private function includes() {
 
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-block-assets.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-render-block.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-acf-support.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-features-manager.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-post-meta.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-block-assets.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-render-block.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-acf-support.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-features-manager.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-post-meta.php';
 			require_once EDITORSKIT_PLUGIN_DIR . 'includes/function-hide-title.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-custom-css-classes.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-custom-css-classes.php';
 			require_once EDITORSKIT_PLUGIN_DIR . 'includes/helper.php';
-			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-shortcodes.php';
+			require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-shortcodes.php';
 
 			if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-welcome.php';
-				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-page-template-support.php';
-				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-editorskit-user-feedback.php';
+				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-welcome.php';
+				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-page-template-support.php';
+				require_once EDITORSKIT_PLUGIN_DIR . 'includes/class-sidetrack-user-feedback.php';
 
 			}
 		}
@@ -193,7 +193,7 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 		 * @return void
 		 */
 		public function load_textdomain() {
-			load_plugin_textdomain( 'block-options', false, dirname( plugin_basename( EDITORSKIT_PLUGIN_DIR ) ) . '/languages/' );
+			load_plugin_textdomain( 'blockshop-options', false, dirname( plugin_basename( EDITORSKIT_PLUGIN_DIR ) ) . '/languages/' );
 		}
 
 		/**
@@ -203,7 +203,7 @@ if ( ! class_exists( 'EditorsKit' ) ) :
 		 */
 		public function block_localization() {
 			if ( function_exists( 'wp_set_script_translations' ) ) {
-				wp_set_script_translations( 'editorskit-editor', 'editorskit' );
+				wp_set_script_translations( 'sidetrack-editor', 'sidetrack' );
 			}
 		}
 
@@ -213,27 +213,27 @@ endif; // End if class_exists check.
 
 
 /**
- * The main function for that returns EditorsKit
+ * The main function for that returns Sidetrack
  *
- * The main function responsible for returning the one true EditorsKit
+ * The main function responsible for returning the one true Sidetrack
  * Instance to functions everywhere.
  *
  * Use this function like you would a global variable, except without needing
  * to declare the global.
  *
- * Example: <?php $blockopts = EditorsKit(); ?>
+ * Example: <?php $wpblockshop = Sidetrack(); ?>
  *
  * @since 1.0
- * @return object|EditorsKit The one true EditorsKit Instance.
+ * @return object|Sidetrack The one true Sidetrack Instance.
  */
-function editorskit() {
-	return EditorsKit::instance();
+function sidetrack() {
+	return Sidetrack::instance();
 }
 
 // Get Plugin Running.
 if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 	// Get Plugin Running. Load on plugins_loaded action to avoid issue on multisite.
-	add_action( 'plugins_loaded', 'editorskit' );
+	add_action( 'plugins_loaded', 'sidetrack' );
 } else {
-	editorskit();
+	sidetrack();
 }

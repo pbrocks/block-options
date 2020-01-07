@@ -17,7 +17,7 @@ const { Modal, TabPanel, withSpokenMessages } = wp.components;
 const { PluginBlockSettingsMenuItem } = wp.editPost;
 const { compose } = wp.compose;
 
-const restrictedBlocks = [ 'core/freeform', 'core/shortcode', 'core/block', 'core/template', 'editorskit/import' ];
+const restrictedBlocks = [ 'core/freeform', 'core/shortcode', 'core/block', 'core/template', 'sidetrack/import' ];
 
 /**
  * Render plugin
@@ -59,16 +59,16 @@ class BlockSettings extends Component {
 		if ( ! isDisabledDevices || ! isDisabledUserState ) {
 			tabs.push( {
 				name: 'default',
-				title: __( 'Default', 'block-options' ),
-				className: 'editorskit-default',
+				title: __( 'Default', 'blockshop-options' ),
+				className: 'sidetrack-default',
 			} );
 		}
 
 		if ( ! isDisabledLogic || ! isDisabledACF ) {
 			tabs.push( {
 				name: 'advanced',
-				title: __( 'Advanced', 'block-options' ),
-				className: 'editorskit-advanced',
+				title: __( 'Advanced', 'blockshop-options' ),
+				className: 'sidetrack-advanced',
 			} );
 		}
 
@@ -86,7 +86,7 @@ class BlockSettings extends Component {
 			<Fragment>
 				<PluginBlockSettingsMenuItem
 					icon="visibility"
-					label={ __( 'Visibility Settings', 'block-options' ) }
+					label={ __( 'Visibility Settings', 'blockshop-options' ) }
 					onClick={ () => {
 						this.setState( { isOpen: true } );
 					} }
@@ -95,12 +95,12 @@ class BlockSettings extends Component {
 				</PluginBlockSettingsMenuItem>
 				{ this.state.isOpen && typeof selectedBlock.name !== 'undefined' && ! restrictedBlocks.includes( selectedBlock.name ) ?
 					<Modal
-						title={ __( 'Visibility Settings', 'block-options' ) }
+						title={ __( 'Visibility Settings', 'blockshop-options' ) }
 						onRequestClose={ () => closeModal() }
-						closeLabel={ __( 'Close', 'block-options' ) }
-						className="editorskit-components-modal__content"
+						closeLabel={ __( 'Close', 'blockshop-options' ) }
+						className="sidetrack-components-modal__content"
 					>
-						<TabPanel className="editorskit-tab-panel"
+						<TabPanel className="sidetrack-tab-panel"
 							activeClass="is-active"
 							tabs={ tabs }>
 							{
@@ -113,7 +113,7 @@ class BlockSettings extends Component {
 											];
 										default:
 											return [
-												<small>{ __( 'Attention: The display settings (show/hide for mobile, tablet, desktop or users) will only take effect once you are on the live page, and not while you\'re editing in Gutenberg.', 'block-options' ) }</small>, /* eslint-disable-line react/jsx-key */
+												<small>{ __( 'Attention: The display settings (show/hide for mobile, tablet, desktop or users) will only take effect once you are on the live page, and not while you\'re editing in Gutenberg.', 'blockshop-options' ) }</small>, /* eslint-disable-line react/jsx-key */
 												! isDisabledDevices && DevicesOptions( selectedBlock ),
 												! isDisabledUserState && UserStateOptions( selectedBlock ),
 											];
@@ -139,10 +139,10 @@ export default compose(
 
 		return {
 			selectedBlock,
-			isDisabledDevices: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitDevicesVisibility' ),
-			isDisabledUserState: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitUserStateVisibility' ),
-			isDisabledLogic: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitLogicVisibility' ),
-			isDisabledACF: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitAcfVisibility' ),
+			isDisabledDevices: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackDevicesVisibility' ),
+			isDisabledUserState: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackUserStateVisibility' ),
+			isDisabledLogic: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackLogicVisibility' ),
+			isDisabledACF: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackAcfVisibility' ),
 		};
 	} ),
 	withSpokenMessages,

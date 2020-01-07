@@ -32,6 +32,6 @@ const withNavigator = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/media-text-link',
+	'sidetrack/media-text-link',
 	withNavigator
 );

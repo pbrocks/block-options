@@ -29,7 +29,7 @@ class UppercaseControl extends Component {
 		return (
 			<RichTextToolbarButton
 				icon={ icon.uppercase }
-				title={ __( 'Uppercase', 'block-options' ) }
+				title={ __( 'Uppercase', 'blockshop-options' ) }
 				onClick={ onToggle }
 				isActive={ isActive }
 			/>
@@ -40,7 +40,7 @@ class UppercaseControl extends Component {
 export default compose(
 	withSelect( ( select ) => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitUppercaseFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackUppercaseFormats' ),
 			formatTypes: select( 'core/rich-text' ).getFormatTypes(),
 		};
 	} ),

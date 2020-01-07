@@ -33,10 +33,10 @@ class FeaturesManager extends Component {
 			onToggle,
 		} = this.props;
 
-		let getSettings = editorSettings.editorskit;
+		let getSettings = editorSettings.sidetrack;
 
-		if ( typeof getSettings === 'undefined' && typeof window.editorskitSettings !== 'undefined' ) {
-			getSettings = window.editorskitSettings.editor_settings.editorskit;
+		if ( typeof getSettings === 'undefined' && typeof window.sidetrackSettings !== 'undefined' ) {
+			getSettings = window.sidetrackSettings.editor_settings.sidetrack;
 		}
 
 		return (
@@ -45,16 +45,16 @@ class FeaturesManager extends Component {
 					return (
 						<section className="edit-post-options-modal__section">
 							<h2 className="edit-post-options-modal__section-title">{ category.label }</h2>
-							<ul className="edit-post-editorskit-manager-modal__checklist">
+							<ul className="edit-post-sidetrack-manager-modal__checklist">
 								{ map( category.items, ( item ) => {
 									return (
 										<li
-											className="edit-post-editorskit-manager-modal__checklist-item"
+											className="edit-post-sidetrack-manager-modal__checklist-item"
 										>
 											<CheckboxControl
 												className="edit-post-options-modal__option"
 												label={ item.label }
-												checked={ ! select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKit' + capitalize( item.name ) + capitalize( category.name ) ) }
+												checked={ ! select( 'core/edit-post' ).isFeatureActive( 'disableSidetrack' + capitalize( item.name ) + capitalize( category.name ) ) }
 												onChange={ () => onToggle( category.name, item.name ) }
 											/>
 										</li>
@@ -76,7 +76,7 @@ export default compose( [
 	} ) ),
 	withDispatch( ( dispatch ) => ( {
 		onToggle( category, item ) {
-			dispatch( 'core/edit-post' ).toggleFeature( 'disableEditorsKit' + capitalize( item ) + capitalize( category ) );
+			dispatch( 'core/edit-post' ).toggleFeature( 'disableSidetrack' + capitalize( item ) + capitalize( category ) );
 		},
 	} ) ),
 	withSpokenMessages,

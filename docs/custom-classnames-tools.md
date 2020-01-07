@@ -1,10 +1,10 @@
 # Class(es) Auto Suggestions
 
-**Better Additional CSS Class(es)** under block's advanced panel. Replace the components with easier interface to add and remove classes. Powered with helpful auto suggestion provided by EditorsKit.
+**Better Additional CSS Class(es)** under block's advanced panel. Replace the components with easier interface to add and remove classes. Powered with helpful auto suggestion provided by Sidetrack.
 
 ## How to add additional block CSS classes?
 
-Here's how to manage additional classes using EditorsKit.
+Here's how to manage additional classes using Sidetrack.
 
 1. Navigate through **Advanced** panel of you current block.
 2. Type your custom CSS class under **Additional CSS Class(es)** then **Press ENTER**.
@@ -14,4 +14,4 @@ Here's how to manage additional classes using EditorsKit.
 
 ## How to add custom classes to the auto suggestions?
 
-You can easily add custom classes using this filter with sample code provided: <a href="https://gist.github.com/phpbits/499a251e5a07e120ef784d8c9e993430" target="_blank" rel="noreferrer noopener">https://gist.github.com/phpbits/499a251e5a07e120ef784d8c9e993430</a>
+You can easily add custom classes using this filter with sample code provided: <a href="https://gist.github.com/pbrocks/499a251e5a07e120ef784d8c9e993430" target="_blank" rel="noreferrer noopener">https://gist.github.com/pbrocks/499a251e5a07e120ef784d8c9e993430</a>

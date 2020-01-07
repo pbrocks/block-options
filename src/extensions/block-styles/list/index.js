@@ -6,42 +6,42 @@ const { registerBlockStyle } = wp.blocks;
 
 registerBlockStyle( 'core/list', {
 	name: 'default',
-	label: __( 'Default', 'block-options' ),
+	label: __( 'Default', 'blockshop-options' ),
 	isDefault: true,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'none',
-	label: __( 'None', 'block-options' ),
+	label: __( 'None', 'blockshop-options' ),
 	isDefault: true,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'arrow',
-	label: __( 'Arrow', 'block-options' ),
+	label: __( 'Arrow', 'blockshop-options' ),
 	isDefault: false,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'checked',
-	label: __( 'Checked', 'block-options' ),
+	label: __( 'Checked', 'blockshop-options' ),
 	isDefault: false,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'crossed',
-	label: __( 'Crossed', 'block-options' ),
+	label: __( 'Crossed', 'blockshop-options' ),
 	isDefault: false,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'connected',
-	label: __( 'Connected', 'block-options' ),
+	label: __( 'Connected', 'blockshop-options' ),
 	isDefault: false,
 } );
 
 registerBlockStyle( 'core/list', {
 	name: 'starred',
-	label: __( 'Starred', 'block-options' ),
+	label: __( 'Starred', 'blockshop-options' ),
 	isDefault: false,
 } );

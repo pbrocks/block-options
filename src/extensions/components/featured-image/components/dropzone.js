@@ -17,7 +17,7 @@ class BackgroundDropZone extends Component {
 	}
 
 	addFile( files ) {
-		document.body.classList.add( 'is-editorskit-uploading-featured' );
+		document.body.classList.add( 'is-sidetrack-uploading-featured' );
 		mediaUpload( {
 			allowedTypes: ALLOWED_MEDIA_TYPES,
 			filesList: files,
@@ -52,7 +52,7 @@ const applyWithDispatch = withDispatch( ( dispatch ) => {
 			const featuredImageId = select( 'core/editor' ).getEditedPostAttribute( 'featured_media' );
 
 			if ( featuredImageId === image.id ) {
-				document.body.classList.remove( 'is-editorskit-uploading-featured' );
+				document.body.classList.remove( 'is-sidetrack-uploading-featured' );
 			}
 		},
 		onRemoveImage() {

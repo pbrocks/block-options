@@ -12,11 +12,11 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/justify';
+const name = 'sidetrack/justify';
 
 export const justify = {
 	name,
-	title: __( 'Align text justify', 'block-options' ),
+	title: __( 'Align text justify', 'blockshop-options' ),
 	tagName: 'p',
 	className: null,
 	attributes: {

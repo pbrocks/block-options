@@ -70,12 +70,12 @@ const withControls = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'blocks.registerBlockType',
-	'editorskit/media-text-link/attributes',
+	'sidetrack/media-text-link/attributes',
 	addAttributes
 );
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/media-text-link',
+	'sidetrack/media-text-link',
 	withControls
 );

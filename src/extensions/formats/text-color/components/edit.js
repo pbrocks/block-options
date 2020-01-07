@@ -9,8 +9,8 @@ const { applyFormat, removeFormat, getActiveFormat } = wp.richText;
 const { Toolbar, IconButton, Popover, ColorPalette } = wp.components;
 const { compose, ifCondition } = wp.compose;
 
-const name = 'editorskit/color';
-const title = __( 'Text Color', 'block-options' );
+const name = 'sidetrack/color';
+const title = __( 'Text Color', 'blockshop-options' );
 
 class Edit extends Component {
 	constructor() {
@@ -59,16 +59,16 @@ class Edit extends Component {
 		return (
 			<Fragment>
 				<BlockControls>
-					<Toolbar className="editorskit-components-toolbar">
+					<Toolbar className="sidetrack-components-toolbar">
 						<IconButton
-							className="components-button components-icon-button components-editorskit-toolbar__control components-toolbar__control components-editorskit-color-format"
+							className="components-button components-icon-button components-sidetrack-toolbar__control components-toolbar__control components-sidetrack-color-format"
 							icon="editor-textcolor"
 							aria-haspopup="true"
 							tooltip={ title }
 							onClick={ this.toggle }
 						>
 							<span
-								className="components-editorskit-inline-color__indicator"
+								className="components-sidetrack-inline-color__indicator"
 								style={ {
 									backgroundColor: activeColor,
 								} }
@@ -78,10 +78,10 @@ class Edit extends Component {
 						{ isOpen && (
 							<Popover
 								position="bottom center"
-								className="components-editorskit__inline-color-popover"
+								className="components-sidetrack__inline-color-popover"
 								focusOnMount="container"
 								onClickOutside={ ( onClickOutside ) => {
-									if ( ( ! onClickOutside.target.classList.contains( 'components-editorskit-color-format' ) && ! document.querySelector( '.components-editorskit-color-format' ).contains( onClickOutside.target ) ) && ( ! document.querySelector( '.components-color-palette__picker' ) || ( document.querySelector( '.components-color-palette__picker' ) && ! document.querySelector( '.components-color-palette__picker' ).contains( onClickOutside.target ) ) ) ) {
+									if ( ( ! onClickOutside.target.classList.contains( 'components-sidetrack-color-format' ) && ! document.querySelector( '.components-sidetrack-color-format' ).contains( onClickOutside.target ) ) && ( ! document.querySelector( '.components-color-palette__picker' ) || ( document.querySelector( '.components-color-palette__picker' ) && ! document.querySelector( '.components-color-palette__picker' ).contains( onClickOutside.target ) ) ) ) {
 										this.setState( { isOpen: ! isOpen } );
 									}
 								} }
@@ -94,8 +94,8 @@ class Edit extends Component {
 											let colorObject = null;
 
 											if (
-												typeof window.editorskitInfo !== 'undefined' &&
-												window.editorskitInfo.supports.color_palette
+												typeof window.sidetrackInfo !== 'undefined' &&
+												window.sidetrackInfo.supports.color_palette
 											) {
 												colorObject = getColorObjectByColorValue( colors, color );
 											}
@@ -136,7 +136,7 @@ export default compose(
 
 		return {
 			colors: colors ? colors : [],
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitColorsFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackColorsFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

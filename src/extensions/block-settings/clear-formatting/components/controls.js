@@ -29,7 +29,7 @@ class ClearBlockFormatting extends Component {
 			<Fragment>
 				<PluginBlockSettingsMenuItem
 					icon="editor-removeformatting"
-					label={ __( 'Clear Block Formatting', 'block-options' ) }
+					label={ __( 'Clear Block Formatting', 'blockshop-options' ) }
 					onClick={ () => {
 						clearBlockFormatting( blockId, blockName, toHTMLString( {
 							value: { ...record, formats: Array( record.formats.length ) },
@@ -54,7 +54,7 @@ export default compose(
 			blockId: selectedBlock.clientId,
 			blockName: selectedBlock.name,
 			blockContent: get( selectedBlock, 'attributes.content' ),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitClearFormattingFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackClearFormattingFormats' ),
 		};
 	} ),
 	withDispatch( ( dispatch ) => {

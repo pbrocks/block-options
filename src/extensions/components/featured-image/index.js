@@ -22,7 +22,7 @@ const applyWithSelect = withSelect( ( select ) => {
 		currentPostId: getCurrentPostId(),
 		postType: getPostType( getEditedPostAttribute( 'type' ) ),
 		featuredImageId,
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitDragAndDropFeaturedTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackDragAndDropFeaturedTools' ),
 	};
 } );
 
@@ -57,6 +57,6 @@ const withDragandDropFeaturedImage = createHigherOrderComponent( ( OriginalCompo
 
 addFilter(
 	'editor.PostFeaturedImage',
-	'editorskit/post-featured-image',
+	'sidetrack/post-featured-image',
 	withDragandDropFeaturedImage
 );

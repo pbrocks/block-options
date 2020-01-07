@@ -8,7 +8,7 @@ import HelpControl from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-help-tips', {
+registerPlugin( 'sidetrack-help-tips', {
 	icon: false,
 	render: HelpControl,
 } );

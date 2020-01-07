@@ -6,9 +6,9 @@
  * Heavily based on code by CoBlocks
  * https://github.com/coblocks/coblocks/blob/master/includes/admin/class-coblocks-feedback.php
  *
- * @package   EditorsKit
- * @author    Jeffrey Carandang from EditorsKit
- * @link      https://editorskit.com
+ * @package   Sidetrack
+ * @author    Jeffrey Carandang from Sidetrack
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main Feedback Notice Class
  */
-class EditorsKit_User_Feedback {
+class Sidetrack_User_Feedback {
 
 	/**
 	 * Slug.
@@ -92,54 +92,54 @@ class EditorsKit_User_Feedback {
 		$years = ( intval( $seconds ) / YEAR_IN_SECONDS ) % 100;
 		if ( $years > 1 ) {
 			/* translators: Number of years */
-			return sprintf( __( '%s years', 'block-options' ), $years );
+			return sprintf( __( '%s years', 'blockshop-options' ), $years );
 		} elseif ( $years > 0 ) {
-			return __( 'a year', 'block-options' );
+			return __( 'a year', 'blockshop-options' );
 		}
 
 		// Get the weeks.
 		$weeks = ( intval( $seconds ) / WEEK_IN_SECONDS ) % 52;
 		if ( $weeks > 1 ) {
 			/* translators: Number of weeks */
-			return sprintf( __( '%s weeks', 'block-options' ), $weeks );
+			return sprintf( __( '%s weeks', 'blockshop-options' ), $weeks );
 		} elseif ( $weeks > 0 ) {
-			return __( 'a week', 'block-options' );
+			return __( 'a week', 'blockshop-options' );
 		}
 
 		// Get the days.
 		$days = ( intval( $seconds ) / DAY_IN_SECONDS ) % 7;
 		if ( $days > 1 ) {
 			/* translators: Number of days */
-			return sprintf( __( '%s days', 'block-options' ), $days );
+			return sprintf( __( '%s days', 'blockshop-options' ), $days );
 		} elseif ( $days > 0 ) {
-			return __( 'a day', 'block-options' );
+			return __( 'a day', 'blockshop-options' );
 		}
 
 		// Get the hours.
 		$hours = ( intval( $seconds ) / HOUR_IN_SECONDS ) % 24;
 		if ( $hours > 1 ) {
 			/* translators: Number of hours */
-			return sprintf( __( '%s hours', 'block-options' ), $hours );
+			return sprintf( __( '%s hours', 'blockshop-options' ), $hours );
 		} elseif ( $hours > 0 ) {
-			return __( 'an hour', 'block-options' );
+			return __( 'an hour', 'blockshop-options' );
 		}
 
 		// Get the minutes.
 		$minutes = ( intval( $seconds ) / MINUTE_IN_SECONDS ) % 60;
 		if ( $minutes > 1 ) {
 			/* translators: Number of minutes */
-			return sprintf( __( '%s minutes', 'block-options' ), $minutes );
+			return sprintf( __( '%s minutes', 'blockshop-options' ), $minutes );
 		} elseif ( $minutes > 0 ) {
-			return __( 'a minute', 'block-options' );
+			return __( 'a minute', 'blockshop-options' );
 		}
 
 		// Get the seconds.
 		$seconds = intval( $seconds ) % 60;
 		if ( $seconds > 1 ) {
 			/* translators: Number of seconds */
-			return sprintf( __( '%s seconds', 'block-options' ), $seconds );
+			return sprintf( __( '%s seconds', 'blockshop-options' ), $seconds );
 		} elseif ( $seconds > 0 ) {
-			return __( 'a second', 'block-options' );
+			return __( 'a second', 'blockshop-options' );
 		}
 	}
 
@@ -170,50 +170,50 @@ class EditorsKit_User_Feedback {
 		$screen = get_current_screen();
 
 		if ( isset( $screen->base ) && 'plugins' === $screen->base ) {
-			$no_bug_url = wp_nonce_url( admin_url( 'plugins.php?' . $this->nobug_option . '=true' ), 'editorskit-feedback-nounce' );
+			$no_bug_url = wp_nonce_url( admin_url( 'plugins.php?' . $this->nobug_option . '=true' ), 'sidetrack-feedback-nounce' );
 			$time       = $this->seconds_to_words( time() - get_site_option( $this->date_option ) );
 			?>
 
 		<style>
-		.notice.editorskit-notice {
+		.notice.sidetrack-notice {
 			border-left-color: #272c51 !important;
 			padding: 20px;
 		}
-		.rtl .notice.editorskit-notice {
+		.rtl .notice.sidetrack-notice {
 			border-right-color: #272c51 !important;
 		}
-		.notice.notice.editorskit-notice .editorskit-notice-inner {
+		.notice.notice.sidetrack-notice .sidetrack-notice-inner {
 			display: table;
 			width: 100%;
 		}
-		.notice.editorskit-notice .editorskit-notice-inner .editorskit-notice-icon,
-		.notice.editorskit-notice .editorskit-notice-inner .editorskit-notice-content,
-		.notice.editorskit-notice .editorskit-notice-inner .editorskit-install-now {
+		.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-notice-icon,
+		.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-notice-content,
+		.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-install-now {
 			display: table-cell;
 			vertical-align: middle;
 		}
-		.notice.editorskit-notice .editorskit-notice-icon {
+		.notice.sidetrack-notice .sidetrack-notice-icon {
 			color: #509ed2;
 			font-size: 13px;
 			width: 60px;
 		}
-		.notice.editorskit-notice .editorskit-notice-icon img {
+		.notice.sidetrack-notice .sidetrack-notice-icon img {
 			width: 64px;
 		}
-		.notice.editorskit-notice .editorskit-notice-content {
+		.notice.sidetrack-notice .sidetrack-notice-content {
 			padding: 0 40px 0 20px;
 		}
-		.notice.editorskit-notice p {
+		.notice.sidetrack-notice p {
 			padding: 0;
 			margin: 0;
 		}
-		.notice.editorskit-notice h3 {
+		.notice.sidetrack-notice h3 {
 			margin: 0 0 5px;
 		}
-		.notice.editorskit-notice .editorskit-install-now {
+		.notice.sidetrack-notice .sidetrack-install-now {
 			text-align: center;
 		}
-		.notice.editorskit-notice .editorskit-install-now .editorskit-install-button {
+		.notice.sidetrack-notice .sidetrack-install-now .sidetrack-install-button {
 			padding: 6px 50px;
 			height: auto;
 			line-height: 20px;
@@ -222,68 +222,68 @@ class EditorsKit_User_Feedback {
 			box-shadow: 0 1px 0 #0d1f82;
 			text-shadow: 0 -1px 1px #272c51, 1px 0 1px #171b3e, 0 1px 1px #0a1035, -1px 0 1px #040721;
 		}
-		.notice.editorskit-notice .editorskit-install-now .editorskit-install-button:hover {
+		.notice.sidetrack-notice .sidetrack-install-now .sidetrack-install-button:hover {
 			background: #272c51;
 		}
-		.notice.editorskit-notice a.no-thanks {
+		.notice.sidetrack-notice a.no-thanks {
 			display: block;
 			margin-top: 10px;
 			color: #72777c;
 			text-decoration: none;
 		}
 
-		.notice.editorskit-notice a.no-thanks:hover {
+		.notice.sidetrack-notice a.no-thanks:hover {
 			color: #444;
 		}
 
 		@media (max-width: 767px) {
 
-			.notice.notice.editorskit-notice .editorskit-notice-inner {
+			.notice.notice.sidetrack-notice .sidetrack-notice-inner {
 				display: block;
 			}
-			.notice.editorskit-notice {
+			.notice.sidetrack-notice {
 				padding: 20px !important;
 			}
-			.notice.editorskit-noticee .editorskit-notice-inner {
+			.notice.sidetrack-noticee .sidetrack-notice-inner {
 				display: block;
 			}
-			.notice.editorskit-notice .editorskit-notice-inner .editorskit-notice-content {
+			.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-notice-content {
 				display: block;
 				padding: 0;
 			}
-			.notice.editorskit-notice .editorskit-notice-inner .editorskit-notice-icon {
+			.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-notice-icon {
 				display: none;
 			}
 
-			.notice.editorskit-notice .editorskit-notice-inner .editorskit-install-now {
+			.notice.sidetrack-notice .sidetrack-notice-inner .sidetrack-install-now {
 				margin-top: 20px;
 				display: block;
 				text-align: left;
 			}
 
-			.notice.editorskit-notice .editorskit-notice-inner .no-thanks {
+			.notice.sidetrack-notice .sidetrack-notice-inner .no-thanks {
 				display: inline-block;
 				margin-left: 15px;
 			}
 		}
 		</style>
-		<div class="notice updated editorskit-notice">
-			<div class="editorskit-notice-inner">
-				<div class="editorskit-notice-icon">
+		<div class="notice updated sidetrack-notice">
+			<div class="sidetrack-notice-inner">
+				<div class="sidetrack-notice-icon">
 					<?php /* translators: 1. Name */ ?>
-					<img src="<?php echo esc_url( EDITORSKIT_PLUGIN_URL . '/build/images/icon-256x256.jpg' ); ?>" alt="<?php printf( esc_attr__( '%s WordPress Plugin', 'block-options' ), esc_attr( $this->name ) ); ?>" />
+					<img src="<?php echo esc_url( EDITORSKIT_PLUGIN_URL . '/build/images/icon-256x256.jpg' ); ?>" alt="<?php printf( esc_attr__( '%s WordPress Plugin', 'blockshop-options' ), esc_attr( $this->name ) ); ?>" />
 				</div>
-				<div class="editorskit-notice-content">
+				<div class="sidetrack-notice-content">
 					<?php /* translators: 1. Name */ ?>
-					<h3><?php printf( esc_html__( 'Are you enjoying %s Plugin?', 'block-options' ), esc_html( $this->name ) ); ?></h3>
+					<h3><?php printf( esc_html__( 'Are you enjoying %s Plugin?', 'blockshop-options' ), esc_html( $this->name ) ); ?></h3>
 					<p>
 						<?php /* translators: 1. Name, 2. Time */ ?>
-						<?php printf( esc_html__( 'You have been using %1$s for %2$s now. Mind leaving a review to let us know know what you think? We\'d really appreciate it!', 'block-options' ), esc_html( $this->name ), esc_html( $time ) ); ?>
+						<?php printf( esc_html__( 'You have been using %1$s for %2$s now. Mind leaving a review to let us know know what you think? We\'d really appreciate it!', 'blockshop-options' ), esc_html( $this->name ), esc_html( $time ) ); ?>
 					</p>
 				</div>
-				<div class="editorskit-install-now">
-					<?php printf( '<a href="%1$s" class="button button-primary editorskit-install-button" target="_blank">%2$s</a>', esc_url( 'https://wordpress.org/support/view/plugin-reviews/block-options#new-post' ), esc_html__( 'Leave a Review', 'block-options' ) ); ?>
-					<a href="<?php echo esc_url( $no_bug_url ); ?>" class="no-thanks"><?php echo esc_html__( 'No thanks / I already have', 'block-options' ); ?></a>
+				<div class="sidetrack-install-now">
+					<?php printf( '<a href="%1$s" class="button button-primary sidetrack-install-button" target="_blank">%2$s</a>', esc_url( 'https://wordpress.org/support/view/plugin-reviews/blockshop-options#new-post' ), esc_html__( 'Leave a Review', 'blockshop-options' ) ); ?>
+					<a href="<?php echo esc_url( $no_bug_url ); ?>" class="no-thanks"><?php echo esc_html__( 'No thanks / I already have', 'blockshop-options' ); ?></a>
 				</div>
 			</div>
 		</div>
@@ -298,7 +298,7 @@ class EditorsKit_User_Feedback {
 
 		// Bail out if not on correct page.
 		// phpcs:ignore
-		if ( ! isset( $_GET['_wpnonce'] ) || ( ! wp_verify_nonce( $_GET['_wpnonce'], 'editorskit-feedback-nounce' ) || ! is_admin() || ! isset( $_GET[ $this->nobug_option ] ) || ! current_user_can( 'manage_options' ) ) ) {
+		if ( ! isset( $_GET['_wpnonce'] ) || ( ! wp_verify_nonce( $_GET['_wpnonce'], 'sidetrack-feedback-nounce' ) || ! is_admin() || ! isset( $_GET[ $this->nobug_option ] ) || ! current_user_can( 'manage_options' ) ) ) {
 			return;
 		}
 
@@ -307,12 +307,12 @@ class EditorsKit_User_Feedback {
 }
 
 /*
-* Instantiate the EditorsKit_User_Feedback class.
+* Instantiate the Sidetrack_User_Feedback class.
 */
-new EditorsKit_User_Feedback(
+new Sidetrack_User_Feedback(
 	array(
-		'slug'       => 'editorskit_plugin_feedback',
-		'name'       => __( 'EditorsKit', 'block-options' ),
+		'slug'       => 'sidetrack_plugin_feedback',
+		'name'       => __( 'Sidetrack', 'blockshop-options' ),
 		'time_limit' => WEEK_IN_SECONDS,
 	)
 );

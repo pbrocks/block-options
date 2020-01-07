@@ -124,7 +124,7 @@ class MarkdownControl extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitMarkdownWriting' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackMarkdownWriting' ),
 		};
 	} ),
 	withDispatch( ( dispatch, {

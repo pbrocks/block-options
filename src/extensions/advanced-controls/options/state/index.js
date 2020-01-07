@@ -14,41 +14,41 @@ const UserStateOptions = ( props ) => {
 	} = props;
 
 	const {
-		editorskit,
+		sidetrack,
 	} = attributes;
 
 	const onSelectUser = ( state ) => {
-		const newValue = ! editorskit[ state ];
+		const newValue = ! sidetrack[ state ];
 
-		delete editorskit[ state ];
+		delete sidetrack[ state ];
 
-		const blockOptions = Object.assign( { [ state ]: newValue }, editorskit );
+		const blockOptions = Object.assign( { [ state ]: newValue }, sidetrack );
 
-		dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { editorskit: blockOptions } );
+		dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { sidetrack: blockOptions } );
 
 		if ( reloadModal ) {
 			reloadModal();
 		}
 	};
 
-	if ( typeof editorskit === 'undefined' ) {
+	if ( typeof sidetrack === 'undefined' ) {
 		return;
 	}
 
 	return (
 		<Fragment>
-			<div className="editorskit-user-state-controls">
-				<hr className="editorskit-divider" />
+			<div className="sidetrack-user-state-controls">
+				<hr className="sidetrack-divider" />
 				<ToggleControl
-					label={ __( 'Hide on Loggedin Users', 'block-options' ) }
-					help={ ! editorskit.loggedin ? __( 'Hidden when users are logged in.', 'block-options' ) : __( 'Toggle to hide this block when users are not logged in.', 'block-options' ) }
-					checked={ typeof editorskit.loggedin !== 'undefined' && ! editorskit.loggedin }
+					label={ __( 'Hide on Loggedin Users', 'blockshop-options' ) }
+					help={ ! sidetrack.loggedin ? __( 'Hidden when users are logged in.', 'blockshop-options' ) : __( 'Toggle to hide this block when users are not logged in.', 'blockshop-options' ) }
+					checked={ typeof sidetrack.loggedin !== 'undefined' && ! sidetrack.loggedin }
 					onChange={ () => onSelectUser( 'loggedin' ) }
 				/>
 				<ToggleControl
-					label={ __( 'Hide on Loggedout Users', 'block-options' ) }
-					help={ ! editorskit.loggedout ? __( 'Hidden on guests or logged out users.', 'block-options' ) : __( 'Toggle to hide this block when users are guests or logged out.', 'block-options' ) }
-					checked={ typeof editorskit.loggedout !== 'undefined' && ! editorskit.loggedout }
+					label={ __( 'Hide on Loggedout Users', 'blockshop-options' ) }
+					help={ ! sidetrack.loggedout ? __( 'Hidden on guests or logged out users.', 'blockshop-options' ) : __( 'Toggle to hide this block when users are guests or logged out.', 'blockshop-options' ) }
+					checked={ typeof sidetrack.loggedout !== 'undefined' && ! sidetrack.loggedout }
 					onChange={ () => onSelectUser( 'loggedout' ) }
 				/>
 			</div>

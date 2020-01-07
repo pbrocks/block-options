@@ -1,9 +1,9 @@
 # Copyright (C) 2020 Jeffrey Carandang
-# This file is distributed under the same license as the EditorsKit plugin.
+# This file is distributed under the same license as the Sidetrack plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: EditorsKit 1.23\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-options\n"
+"Project-Id-Version: Sidetrack 1.23\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/blockshop-options\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,20 +12,20 @@ msgstr ""
 "POT-Creation-Date: 2020-01-03T14:15:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.1.0\n"
-"X-Domain: block-options\n"
+"X-Domain: blockshop-options\n"
 
 #. Plugin Name of the plugin
-#: includes/class-editorskit-user-feedback.php:315
-#: includes/class-editorskit-welcome.php:131
-msgid "EditorsKit"
+#: includes/class-sidetrack-user-feedback.php:315
+#: includes/class-sidetrack-welcome.php:131
+msgid "Sidetrack"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "https://editorskit.com/"
+msgid "https://sidetrack.com/"
 msgstr ""
 
 #. Description of the plugin
-msgid "EditorsKit is a suite of <strong>page building block options</strong> for the Gutenberg block editor."
+msgid "Sidetrack is a suite of <strong>page building block options</strong> for the Gutenberg block editor."
 msgstr ""
 
 #. Author of the plugin
@@ -41,301 +41,301 @@ msgstr ""
 msgid "Cheating huh?"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:87
+#: includes/class-sidetrack-features-manager.php:87
 msgid "Visibility"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:91
+#: includes/class-sidetrack-features-manager.php:91
 msgid "ACF Support"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:96
+#: includes/class-sidetrack-features-manager.php:96
 msgid "Devices"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:101
+#: includes/class-sidetrack-features-manager.php:101
 msgid "Display Logic"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:106
+#: includes/class-sidetrack-features-manager.php:106
 msgid "User Login State"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:113
+#: includes/class-sidetrack-features-manager.php:113
 msgid "Formats"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:117
+#: includes/class-sidetrack-features-manager.php:117
 #: src/extensions/formats/abbreviation/index.js:19
 #: src/extensions/formats/abbreviation/components/edit.js:47
 msgid "Abbreviation"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:122
+#: includes/class-sidetrack-features-manager.php:122
 #: src/admin/docs/index.js:66
 #: src/extensions/formats/clear/controls.js:39
 #: src/extensions/formats/clear/index.js:19
 msgid "Clear Formatting"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:127
+#: includes/class-sidetrack-features-manager.php:127
 msgid "Highlighted Text Color"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:132
+#: includes/class-sidetrack-features-manager.php:132
 msgid "Justified Alignment"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:137
+#: includes/class-sidetrack-features-manager.php:137
 msgid "Link with \"rel\" Attributes"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:142
+#: includes/class-sidetrack-features-manager.php:142
 #: src/extensions/formats/nbsp/index.js:19
 msgid "Nonbreaking Space"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:147
+#: includes/class-sidetrack-features-manager.php:147
 #: src/extensions/formats/subscript/controls.js:45
 #: src/extensions/formats/subscript/index.js:19
 msgid "Subscript"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:152
+#: includes/class-sidetrack-features-manager.php:152
 #: src/extensions/formats/superscript/controls.js:45
 #: src/extensions/formats/superscript/index.js:19
 msgid "Superscript"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:157
+#: includes/class-sidetrack-features-manager.php:157
 #: src/extensions/block-panel/list-settings/index.js:59
 #: src/extensions/formats/text-color/index.js:18
 #: src/extensions/formats/text-color/components/edit.js:13
 msgid "Text Color"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:162
+#: includes/class-sidetrack-features-manager.php:162
 #: src/extensions/formats/underline/index.js:17
 #: src/extensions/formats/underline/index.js:48
 #: src/extensions/formats/markdown/index.js:20
 msgid "Underline"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:167
+#: includes/class-sidetrack-features-manager.php:167
 #: src/extensions/formats/uppercase/controls.js:32
 #: src/extensions/formats/uppercase/index.js:19
 msgid "Uppercase"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:174
+#: includes/class-sidetrack-features-manager.php:174
 #: src/admin/docs/index.js:204
 msgid "Writing"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:178
+#: includes/class-sidetrack-features-manager.php:178
 msgid "Estimated Reading Time"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:183
+#: includes/class-sidetrack-features-manager.php:183
 msgid "Heading Block Label"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:188
+#: includes/class-sidetrack-features-manager.php:188
 msgid "Markdown"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:193
+#: includes/class-sidetrack-features-manager.php:193
 #: src/admin/docs/index.js:81
 msgid "Transform 4 Empty Paragraphs to Spacer Block"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:200
+#: includes/class-sidetrack-features-manager.php:200
 #: src/admin/docs/index.js:221
 msgid "Block Options"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:204
+#: includes/class-sidetrack-features-manager.php:204
 msgid "Button Block Full Width"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:209
+#: includes/class-sidetrack-features-manager.php:209
 msgid "Columns Block Background Color"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:214
+#: includes/class-sidetrack-features-manager.php:214
 msgid "Convert Reusable Block Toolbar"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:219
+#: includes/class-sidetrack-features-manager.php:219
 #: src/admin/docs/index.js:96
 msgid "Copy Selected Block(s)"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:224
+#: includes/class-sidetrack-features-manager.php:224
 msgid "Cover Block Vertical Alignment"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:229
+#: includes/class-sidetrack-features-manager.php:229
 #: src/extensions/block-toolbar/block-navigator/components/controls.js:43
 msgid "Block Navigator"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:234
+#: includes/class-sidetrack-features-manager.php:234
 #: src/extensions/block-settings/export/components/export.js:77
 msgid "Export as JSON"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:239
+#: includes/class-sidetrack-features-manager.php:239
 msgid "List Block Font Size"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:244
+#: includes/class-sidetrack-features-manager.php:244
 msgid "List Block Text Color"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:249
+#: includes/class-sidetrack-features-manager.php:249
 msgid "Media Text Block Layout"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:254
+#: includes/class-sidetrack-features-manager.php:254
 msgid "Media Text Block Link"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:259
+#: includes/class-sidetrack-features-manager.php:259
 msgid "Set Image Block as Featured"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:266
+#: includes/class-sidetrack-features-manager.php:266
 #: src/admin/docs/index.js:238
 msgid "Tools"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:270
+#: includes/class-sidetrack-features-manager.php:270
 #: src/extensions/components/guidelines/components/menu.js:55
 msgid "Block Guide Lines"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:275
+#: includes/class-sidetrack-features-manager.php:275
 msgid "Code Editor Syntax Highlight"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:280
+#: includes/class-sidetrack-features-manager.php:280
 msgid "Custom Class Names"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:285
+#: includes/class-sidetrack-features-manager.php:285
 #: src/admin/docs/index.js:119
 msgid "Drag and Drop Featured Image"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:290
+#: includes/class-sidetrack-features-manager.php:290
 msgid "Editor Min-Height"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:295
+#: includes/class-sidetrack-features-manager.php:295
 msgid "Toggle Auto Save"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:300
+#: includes/class-sidetrack-features-manager.php:300
 msgid "Help, tips and tricks"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:305
+#: includes/class-sidetrack-features-manager.php:305
 msgid "Toggle Title Visibility"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:310
+#: includes/class-sidetrack-features-manager.php:310
 #: src/extensions/components/scroll-down/components/scrolldown.js:36
 msgid "View Custom Fields"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:317
+#: includes/class-sidetrack-features-manager.php:317
 msgid "Shortcuts"
 msgstr ""
 
-#: includes/class-editorskit-features-manager.php:321
+#: includes/class-sidetrack-features-manager.php:321
 msgid "Select Parent Block"
 msgstr ""
 
 #. translators: Number of years
-#: includes/class-editorskit-user-feedback.php:95
+#: includes/class-sidetrack-user-feedback.php:95
 msgid "%s years"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:97
+#: includes/class-sidetrack-user-feedback.php:97
 msgid "a year"
 msgstr ""
 
 #. translators: Number of weeks
-#: includes/class-editorskit-user-feedback.php:104
+#: includes/class-sidetrack-user-feedback.php:104
 msgid "%s weeks"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:106
+#: includes/class-sidetrack-user-feedback.php:106
 msgid "a week"
 msgstr ""
 
 #. translators: Number of days
-#: includes/class-editorskit-user-feedback.php:113
+#: includes/class-sidetrack-user-feedback.php:113
 msgid "%s days"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:115
+#: includes/class-sidetrack-user-feedback.php:115
 msgid "a day"
 msgstr ""
 
 #. translators: Number of hours
-#: includes/class-editorskit-user-feedback.php:122
+#: includes/class-sidetrack-user-feedback.php:122
 msgid "%s hours"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:124
+#: includes/class-sidetrack-user-feedback.php:124
 msgid "an hour"
 msgstr ""
 
 #. translators: Number of minutes
-#: includes/class-editorskit-user-feedback.php:131
+#: includes/class-sidetrack-user-feedback.php:131
 msgid "%s minutes"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:133
+#: includes/class-sidetrack-user-feedback.php:133
 msgid "a minute"
 msgstr ""
 
 #. translators: Number of seconds
-#: includes/class-editorskit-user-feedback.php:140
+#: includes/class-sidetrack-user-feedback.php:140
 msgid "%s seconds"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:142
+#: includes/class-sidetrack-user-feedback.php:142
 msgid "a second"
 msgstr ""
 
 #. translators: 1. Name
-#: includes/class-editorskit-user-feedback.php:274
+#: includes/class-sidetrack-user-feedback.php:274
 msgid "%s WordPress Plugin"
 msgstr ""
 
 #. translators: 1. Name
-#: includes/class-editorskit-user-feedback.php:278
+#: includes/class-sidetrack-user-feedback.php:278
 msgid "Are you enjoying %s Plugin?"
 msgstr ""
 
 #. translators: 1. Name, 2. Time
-#: includes/class-editorskit-user-feedback.php:281
+#: includes/class-sidetrack-user-feedback.php:281
 msgid "You have been using %1$s for %2$s now. Mind leaving a review to let us know know what you think? We'd really appreciate it!"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:285
+#: includes/class-sidetrack-user-feedback.php:285
 msgid "Leave a Review"
 msgstr ""
 
-#: includes/class-editorskit-user-feedback.php:286
+#: includes/class-sidetrack-user-feedback.php:286
 msgid "No thanks / I already have"
 msgstr ""
 
-#: includes/class-editorskit-welcome.php:130
-msgid "Getting started with EditorsKit"
+#: includes/class-sidetrack-welcome.php:130
+msgid "Getting started with Sidetrack"
 msgstr ""
 
 #: src/blocks/lorem/index.js:19
@@ -363,7 +363,7 @@ msgid "migrate"
 msgstr ""
 
 #: src/blocks/import/index.js:36
-msgid "Import blocks exported using EditorsKit plugin."
+msgid "Import blocks exported using Sidetrack plugin."
 msgstr ""
 
 #: src/blocks/import/components/edit.js:104
@@ -392,19 +392,19 @@ msgid "Upload"
 msgstr ""
 
 #: src/admin/index.js:51
-msgid "EditorsKit provides set of tools to extend the way you are building content on WordPress Gutenberg block editor. Designed and integrated to help users easily navigate; and control each block the way it should be."
+msgid "Sidetrack provides set of tools to extend the way you are building content on WordPress Gutenberg block editor. Designed and integrated to help users easily navigate; and control each block the way it should be."
 msgstr ""
 
 #: src/admin/index.js:54
-msgid "EditorsKit video preview"
+msgid "Sidetrack video preview"
 msgstr ""
 
 #: src/admin/index.js:59
-msgid "If you have any questions or suggestion, let us know through %1$sTwitter%4$s or our %2$sFacebook community %4$s. Also, %3$ssubscribe to our newsletter%4$s if you want to stay up to date with what's new and upcoming at EditorsKit."
+msgid "If you have any questions or suggestion, let us know through %1$sTwitter%4$s or our %2$sFacebook community %4$s. Also, %3$ssubscribe to our newsletter%4$s if you want to stay up to date with what's new and upcoming at Sidetrack."
 msgstr ""
 
 #: src/admin/index.js:79
-msgid "All features are active by default but you have complete control over each one of them. Disable any features do not want to use and re-enable them anytime on this page or under the \"EditorsKit Settings\" on Gutenberg editor. Just uncheck the box and it will automatically be saved."
+msgid "All features are active by default but you have complete control over each one of them. Disable any features do not want to use and re-enable them anytime on this page or under the \"Sidetrack Settings\" on Gutenberg editor. Just uncheck the box and it will automatically be saved."
 msgstr ""
 
 #: src/admin/index.js:89
@@ -412,7 +412,7 @@ msgid "Manage each individual blocks! You can enable or disable any blocks you w
 msgstr ""
 
 #: src/admin/index.js:106
-msgid "Settings → EditorsKit"
+msgid "Settings → Sidetrack"
 msgstr ""
 
 #: src/admin/index.js:107
@@ -532,7 +532,7 @@ msgid "Additional List Block Styles"
 msgstr ""
 
 #: src/admin/docs/index.js:184
-msgid "Learn more about each EditorsKit features with the tutorials below. Click on the link to open a modal pop-up with detailed explanation and animated GIF previewing how the features work."
+msgid "Learn more about each Sidetrack features with the tutorials below. Click on the link to open a modal pop-up with detailed explanation and animated GIF previewing how the features work."
 msgstr ""
 
 #: src/admin/docs/index.js:187
@@ -1076,11 +1076,11 @@ msgid "Replace Image"
 msgstr ""
 
 #: src/extensions/components/manager/components/index.js:41
-msgid "EditorsKit Settings"
+msgid "Sidetrack Settings"
 msgstr ""
 
 #: src/extensions/components/manager/components/index.js:45
-msgid "EditorsKit Features Manager"
+msgid "Sidetrack Features Manager"
 msgstr ""
 
 #: src/extensions/components/autosave/components/menu.js:21
@@ -1120,7 +1120,7 @@ msgid " Want to help? %sGet involved or report an issue%s."
 msgstr ""
 
 #: src/extensions/components/help-tips/components/about.js:25
-msgid "EditorsKit %s"
+msgid "Sidetrack %s"
 msgstr ""
 
 #: src/extensions/components/help-tips/components/controls.js:157

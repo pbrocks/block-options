@@ -38,15 +38,15 @@ class FeaturesManagerModal extends Component {
 						this.setState( { isOpen: true } );
 					} }
 				>
-					{ __( 'EditorsKit Settings', 'block-options' ) }
+					{ __( 'Sidetrack Settings', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 				{ this.state.isOpen ?
 					<Modal
-						title={ __( 'EditorsKit Features Manager', 'block-options' ) }
+						title={ __( 'Sidetrack Features Manager', 'blockshop-options' ) }
 						onRequestClose={ () => closeModal() }
-						closeLabel={ __( 'Close', 'block-options' ) }
+						closeLabel={ __( 'Close', 'blockshop-options' ) }
 						icon={ null }
-						className="editorskit-modal-component components-modal--editorskit-features-manager"
+						className="sidetrack-modal-component components-modal--sidetrack-features-manager"
 					>
 						{ <FeaturesManager /> }
 					</Modal> :

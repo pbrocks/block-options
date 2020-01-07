@@ -35,7 +35,7 @@ const enhance = compose(
 
 				createNotice(
 					'info',
-					blockTitle + __( ' block has been disabled.', 'block-options' ),
+					blockTitle + __( ' block has been disabled.', 'blockshop-options' ),
 					{
 						isDismissible: true,
 						type: 'snackbar',
@@ -64,15 +64,15 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 		} = props;
 
 		const {
-			editorskit,
+			sidetrack,
 		} = attributes;
 
-		if ( typeof editorskit !== 'undefined' && typeof editorskit.unit_test !== 'undefined' && editorskit.unit_test && props.isSelected ) {
+		if ( typeof sidetrack !== 'undefined' && typeof sidetrack.unit_test !== 'undefined' && sidetrack.unit_test && props.isSelected ) {
 			return (
 				<Fragment>
 					<BlockEdit { ...props } />
 					<InspectorAdvancedControls>
-						<div className="components-base-control components-button-control components-editorskit-disable-block">
+						<div className="components-base-control components-button-control components-sidetrack-disable-block">
 							<div className="components-base-control__field">
 								<Button
 									isPrimary
@@ -81,11 +81,11 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 									onClick={ () => {
 										editorsKitDisableBlock( name, clientId );
 									} }>
-									{ __( 'Remove & Disable Block', 'block-options' ) }
+									{ __( 'Remove & Disable Block', 'blockshop-options' ) }
 								</Button>
 							</div>
 							<p className="components-base-control__help">
-								{ __( 'Click if you want this block to be disabled on Block Manager.', 'block-options' ) }
+								{ __( 'Click if you want this block to be disabled on Block Manager.', 'blockshop-options' ) }
 							</p>
 						</div>
 					</InspectorAdvancedControls>
@@ -99,6 +99,6 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/advanced/disable-block',
+	'sidetrack/advanced/disable-block',
 	withInspectorControl
 );

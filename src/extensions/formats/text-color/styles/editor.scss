@@ -1,4 +1,4 @@
-.components-editorskit-inline-color__indicator {
+.components-sidetrack-inline-color__indicator {
 	position: absolute;
 	background: #000;
 	height: 3px;
@@ -19,7 +19,7 @@
 	}
 }
 
-.components-editorskit-toolbar__control {
+.components-sidetrack-toolbar__control {
 
 	&.components-icon-button {
 
@@ -32,7 +32,7 @@
 	}
 }
 
-.components-editorskit__inline-color-popover {
+.components-sidetrack__inline-color-popover {
 
 	.components-popover__content {
 		padding: 10px 18px;
@@ -56,7 +56,7 @@
 
 .block-editor-block-list__block .block-editor-block-contextual-toolbar .components-toolbar {
 
-	&.editorskit-components-toolbar {
+	&.sidetrack-components-toolbar {
 		border-right: 0;
 		border-left: 0;
 	}

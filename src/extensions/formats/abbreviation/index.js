@@ -12,11 +12,11 @@ const { Fragment } = wp.element;
 /**
  * Block constants
  */
-const name = 'editorskit/abbreviation';
+const name = 'sidetrack/abbreviation';
 
 export const abbreviation = {
 	name,
-	title: __( 'Abbreviation', 'block-options' ),
+	title: __( 'Abbreviation', 'blockshop-options' ),
 	tagName: 'abbr',
 	className: null,
 	attributes: {

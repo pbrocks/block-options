@@ -9,7 +9,7 @@ const { RichTextToolbarButton } = wp.blockEditor;
 const { applyFormat, removeFormat, getActiveFormat } = wp.richText;
 const { Modal, Button, TextControl } = wp.components;
 
-const name = 'editorskit/abbreviation';
+const name = 'sidetrack/abbreviation';
 
 class Edit extends Component {
 	constructor() {
@@ -44,23 +44,23 @@ class Edit extends Component {
 			<Fragment>
 				<RichTextToolbarButton
 					icon="editor-code"
-					title={ __( 'Abbreviation', 'block-options' ) }
+					title={ __( 'Abbreviation', 'blockshop-options' ) }
 					onClick={ this.toggle }
 					isActive={ isActive }
 				/>
 				{ this.state.isOpen && (
 					<Modal
-						title={ __( 'Insert Abbreviation', 'block-options' ) }
+						title={ __( 'Insert Abbreviation', 'blockshop-options' ) }
 						onRequestClose={ this.toggle }>
 						<TextControl
-							label={ __( 'Title', 'block-options' ) }
+							label={ __( 'Title', 'blockshop-options' ) }
 							value={ activeColorFormat && ! title ? activeColorFormat.attributes.title : title }
 							onChange={ ( newTitle ) => this.setState( { title: newTitle } ) }
 						/>
 						<TextControl
-							label={ __( 'Language (optional)', 'block-options' ) }
+							label={ __( 'Language (optional)', 'blockshop-options' ) }
 							value={ activeColorFormat && ! lang ? activeColorFormat.attributes.lang : lang }
-							help={ __( 'Example: fr, en, de, etc. Use it only if the abbreviation’s language is different from page main language.', 'block-options' ) }
+							help={ __( 'Example: fr, en, de, etc. Use it only if the abbreviation’s language is different from page main language.', 'blockshop-options' ) }
 							onChange={ ( newLang ) => this.setState( { lang: newLang } ) }
 						/>
 
@@ -84,7 +84,7 @@ class Edit extends Component {
 
 							this.toggle();
 						} }>
-							{ __( 'Apply', 'block-options' ) }
+							{ __( 'Apply', 'blockshop-options' ) }
 						</Button>
 					</Modal>
 
@@ -97,7 +97,7 @@ class Edit extends Component {
 export default compose(
 	withSelect( ( select ) => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitAbbreviationFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackAbbreviationFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

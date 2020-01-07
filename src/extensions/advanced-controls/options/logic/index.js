@@ -14,23 +14,23 @@ const LogicOptions = ( props ) => {
 	} = props;
 
 	const {
-		editorskit,
+		sidetrack,
 	} = attributes;
 
 	return (
 		<Fragment>
-			<div className="editorskit-button-group-container editorskit-button-group-logic">
+			<div className="sidetrack-button-group-container sidetrack-button-group-logic">
 				<TextareaControl
 					rows="2"
-					label={ __( 'Conditional Logic', 'block-options' ) }
-					help={ __( 'Add valid PHP conditional tags for custom & advanced visibility options.', 'block-options' ) }
-					value={ editorskit.logic ? editorskit.logic : null }
+					label={ __( 'Conditional Logic', 'blockshop-options' ) }
+					help={ __( 'Add valid PHP conditional tags for custom & advanced visibility options.', 'blockshop-options' ) }
+					value={ sidetrack.logic ? sidetrack.logic : null }
 					onChange={ ( newValue ) => {
-						delete editorskit.logic;
+						delete sidetrack.logic;
 
-						const blockOptions = Object.assign( { logic: newValue }, editorskit );
+						const blockOptions = Object.assign( { logic: newValue }, sidetrack );
 
-						dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { editorskit: blockOptions } );
+						dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { sidetrack: blockOptions } );
 
 						if ( reloadModal ) {
 							reloadModal();

@@ -15,12 +15,12 @@ const { __ } = wp.i18n;
  */
 const name = 'import';
 
-const title = __( 'Import', 'block-options' );
+const title = __( 'Import', 'blockshop-options' );
 
 const keywords = [
-	__( 'import', 'block-options' ),
-	__( 'download', 'block-options' ),
-	__( 'migrate', 'block-options' ),
+	__( 'import', 'blockshop-options' ),
+	__( 'download', 'blockshop-options' ),
+	__( 'migrate', 'blockshop-options' ),
 ];
 
 const blockAttributes = {
@@ -33,7 +33,7 @@ const settings = {
 
 	title,
 
-	description: __( 'Import blocks exported using EditorsKit plugin.', 'block-options' ),
+	description: __( 'Import blocks exported using Sidetrack plugin.', 'blockshop-options' ),
 
 	keywords,
 

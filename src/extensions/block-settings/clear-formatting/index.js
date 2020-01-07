@@ -8,7 +8,7 @@ import ClearBlockFormatting from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-block-clear-formatting', {
+registerPlugin( 'sidetrack-block-clear-formatting', {
 	icon: 'editor-removeformatting',
 	render: ClearBlockFormatting,
 } );

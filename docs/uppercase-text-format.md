@@ -1,6 +1,6 @@
 # Uppercase Text Format
 
-Transform any text to **UPPERCASE** using EditorsKit format. This will save you time rather than typing the text using uppercase again.
+Transform any text to **UPPERCASE** using Sidetrack format. This will save you time rather than typing the text using uppercase again.
 
 ## How transform text or word to uppercase?
 

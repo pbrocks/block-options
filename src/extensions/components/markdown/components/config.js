@@ -4,47 +4,47 @@
 const { __ } = wp.i18n;
 
 const markdownShortcuts = {
-	title: __( 'Markdown Formatting', 'block-options' ),
+	title: __( 'Markdown Formatting', 'blockshop-options' ),
 	shortcuts: [
 		{
 			keyCombination: [ '##', 'SPACE' ],
-			description: __( 'Large header (h2)', 'block-options' ),
+			description: __( 'Large header (h2)', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '###', 'SPACE' ],
-			description: __( 'Medium header (h3)', 'block-options' ),
+			description: __( 'Medium header (h3)', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '####', 'SPACE' ],
-			description: __( 'Small header (h4)', 'block-options' ),
+			description: __( 'Small header (h4)', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '1.', 'SPACE' ],
-			description: __( 'Numbered list', 'block-options' ),
+			description: __( 'Numbered list', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '*', 'SPACE' ],
-			description: __( 'Bulleted list', 'block-options' ),
+			description: __( 'Bulleted list', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '>', 'SPACE' ],
-			description: __( 'Blockquote', 'block-options' ),
+			description: __( 'Blockquote', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '_italic_' ],
-			description: __( 'Italic', 'block-options' ),
+			description: __( 'Italic', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '*bold*' ],
-			description: __( 'Bold', 'block-options' ),
+			description: __( 'Bold', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '~Strikethrough~' ],
-			description: __( 'Strikethrough', 'block-options' ),
+			description: __( 'Strikethrough', 'blockshop-options' ),
 		},
 		{
 			keyCombination: [ '`code`' ],
-			description: __( 'Code', 'block-options' ),
+			description: __( 'Code', 'blockshop-options' ),
 		},
 	],
 };

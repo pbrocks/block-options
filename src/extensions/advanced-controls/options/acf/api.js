@@ -27,7 +27,7 @@ const actions = {
 	},
 };
 
-registerStore( 'editorskit/acf', {
+registerStore( 'sidetrack/acf', {
 	reducer( state = { ACFfields: {} }, action ) {
 		switch ( action.type ) {
 			case 'SET_ACF_FIELDS':
@@ -59,7 +59,7 @@ registerStore( 'editorskit/acf', {
 
 	resolvers: {
 		* receiveACFields() {
-			const path = '/editorskit/v1/acf';
+			const path = '/sidetrack/v1/acf';
 			const ACFfields = yield actions.fetchFromAPI( path );
 			yield actions.setACFields( ACFfields );
 		},

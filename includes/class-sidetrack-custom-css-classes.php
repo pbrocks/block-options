@@ -2,9 +2,9 @@
 /**
  * Custom CSS classes with custom filter
  *
- * @package   EditorsKit
- * @author    Jeffrey Carandang from EditorsKit
- * @link      https://editorskit.com
+ * @package   Sidetrack
+ * @author    Jeffrey Carandang from Sidetrack
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -14,16 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * EditorsKit_Custom_CSS_Classes Class
+ * Sidetrack_Custom_CSS_Classes Class
  *
  * @since 1.9.0
  */
-class EditorsKit_Custom_CSS_Classes {
+class Sidetrack_Custom_CSS_Classes {
 
 	/**
 	 * This plugin's instance.
 	 *
-	 * @var EditorsKit_Features_Manager
+	 * @var Sidetrack_Features_Manager
 	 */
 	private static $instance;
 
@@ -32,7 +32,7 @@ class EditorsKit_Custom_CSS_Classes {
 	 */
 	public static function register() {
 		if ( null === self::$instance ) {
-			self::$instance = new EditorsKit_Custom_CSS_Classes();
+			self::$instance = new Sidetrack_Custom_CSS_Classes();
 		}
 	}
 
@@ -63,7 +63,7 @@ class EditorsKit_Custom_CSS_Classes {
 	 */
 	private function __construct() {
 		$this->version = EDITORSKIT_VERSION;
-		$this->slug    = 'editorskit';
+		$this->slug    = 'sidetrack';
 		$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 		add_filter( 'block_editor_settings', array( $this, 'block_editor_settings' ), 10, 2 );
@@ -212,11 +212,11 @@ class EditorsKit_Custom_CSS_Classes {
 				'md:ek-w-full',
 			);
 
-			$editor_settings[ $this->slug . 'CustomClassNames' ] = apply_filters( 'editorskit_block_editor_classnames', $defaults );
+			$editor_settings[ $this->slug . 'CustomClassNames' ] = apply_filters( 'sidetrack_block_editor_classnames', $defaults );
 		}
 
 		return $editor_settings;
 	}
 }
 
-EditorsKit_Custom_CSS_Classes::register();
+Sidetrack_Custom_CSS_Classes::register();

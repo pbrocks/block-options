@@ -25,9 +25,9 @@ class ToolbarControls extends Component {
 					<Toolbar>
 						<Button
 							onClick={ onConvertToStatic }
-							className="editorskit-reusable-convert-controls"
+							className="sidetrack-reusable-convert-controls"
 						>
-							{ __( 'Convert to Regular Blocks', 'block-options' ) }
+							{ __( 'Convert to Regular Blocks', 'blockshop-options' ) }
 						</Button>
 					</Toolbar>
 				</BlockControls>
@@ -39,7 +39,7 @@ class ToolbarControls extends Component {
 export default compose(
 	withSelect( ( select ) => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitConvertReusableOptions' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackConvertReusableOptions' ),
 		};
 	} ),
 	withDispatch( ( dispatch, { clientId } ) => {
@@ -53,7 +53,7 @@ export default compose(
 				convertBlockToStatic( clientId );
 				createNotice(
 					'info',
-					__( 'Reusable Block converted.', 'block-options' ),
+					__( 'Reusable Block converted.', 'blockshop-options' ),
 					{
 						isDismissible: true,
 						type: 'snackbar',

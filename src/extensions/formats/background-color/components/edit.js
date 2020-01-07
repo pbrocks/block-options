@@ -19,32 +19,32 @@ const { applyFormat, removeFormat, getActiveFormat } = wp.richText;
 const { Toolbar, IconButton, Popover, ColorPalette } = wp.components;
 const { compose, ifCondition } = wp.compose;
 
-const name = 'editorskit/background';
-const title = __( 'Highlight Color', 'block-options' );
+const name = 'sidetrack/background';
+const title = __( 'Highlight Color', 'blockshop-options' );
 const definedColors = [
 
 	{
-		name: __( 'Orange Sunrise', 'block-options' ),
+		name: __( 'Orange Sunrise', 'blockshop-options' ),
 		slug: 'orange-sunrise',
 		color: '#f7cc62',
 	},
 	{
-		name: __( 'Pink Flamingo', 'block-options' ),
+		name: __( 'Pink Flamingo', 'blockshop-options' ),
 		slug: 'pink-flamingo',
 		color: '#ffbfb5',
 	},
 	{
-		name: __( 'Spring Green', 'block-options' ),
+		name: __( 'Spring Green', 'blockshop-options' ),
 		slug: 'spring-green',
 		color: '#b5dcaf',
 	},
 	{
-		name: __( 'Blue Moon', 'block-options' ),
+		name: __( 'Blue Moon', 'blockshop-options' ),
 		slug: 'blue-moon',
 		color: '#d6e8fa',
 	},
 	{
-		name: __( 'Purple Mist', 'block-options' ),
+		name: __( 'Purple Mist', 'blockshop-options' ),
 		slug: 'purple-mist',
 		color: '#d8c3ff',
 	},
@@ -98,10 +98,10 @@ class Edit extends Component {
 		return (
 			<Fragment>
 				<BlockControls>
-					<Toolbar className="editorskit-components-toolbar">
+					<Toolbar className="sidetrack-components-toolbar">
 						<IconButton
 							className={ classnames(
-								'components-button components-icon-button components-editorskit-toolbar__control components-toolbar__control components-editorskit-background-format', {
+								'components-button components-icon-button components-sidetrack-toolbar__control components-toolbar__control components-sidetrack-background-format', {
 									'is-active': isActive,
 								}
 							) }
@@ -115,10 +115,10 @@ class Edit extends Component {
 						{ isOpen && (
 							<Popover
 								position="bottom center"
-								className="components-editorskit__inline-color-popover"
+								className="components-sidetrack__inline-color-popover"
 								focusOnMount="container"
 								onClickOutside={ ( onClickOutside ) => {
-									if ( ( ! onClickOutside.target.classList.contains( 'components-editorskit-background-format' ) && ! document.querySelector( '.components-editorskit-background-format' ).contains( onClickOutside.target ) ) && ( ! document.querySelector( '.components-color-palette__picker' ) || ( document.querySelector( '.components-color-palette__picker' ) && ! document.querySelector( '.components-color-palette__picker' ).contains( onClickOutside.target ) ) ) ) {
+									if ( ( ! onClickOutside.target.classList.contains( 'components-sidetrack-background-format' ) && ! document.querySelector( '.components-sidetrack-background-format' ).contains( onClickOutside.target ) ) && ( ! document.querySelector( '.components-color-palette__picker' ) || ( document.querySelector( '.components-color-palette__picker' ) && ! document.querySelector( '.components-color-palette__picker' ).contains( onClickOutside.target ) ) ) ) {
 										this.setState( { isOpen: ! isOpen } );
 									}
 								} }
@@ -131,8 +131,8 @@ class Edit extends Component {
 											let colorObject = null;
 
 											if (
-												typeof window.editorskitInfo !== 'undefined' &&
-												window.editorskitInfo.supports.color_palette
+												typeof window.sidetrackInfo !== 'undefined' &&
+												window.sidetrackInfo.supports.color_palette
 											) {
 												colorObject = getColorObjectByColorValue( colors, color );
 											}
@@ -169,7 +169,7 @@ export default compose(
 
 		return {
 			colors: colors ? colors : definedColors,
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitHighlightFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackHighlightFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

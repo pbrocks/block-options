@@ -1,4 +1,4 @@
-.editorskit-media-text-card-controls {
+.sidetrack-media-text-card-controls {
 
 	.components-button {
 
@@ -38,7 +38,7 @@
 	}
 }
 
-body.editorskit-selected--core-media-text .has-fixed-toolbar,
+body.sidetrack-selected--core-media-text .has-fixed-toolbar,
 .editor-block-list__block[data-type="core/media-text"] {
 
 	.editor-block-toolbar {
@@ -86,13 +86,13 @@ body.editorskit-selected--core-media-text .has-fixed-toolbar,
 				order: 10;
 			}
 
-			> .editorskit-media-text-card-controls {
+			> .sidetrack-media-text-card-controls {
 				order: 4;
 				margin-left: -1px;
 			}
 		}
 
-		> .editorskit-media-text-card-controls {
+		> .sidetrack-media-text-card-controls {
 			order: 5;
 		}
 	}

@@ -8,7 +8,7 @@ import HeadingLabel from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-heading-label', {
+registerPlugin( 'sidetrack-heading-label', {
 	icon: false,
 	render: HeadingLabel,
 } );

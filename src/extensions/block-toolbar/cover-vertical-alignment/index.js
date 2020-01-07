@@ -82,9 +82,9 @@ const addEditorBlockAttributes = createHigherOrderComponent( ( BlockListBlock ) 
 
 		if ( allowedBlocks.includes( name ) && verticalAlignment ) {
 			if ( verticalAlignment === 'top' ) {
-				customData = Object.assign( customData, { 'data-editorskit-is-vertically-top': 1 } );
+				customData = Object.assign( customData, { 'data-sidetrack-is-vertically-top': 1 } );
 			} else if ( verticalAlignment === 'bottom' ) {
-				customData = Object.assign( customData, { 'data-editorskit-is-vertically-bottom': 1 } );
+				customData = Object.assign( customData, { 'data-sidetrack-is-vertically-bottom': 1 } );
 			}
 		}
 
@@ -99,24 +99,24 @@ const addEditorBlockAttributes = createHigherOrderComponent( ( BlockListBlock ) 
 
 addFilter(
 	'blocks.registerBlockType',
-	'editorskit/cover/attributes',
+	'sidetrack/cover/attributes',
 	addAttributes
 );
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/cover-vertical-alignment',
+	'sidetrack/cover-vertical-alignment',
 	withControls
 );
 
 addFilter(
 	'blocks.getSaveContent.extraProps',
-	'editorskit/cover/applyExtraClass',
+	'sidetrack/cover/applyExtraClass',
 	applyExtraClass
 );
 
 addFilter(
 	'editor.BlockListBlock',
-	'editorskit/cover/addEditorBlockAttributes',
+	'sidetrack/cover/addEditorBlockAttributes',
 	addEditorBlockAttributes
 );

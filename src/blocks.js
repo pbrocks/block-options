@@ -75,7 +75,7 @@ export function registerBlocks() {
 
 		const { name, settings } = block;
 
-		registerBlockType( `editorskit/${ name }`, { category: 'common', ...settings } );
+		registerBlockType( `sidetrack/${ name }`, { category: 'common', ...settings } );
 	} );
 }
 registerBlocks();

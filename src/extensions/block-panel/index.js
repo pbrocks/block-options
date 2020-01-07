@@ -45,7 +45,7 @@ const enhance = compose(
 			colors,
 			selected: select( 'core/block-editor' ).getSelectedBlock(),
 			select,
-			isDisabledListTextSettings: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitDevicesVisibility' ),
+			isDisabledListTextSettings: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackDevicesVisibility' ),
 		};
 	} )
 );
@@ -80,7 +80,7 @@ const withTextSettings = createHigherOrderComponent( ( BlockListBlock ) => {
 }, 'withTextSettings' );
 
 /**
- * Add custom EditorsKit attributes to selected blocks
+ * Add custom Sidetrack attributes to selected blocks
  *
  * @param {Function} BlockEdit Original component.
  * @return {string} Wrapped component.
@@ -150,18 +150,18 @@ function applyTextSettings( extraProps, blockType, attributes ) {
 
 addFilter(
 	'editor.BlockEdit',
-	'editorskit/block-panel',
+	'sidetrack/block-panel',
 	withBlockPanel
 );
 
 addFilter(
 	'editor.BlockListBlock',
-	'editorskit/withTextSettings',
+	'sidetrack/withTextSettings',
 	withTextSettings
 );
 
 addFilter(
 	'blocks.getSaveContent.extraProps',
-	'editorskit/applyTextSettings',
+	'sidetrack/applyTextSettings',
 	applyTextSettings
 );

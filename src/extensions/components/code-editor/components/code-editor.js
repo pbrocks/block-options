@@ -43,7 +43,7 @@ class CodeEditor extends Component {
 			const editorSettings = wp.codeEditor.defaultSettings ? _.clone( wp.codeEditor.defaultSettings ) : {};
 
 			//add placeholder class
-			document.body.classList.add( 'editorskit-editor-loaded' );
+			document.body.classList.add( 'sidetrack-editor-loaded' );
 
 			editorSettings.codemirror = _.extend(
 				{},
@@ -88,7 +88,7 @@ class CodeEditor extends Component {
 export default compose( [
 	withSelect( ( select ) => ( {
 		readyState: document.readyState,
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitCodeHighlightTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackCodeHighlightTools' ),
 		editorMode: select( 'core/edit-post' ).getEditorMode(),
 	} ) ),
 	withSpokenMessages,

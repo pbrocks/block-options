@@ -11,11 +11,11 @@ const { __ } = wp.i18n;
 /**
  * Block constants
  */
-const name = 'editorskit/background';
+const name = 'sidetrack/background';
 
 export const backgroundColor = {
 	name,
-	title: __( 'Background Color', 'block-options' ),
+	title: __( 'Background Color', 'blockshop-options' ),
 	tagName: 'span',
 	className: 'has-inline-background',
 	attributes: {

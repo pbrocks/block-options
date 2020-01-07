@@ -221,11 +221,11 @@ class InlineLinkUI extends Component {
 		this.resetState();
 
 		if ( ! isValidHref( url ) ) {
-			speak( __( 'Warning: the link has been inserted but may have errors. Please test it.', 'block-options' ), 'assertive' );
+			speak( __( 'Warning: the link has been inserted but may have errors. Please test it.', 'blockshop-options' ), 'assertive' );
 		} else if ( isActive ) {
-			speak( __( 'Link edited.', 'block-options' ), 'assertive' );
+			speak( __( 'Link edited.', 'blockshop-options' ), 'assertive' );
 		} else {
-			speak( __( 'Link inserted.', 'block-options' ), 'assertive' );
+			speak( __( 'Link inserted.', 'blockshop-options' ), 'assertive' );
 		}
 	}
 
@@ -292,17 +292,17 @@ class InlineLinkUI extends Component {
 					renderSettings={ () => (
 						<Fragment>
 							<ToggleControl
-								label={ __( 'Open in New Tab', 'block-options' ) }
+								label={ __( 'Open in New Tab', 'blockshop-options' ) }
 								checked={ opensInNewWindow }
 								onChange={ this.setLinkTarget }
 							/>
 							<ToggleControl
-								label={ __( 'No Follow', 'block-options' ) }
+								label={ __( 'No Follow', 'blockshop-options' ) }
 								checked={ noFollow }
 								onChange={ this.setNoFollow }
 							/>
 							<ToggleControl
-								label={ __( 'Sponsored', 'block-options' ) }
+								label={ __( 'Sponsored', 'blockshop-options' ) }
 								checked={ sponsored }
 								onChange={ this.setSponsored }
 							/>

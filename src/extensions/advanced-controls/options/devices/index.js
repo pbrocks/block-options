@@ -14,42 +14,42 @@ const DevicesOptions = ( props ) => {
 	} = props;
 
 	const {
-		editorskit,
+		sidetrack,
 	} = attributes;
 
 	const onSelectDevice = ( device ) => {
-		const newValue = ! editorskit[ device ];
+		const newValue = ! sidetrack[ device ];
 
-		delete editorskit[ device ];
+		delete sidetrack[ device ];
 
-		const blockOptions = Object.assign( { [ device ]: newValue }, editorskit );
+		const blockOptions = Object.assign( { [ device ]: newValue }, sidetrack );
 
-		dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { editorskit: blockOptions } );
+		dispatch( 'core/block-editor' ).updateBlockAttributes( clientId, { sidetrack: blockOptions } );
 
 		if ( reloadModal ) {
 			reloadModal();
 		}
 	};
 
-	if ( typeof editorskit === 'undefined' ) {
+	if ( typeof sidetrack === 'undefined' ) {
 		return;
 	}
 
 	return (
 		<Fragment>
 			<ToggleControl
-				label={ __( 'Hide on Desktop', 'block-options' ) }
-				checked={ typeof editorskit.desktop !== 'undefined' && ! editorskit.desktop }
+				label={ __( 'Hide on Desktop', 'blockshop-options' ) }
+				checked={ typeof sidetrack.desktop !== 'undefined' && ! sidetrack.desktop }
 				onChange={ () => onSelectDevice( 'desktop' ) }
 			/>
 			<ToggleControl
-				label={ __( 'Hide on Tablet', 'block-options' ) }
-				checked={ typeof editorskit.tablet !== 'undefined' && ! editorskit.tablet }
+				label={ __( 'Hide on Tablet', 'blockshop-options' ) }
+				checked={ typeof sidetrack.tablet !== 'undefined' && ! sidetrack.tablet }
 				onChange={ () => onSelectDevice( 'tablet' ) }
 			/>
 			<ToggleControl
-				label={ __( 'Hide on Mobile', 'block-options' ) }
-				checked={ typeof editorskit.mobile !== 'undefined' && ! editorskit.mobile }
+				label={ __( 'Hide on Mobile', 'blockshop-options' ) }
+				checked={ typeof sidetrack.mobile !== 'undefined' && ! sidetrack.mobile }
 				onChange={ () => onSelectDevice( 'mobile' ) }
 			/>
 		</Fragment>

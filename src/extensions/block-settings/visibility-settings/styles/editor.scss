@@ -1,4 +1,4 @@
-.editorskit-components-modal__content {
+.sidetrack-components-modal__content {
 	width: 320px;
 	min-width: 200px !important;
 
@@ -7,13 +7,13 @@
 	}
 }
 
-.editorskit-divider {
+.sidetrack-divider {
 	border: 0;
 	border-top: 1px solid #e2e4e7;
 	margin: 20px 0;
 }
 
-.editorskit-tab-panel {
+.sidetrack-tab-panel {
 	margin: 0 -16px;
 
 	small {
@@ -61,7 +61,7 @@
 	.components-tab-panel__tab-content {
 		padding: 16px;
 
-		.editorskit-user-state-controls {
+		.sidetrack-user-state-controls {
 
 			.components-base-control__help {
 				display: none;

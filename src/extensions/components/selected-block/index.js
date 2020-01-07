@@ -8,7 +8,7 @@ import AddSelectedBlockClass from './components/controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-selected-block', {
+registerPlugin( 'sidetrack-selected-block', {
 	icon: false,
 	render: AddSelectedBlockClass,
 } );

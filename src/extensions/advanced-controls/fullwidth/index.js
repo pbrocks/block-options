@@ -18,10 +18,10 @@ const FullWidthToggle = ( props ) => {
 	return (
 		<Fragment>
 			<ToggleControl
-				label={ __( 'Full Width Display', 'block-options' ) }
+				label={ __( 'Full Width Display', 'blockshop-options' ) }
 				checked={ !! isFullWidth }
 				onChange={ () => setAttributes( { isFullWidth: ! isFullWidth } ) }
-				help={ isFullWidth ? __( 'Full width display is enabled.', 'block-options' ) : __( 'Toggle to display this block\'s as full width.', 'block-options' ) }
+				help={ isFullWidth ? __( 'Full width display is enabled.', 'blockshop-options' ) : __( 'Toggle to display this block\'s as full width.', 'blockshop-options' ) }
 			/>
 		</Fragment>
 	);

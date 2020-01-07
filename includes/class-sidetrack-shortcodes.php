@@ -2,9 +2,9 @@
 /**
  * Create shortcodes
  *
- * @package   EditorsKit
- * @author    Jeffrey Carandang from EditorsKit
- * @link      https://editorskit.com
+ * @package   Sidetrack
+ * @author    Jeffrey Carandang from Sidetrack
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -14,21 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * EditorsKit_Shortcodes Class
+ * Sidetrack_Shortcodes Class
  *
  * @since 1.15
  */
-class EditorsKit_Shortcodes {
+class Sidetrack_Shortcodes {
 
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
-		add_shortcode( 'editorskit', array( $this, 'register_shortcode' ) );
+		add_shortcode( 'sidetrack', array( $this, 'register_shortcode' ) );
 	}
 
 	/**
-	 * Register EditorsKit shortcode.
+	 * Register Sidetrack shortcode.
 	 *
 	 * @param array $atts The shortcode attributes.
 	 * @param mixed $content The shortcode content.
@@ -46,7 +46,7 @@ class EditorsKit_Shortcodes {
 			$tag = $atts['tag'];
 		}
 
-		$content = '<' . $tag . ' class="editorskit-shortcode">';
+		$content = '<' . $tag . ' class="sidetrack-shortcode">';
 
 		switch ( $atts['display'] ) {
 			case 'wordcount':
@@ -85,7 +85,7 @@ class EditorsKit_Shortcodes {
 		}
 
 		$returned_content = '';
-		$reading_time     = get_post_meta( $post->ID, '_editorskit_reading_time', true );
+		$reading_time     = get_post_meta( $post->ID, '_sidetrack_reading_time', true );
 
 		if ( ! $reading_time && isset( $atts['fallback'] ) && 'true' === $atts['fallback'] ) {
 			$blocks = '';
@@ -138,4 +138,4 @@ class EditorsKit_Shortcodes {
 	}
 }
 
-return new EditorsKit_Shortcodes();
+return new Sidetrack_Shortcodes();

@@ -55,6 +55,6 @@ function addTransforms( settings ) {
 
 addFilter(
 	'blocks.registerBlockType',
-	'editorskit/transform/group',
+	'sidetrack/transform/group',
 	addTransforms
 );

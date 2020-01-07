@@ -1,6 +1,6 @@
 # List Block Additional Settings
 
-EditorsKit provides the missing **Font Size** and **Text Color** settings to list block.
+Sidetrack provides the missing **Font Size** and **Text Color** settings to list block.
 
 ### How to change List Block font size & text color?
 

@@ -25,8 +25,8 @@ const { compose, ifCondition } = wp.compose;
  */
 import InlineLinkUI from './inline';
 
-const name = 'editorskit/link';
-const title = __( 'Add Link', 'block-options' );
+const name = 'sidetrack/link';
+const title = __( 'Add Link', 'blockshop-options' );
 const EMAIL_REGEXP = /^(mailto:)?[a-z0-9._%+-]+@[a-z0-9][a-z0-9.-]*\.[a-z]{2,63}$/i;
 
 class Edit extends Component {
@@ -76,12 +76,12 @@ class Edit extends Component {
 
 		let newValue = value;
 
-		map( [ 'core/link', 'editorskit/link' ], ( linkFormat ) => {
+		map( [ 'core/link', 'sidetrack/link' ], ( linkFormat ) => {
 			newValue = removeFormat( newValue, linkFormat );
 		} );
 
 		onChange( { ...newValue } );
-		speak( __( 'Link removed.', 'block-options' ), 'assertive' );
+		speak( __( 'Link removed.', 'blockshop-options' ), 'assertive' );
 	}
 
 	render() {
@@ -110,7 +110,7 @@ class Edit extends Component {
 		return (
 			<Fragment>
 				<BlockControls>
-					<Toolbar className="editorskit-components-toolbar">
+					<Toolbar className="sidetrack-components-toolbar">
 						<RichTextShortcut
 							type="primary"
 							character="k"
@@ -125,7 +125,7 @@ class Edit extends Component {
 						{ isActive && <RichTextToolbarButton
 							name="link"
 							icon="editor-unlink"
-							title={ __( 'Unlink', 'block-options' ) }
+							title={ __( 'Unlink', 'blockshop-options' ) }
 							onClick={ this.onRemoveFormat }
 							isActive={ isActive }
 							shortcutType="primaryShift"
@@ -160,7 +160,7 @@ class Edit extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitLinkFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackLinkFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => ! props.isDisabled ),

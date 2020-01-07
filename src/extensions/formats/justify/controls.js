@@ -31,7 +31,7 @@ class JustifyControl extends Component {
 		return (
 			<RichTextToolbarButton
 				icon="editor-justify"
-				title={ __( 'Justify', 'block-options' ) }
+				title={ __( 'Justify', 'blockshop-options' ) }
 				onClick={ onToggle }
 				isActive={ isBlockJustified }
 			/>
@@ -49,7 +49,7 @@ export default compose(
 			blockId: selectedBlock.clientId,
 			blockName: selectedBlock.name,
 			isBlockJustified: 'justify' === get( selectedBlock, 'attributes.align' ),
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitJustifyFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackJustifyFormats' ),
 			formatTypes: select( 'core/rich-text' ).getFormatTypes(),
 		};
 	} ),

@@ -2,9 +2,9 @@
 /**
  * Load assets for our blocks.
  *
- * @package   EditorsKit
+ * @package   Sidetrack
  * @author    Jeffrey Carandang
- * @link      https://editorskit.com
+ * @link      https://sidetrack.com
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -18,13 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class EditorsKit_ACF_Support {
+class Sidetrack_ACF_Support {
 
 
 	/**
 	 * This plugin's instance.
 	 *
-	 * @var EditorsKit_ACF_Support
+	 * @var Sidetrack_ACF_Support
 	 */
 	private static $instance;
 
@@ -33,7 +33,7 @@ class EditorsKit_ACF_Support {
 	 */
 	public static function register() {
 		if ( null === self::$instance ) {
-			self::$instance = new EditorsKit_ACF_Support();
+			self::$instance = new Sidetrack_ACF_Support();
 		}
 	}
 
@@ -63,7 +63,7 @@ class EditorsKit_ACF_Support {
 	 */
 	private function __construct() {
 		$this->version = EDITORSKIT_VERSION;
-		$this->slug    = 'editorskit';
+		$this->slug    = 'sidetrack';
 		$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 		add_action(
@@ -72,7 +72,7 @@ class EditorsKit_ACF_Support {
 				if ( is_user_logged_in() ) {
 					if ( class_exists( 'ACF' ) ) {
 						register_rest_route(
-							'editorskit/v1',
+							'sidetrack/v1',
 							'/acf',
 							array(
 								'methods'  => 'GET',
@@ -81,7 +81,7 @@ class EditorsKit_ACF_Support {
 						);
 					} else {
 						register_rest_route(
-							'editorskit/v1',
+							'sidetrack/v1',
 							'/acf',
 							array(
 								'methods'  => 'GET',
@@ -140,4 +140,4 @@ class EditorsKit_ACF_Support {
 
 }
 
-EditorsKit_ACF_Support::register();
+Sidetrack_ACF_Support::register();

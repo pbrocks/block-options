@@ -27,7 +27,7 @@ class TransformControls extends Component {
 
 	focus() {
 		if ( this.nameInput.current !== null ) {
-			const tabbables = focus.tabbable.find( document.querySelector( '.components-modal--editorskit-transform-empty' ) );
+			const tabbables = focus.tabbable.find( document.querySelector( '.components-modal--sidetrack-transform-empty' ) );
 			if ( tabbables.length ) {
 				document.activeElement.blur();
 				tabbables[ 0 ].focus();
@@ -67,27 +67,27 @@ class TransformControls extends Component {
 			return (
 				<Fragment>
 					<Modal
-						title={ __( 'Enable Shortcut', 'block-options' ) }
+						title={ __( 'Enable Shortcut', 'blockshop-options' ) }
 						onRequestClose={ () => closeModal() }
 						shouldCloseOnClickOutside={ false }
-						closeLabel={ __( 'Close', 'block-options' ) }
+						closeLabel={ __( 'Close', 'blockshop-options' ) }
 						icon={ null }
-						className="editorskit-modal-component components-modal--editorskit-transform-empty"
+						className="sidetrack-modal-component components-modal--sidetrack-transform-empty"
 					>
-						<p>{ __( 'Do you want to automatically transform four(4) consecutive empty paragraphs into Spacer Block?', 'block-options' ) }</p>
+						<p>{ __( 'Do you want to automatically transform four(4) consecutive empty paragraphs into Spacer Block?', 'blockshop-options' ) }</p>
 						<Button isPrimary isLarge onClick={
 							() => {
 								onToggle( 0 );
 								createSpacer( getFirst.clientId, getSecond.clientId, getThird.clientId, getFourth.clientId );
 							}
 						} ref={ this.nameInput } >
-							{ __( 'Yes Enable', 'block-options' ) }
+							{ __( 'Yes Enable', 'blockshop-options' ) }
 						</Button>
 						&nbsp;
 						<Button isDefault isLarge onClick={ () => closeModal() } >
-							{ __( 'No, Thanks', 'block-options' ) }
+							{ __( 'No, Thanks', 'blockshop-options' ) }
 						</Button>
-						<p><small>{ __( 'This prompt will only be shown once and will remember your preference. Thanks!', 'block-options' ) }</small></p>
+						<p><small>{ __( 'This prompt will only be shown once and will remember your preference. Thanks!', 'blockshop-options' ) }</small></p>
 					</Modal>
 				</Fragment>
 			);
@@ -114,7 +114,7 @@ export default compose(
 		return {
 			getBlocks: getAllBlocks,
 			getBlockIndex: getSelectedBlockIndex,
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitTransformEmptyWriting' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackTransformEmptyWriting' ),
 			isPrompted: select( 'core/edit-post' ).isFeatureActive( 'editorsKitTransformEmptyWriting' ),
 		};
 	} ),
@@ -129,7 +129,7 @@ export default compose(
 		onToggle( disabled ) {
 			dispatch( 'core/edit-post' ).toggleFeature( 'editorsKitTransformEmptyWriting' );
 			if ( disabled ) {
-				dispatch( 'core/edit-post' ).toggleFeature( 'disableEditorsKitTransformEmptyWriting' );
+				dispatch( 'core/edit-post' ).toggleFeature( 'disableSidetrackTransformEmptyWriting' );
 			}
 		},
 	} ) ),

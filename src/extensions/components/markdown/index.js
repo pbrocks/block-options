@@ -8,7 +8,7 @@ import MarkdownFormatting from './components/menu';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-markdown-formatting', {
+registerPlugin( 'sidetrack-markdown-formatting', {
 	icon: false,
 	render: MarkdownFormatting,
 } );

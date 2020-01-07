@@ -10,18 +10,18 @@ $mobile : 736px;
 
 body:not(.wp-admin) {
 
-	.blockopts-show {
+	.wpblockshop-show {
 		display: none;
 	}
 
 	@media screen and (min-width: $desktop) {
 
-		.blockopts-hide.blockopts-desktop,
-		.editorskit-no-desktop {
+		.wpblockshop-hide.wpblockshop-desktop,
+		.sidetrack-no-desktop {
 			display: none;
 		}
 
-		.blockopts-show.blockopts-desktop {
+		.wpblockshop-show.wpblockshop-desktop {
 			display: block;
 		}
 	}
@@ -29,24 +29,24 @@ body:not(.wp-admin) {
 	@media screen and (max-width: $tablet)
 		and (min-width: $mobile + 1) {
 
-		.blockopts-hide.blockopts-tablet,
-		.editorskit-no-tablet {
+		.wpblockshop-hide.wpblockshop-tablet,
+		.sidetrack-no-tablet {
 			display: none;
 		}
 
-		.blockopts-show.blockopts-tablet {
+		.wpblockshop-show.wpblockshop-tablet {
 			display: block;
 		}
 	}
 
 	@media screen and (max-width: $mobile) {
 
-		.blockopts-hide.blockopts-mobile,
-		.editorskit-no-mobile {
+		.wpblockshop-hide.wpblockshop-mobile,
+		.sidetrack-no-mobile {
 			display: none;
 		}
 
-		.blockopts-show.blockopts-mobile {
+		.wpblockshop-show.wpblockshop-mobile {
 			display: block;
 		}
 	}

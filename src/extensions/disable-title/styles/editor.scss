@@ -1,4 +1,4 @@
-.editorskit-hide-title-label {
+.sidetrack-hide-title-label {
 
 	&.components-base-control {
 		text-transform: capitalize;
@@ -15,7 +15,7 @@
 
 body {
 
-	&.editorskit-title-hidden {
+	&.sidetrack-title-hidden {
 
 		.editor-post-title__block {
 
@@ -24,15 +24,15 @@ body {
 			}
 		}
 
-		.editorskit-hidden-title-label {
+		.sidetrack-hidden-title-label {
 			display: block;
 		}
 	}
 
-	&.editorskit-title-visible-disabled {
+	&.sidetrack-title-visible-disabled {
 
-		.editorskit-toggle-title,
-		.editorskit-hidden-title-label {
+		.sidetrack-toggle-title,
+		.sidetrack-hidden-title-label {
 			display: none;
 		}
 

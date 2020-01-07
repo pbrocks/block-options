@@ -49,10 +49,10 @@ class BlockGuideLines extends Component {
 				<PluginMoreMenuItem
 					icon={ isActive && 'yes' }
 					role="menuitemcheckbox"
-					info={ __( 'Show visible guide lines on title and blocks', 'block-options' ) }
+					info={ __( 'Show visible guide lines on title and blocks', 'blockshop-options' ) }
 					onClick={ onToggle }
 				>
-					{ __( 'Block Guide Lines', 'block-options' ) }
+					{ __( 'Block Guide Lines', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 
 			</Fragment>
@@ -63,7 +63,7 @@ class BlockGuideLines extends Component {
 export default compose( [
 	withSelect( ( select ) => ( {
 		isActive: select( 'core/edit-post' ).isFeatureActive( 'blockGuideLines' ),
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitGuidelinesTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackGuidelinesTools' ),
 	} ) ),
 	withDispatch( ( dispatch ) => ( {
 		onToggle() {

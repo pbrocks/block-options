@@ -8,7 +8,7 @@ import DisableTitle from './controls';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-disable-title', {
+registerPlugin( 'sidetrack-disable-title', {
 	icon: false,
 	render: DisableTitle,
 } );

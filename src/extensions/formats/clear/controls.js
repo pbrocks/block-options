@@ -36,7 +36,7 @@ class ClearFormatting extends Component {
 		return (
 			<RichTextToolbarButton
 				icon="editor-removeformatting"
-				title={ __( 'Clear Formatting', 'block-options' ) }
+				title={ __( 'Clear Formatting', 'blockshop-options' ) }
 				onClick={ onToggle }
 				isActive={ isActive }
 			/>
@@ -47,7 +47,7 @@ class ClearFormatting extends Component {
 export default compose(
 	withSelect( () => {
 		return {
-			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitClearFormattingFormats' ),
+			isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackClearFormattingFormats' ),
 		};
 	} ),
 	ifCondition( ( props ) => {

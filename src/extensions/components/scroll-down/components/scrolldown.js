@@ -33,7 +33,7 @@ class ScrollDown extends Component {
 						}
 					} }
 				>
-					{ __( 'View Custom Fields', 'block-options' ) }
+					{ __( 'View Custom Fields', 'blockshop-options' ) }
 				</PluginMoreMenuItem>
 
 			</Fragment>
@@ -44,7 +44,7 @@ class ScrollDown extends Component {
 export default compose( [
 	withSelect( ( select ) => ( {
 		isActive: select( 'core/editor' ).getEditorSettings().enableCustomFields,
-		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableEditorsKitScrollDownTools' ),
+		isDisabled: select( 'core/edit-post' ).isFeatureActive( 'disableSidetrackScrollDownTools' ),
 	} ) ),
 	withSpokenMessages,
 ] )( ScrollDown );

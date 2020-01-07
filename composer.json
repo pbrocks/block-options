@@ -1,5 +1,5 @@
 {
-	"name": "phpbits/block-options",
+	"name": "pbrocks/blockshop-options",
 	"type": "wordpress-plugin",
 	"require": {
 		"php": ">=5.6"

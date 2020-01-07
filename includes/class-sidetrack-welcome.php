@@ -4,23 +4,23 @@
  *
  * @copyright   Copyright (c) 2018, Jeffrey Carandang
  * @since       1.0
- * @package     EditorsKit
+ * @package     Sidetrack
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
+if ( ! class_exists( 'Sidetrack_Welcome' ) ) {
 	/**
-	 * EditorsKit_Welcome Class
+	 * Sidetrack_Welcome Class
 	 *
 	 * A general class for About and Credits page.
 	 *
 	 * @since 1.0
-	 * @package EditorsKit
+	 * @package Sidetrack
 	 */
-	class EditorsKit_Welcome {
+	class Sidetrack_Welcome {
 
 		/**
 		 * The base URL path (without trailing slash).
@@ -46,7 +46,7 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 		 */
 		public function __construct() {
 			$this->version = EDITORSKIT_VERSION;
-			$this->slug    = 'editorskit';
+			$this->slug    = 'sidetrack';
 			$this->url     = untrailingslashit( plugins_url( '/', dirname( __FILE__ ) ) );
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
@@ -54,8 +54,8 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 
 			if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				// Do nothing if WP CLI.
-			}else{
-				add_action( 'activated_plugin', array( $this, 'redirect' ), 10, 2 );	
+			} else {
+				add_action( 'activated_plugin', array( $this, 'redirect' ), 10, 2 );
 			}
 		}
 
@@ -68,7 +68,7 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 		 */
 		public function enqueue() {
 			// phpcs:ignore
-			if ( ! isset( $_GET['page'] ) || 'editorskit-getting-started' !== $_GET['page'] ) {
+			if ( ! isset( $_GET['page'] ) || 'sidetrack-getting-started' !== $_GET['page'] ) {
 				return;
 			}
 
@@ -96,7 +96,7 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 			}
 
 			wp_enqueue_style(
-				'editorskit-welcome',
+				'sidetrack-welcome',
 				$this->url . '/build/admin.build.css',
 				array( 'wp-components' ),
 				$this->version
@@ -118,7 +118,7 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 				'editor_settings' => apply_filters( 'block_editor_settings', array(), '' ),
 			);
 
-			wp_add_inline_script( $this->slug . '-admin', 'window.editorskitSettings = ' . wp_json_encode( $global ) . ';', 'before' );
+			wp_add_inline_script( $this->slug . '-admin', 'window.sidetrackSettings = ' . wp_json_encode( $global ) . ';', 'before' );
 		}
 
 		/**
@@ -127,10 +127,10 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 		public function screen_page() {
 			add_submenu_page(
 				'options-general.php',
-				__( 'Getting started with EditorsKit', 'block-options' ),
-				__( 'EditorsKit', 'block-options' ),
-				apply_filters( 'blockopts_welcome_cap', 'manage_options' ),
-				'editorskit-getting-started',
+				__( 'Getting started with Sidetrack', 'blockshop-options' ),
+				__( 'Sidetrack', 'blockshop-options' ),
+				apply_filters( 'wpblockshop_welcome_cap', 'manage_options' ),
+				'sidetrack-getting-started',
 				array( $this, 'welcome_content' )
 			);
 		}
@@ -139,7 +139,7 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 		 * Render page content.
 		 */
 		public function welcome_content(){ ?>
-			<div class="editorskit-settings-wrap"></div>
+			<div class="sidetrack-settings-wrap"></div>
 		<?php }
 
 		/**
@@ -149,13 +149,13 @@ if ( ! class_exists( 'EditorsKit_Welcome' ) ) {
 		 */
 		public function redirect( $plugin ) {
 			// phpcs:ignore
-			if ( ( $plugin === 'block-options/plugin.php' || $plugin === 'editorskit/plugin.php' ) && ! isset( $_GET['activate-multi'] ) ) {
-				wp_safe_redirect( admin_url( 'options-general.php?page=editorskit-getting-started' ) );
+			if ( ( $plugin === 'blockshop-options/plugin.php' || $plugin === 'sidetrack/plugin.php' ) && ! isset( $_GET['activate-multi'] ) ) {
+				wp_safe_redirect( admin_url( 'options-general.php?page=sidetrack-getting-started' ) );
 				die();
 			}
 		}
 	}
-	new EditorsKit_Welcome();
+	new Sidetrack_Welcome();
 }
 
 ?>

@@ -1,8 +1,8 @@
 # Developer Tools
 
-EditorsKit provide several **developer tools** which is disable by default. You can start using them by adding as theme support.
+Sidetrack provide several **developer tools** which is disable by default. You can start using them by adding as theme support.
 
-`add_theme_support( 'editorskit-devtools' );`
+`add_theme_support( 'sidetrack-devtools' );`
 
 This will enable new Gutenberg shortcuts to automatically generate placeholder text and heading blocks.
 

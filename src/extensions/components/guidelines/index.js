@@ -8,7 +8,7 @@ import BlockGuideLines from './components/menu';
  */
 const { registerPlugin } = wp.plugins;
 
-registerPlugin( 'editorskit-block-guidelines', {
+registerPlugin( 'sidetrack-block-guidelines', {
 	icon: false,
 	render: BlockGuideLines,
 } );

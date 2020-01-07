@@ -6,23 +6,23 @@ const { RawHTML } = wp.element;
 const { Modal } = wp.components;
 
 export function AboutGutenbergEditor( { closeModal } ) {
-	const { core, editor, plugin } = window.editorskitInfo;
+	const { core, editor, plugin } = window.sidetrackInfo;
 	return (
 		<Modal
-			title={ __( 'About Gutenberg Block Editor', 'block-options' ) }
+			title={ __( 'About Gutenberg Block Editor', 'blockshop-options' ) }
 			shouldCloseOnClickOutside={ false }
 			onRequestClose={ () => closeModal() }
-			closeLabel={ __( 'Close', 'block-options' ) }
+			closeLabel={ __( 'Close', 'blockshop-options' ) }
 			icon={ null }
-			className="editorskit-modal-component components-modal--editorskit-overview"
+			className="sidetrack-modal-component components-modal--sidetrack-overview"
 		>
-			<p>{ __( 'Version', 'block-options' ) } <strong>{ editor.version }</strong></p>
+			<p>{ __( 'Version', 'blockshop-options' ) } <strong>{ editor.version }</strong></p>
 			<p>{ editor.is_core ?
-				sprintf( __( 'You are using the new block editor bundled on WordPress core %s', 'block-options' ), core.version ) :
-				<RawHTML>{ sprintf( __( 'You are using the new block editor powered by the %sGutenberg Plugin%s.', 'block-options' ), '<a href="https://wordpress.org/plugins/gutenberg/" target="_blank" rel="noreferrer noopener nofollow">', '</a>' ) }</RawHTML>
+				sprintf( __( 'You are using the new block editor bundled on WordPress core %s', 'blockshop-options' ), core.version ) :
+				<RawHTML>{ sprintf( __( 'You are using the new block editor powered by the %sGutenberg Plugin%s.', 'blockshop-options' ), '<a href="https://wordpress.org/plugins/gutenberg/" target="_blank" rel="noreferrer noopener nofollow">', '</a>' ) }</RawHTML>
 			}</p>
-			<p><RawHTML>{ sprintf( __( ' Want to help? %sGet involved or report an issue%s.', 'block-options' ), '<a href="https://github.com/WordPress/gutenberg/issues" target="_blank" rel="noreferrer noopener nofollow">', '</a>' ) }</RawHTML></p>
-			<p className="editorskit-version-small">{ sprintf( __( 'EditorsKit %s', 'block-options' ), plugin.version ) }</p>
+			<p><RawHTML>{ sprintf( __( ' Want to help? %sGet involved or report an issue%s.', 'blockshop-options' ), '<a href="https://github.com/WordPress/gutenberg/issues" target="_blank" rel="noreferrer noopener nofollow">', '</a>' ) }</RawHTML></p>
+			<p className="sidetrack-version-small">{ sprintf( __( 'Sidetrack %s', 'blockshop-options' ), plugin.version ) }</p>
 		</Modal>
 	);
 }
